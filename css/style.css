@@ -1487,7 +1487,7 @@ html.time-night .mt-bonfire {
    ============================================ */
 .booking-bar {
   position: absolute;
-  bottom: -80px;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 20;
