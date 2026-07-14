@@ -760,12 +760,20 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-.hero-root::before {
-  content: '';
+
+.hero-bg-wrap {
   position: absolute;
   inset: 0;
-  background: #1a1a1e url('/images/hero/luxury-hero.jpg') center top / cover no-repeat;
   z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .hero-overlay-right {
