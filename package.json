@@ -4,11 +4,18 @@
   "version": "1.0.0",
   "description": "Flamingo aur Maina — Boutique Stays in Jibhi",
   "scripts": {
-    "build": "echo 'Static site — no build required' && exit 0",
+    "build": "npx vite build",
     "dev": "echo 'Open index.html in browser or use a local server' && exit 0",
     "start": "npx serve ."
   },
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "framer-motion": "^12.42.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite": "^8.1.4"
   }
 }

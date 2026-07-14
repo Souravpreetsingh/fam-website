@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <link rel="stylesheet" href="css/style.css?v=7" />
 
 <script id="tailwind-config">
@@ -149,38 +151,10 @@ tailwind.config = {
     </div>
 
     <div class="hero-content-wrap">
-      <div class="hero-content-inner">
-        <div class="hero-label hero-seq hero-seq-1">
-          FLAMINGO AUR MAINA
-        </div>
-        <h1 class="hero-fam hero-seq hero-seq-2">
-          FAM
-        </h1>
-        <div class="hero-welcome hero-seq hero-seq-3">
-          Welcome Home
-        </div>
-        <div class="hero-sub-label hero-seq hero-seq-4">
-          Luxury Boutique Café &amp; Mountain Stays
-        </div>
-        <p class="hero-tagline hero-seq hero-seq-5">
-          Some Places Stay in Your Heart Forever
-        </p>
-        <p class="hero-desc hero-seq hero-seq-6">
-          Discover peaceful mornings, breathtaking mountain sunsets, cozy boutique stays, and unforgettable memories at Flamingo aur Maina. Nestled in the heart of Jibhi, FAM is a place where nature, comfort, and heartfelt hospitality come together to make every stay feel like home.
-        </p>
-        <div class="hero-btns hero-seq hero-seq-7">
-          <a href="pages/rooms.html" class="hero-btn-primary">
-            <span>Book Your Stay</span>
-            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-          </a>
-          <a href="#story" class="hero-btn-secondary">
-            Explore Rooms
-          </a>
-        </div>
-      </div>
+      <div id="hero-react-mount"></div>
     </div>
 
-    <div class="booking-bar hero-seq hero-seq-8">
+    <div class="booking-bar hero-fade-late">
       <div class="bb-container">
         <div class="bb-inner">
           <div class="bb-field">
@@ -262,7 +236,7 @@ tailwind.config = {
       </div>
     </div>
 
-    <div class="scroll-indicator hero-seq hero-seq-9">
+    <div class="scroll-indicator hero-fade-late">
       <span class="scroll-label">Scroll</span>
       <div class="scroll-mouse"><div class="scroll-dot"></div></div>
     </div>
@@ -1304,5 +1278,6 @@ tailwind.config = {
     updateUI();
   }
   </script>
+  <script src="dist/hero-bundle.js"></script>
 </body>
 </html>

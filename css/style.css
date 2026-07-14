@@ -304,6 +304,11 @@ html.mode-winter .seasonal-toggle-btn.active {
     opacity: 1 !important;
     transform: none !important;
   }
+  .hero-fade-late {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .reveal, .reveal-hidden, .gsap-reveal, .gsap-mask {
     opacity: 1 !important;
     transform: none !important;
@@ -955,6 +960,13 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.hero-fade-late {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 1.5s;
 }
 
 @media (max-width: 768px) {
