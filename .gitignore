@@ -1,18 +1,36 @@
+# --- Dependencies ---
 node_modules/
+
+# --- Vercel ---
 .vercel/
+
+# --- Environment ---
 .env
 .env.local
+.env.development
+.env.production
+
+# --- OS files ---
 .DS_Store
 Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
 
-# Separate projects / archives (not part of the main site)
+# --- Editor / IDE ---
+.vscode/settings.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Logs ---
+*.log
+npm-debug.log*
+
+# --- Archives / unrelated projects (not part of the main site) ---
 react-hero/
 stitch_flamingo_aur_maina_architecture*.zip
 stitch_flamingo_aur_maina_architecture/
 arch2/
 ChatGPT Image Jul 14, 2026, 02_53_17 PM.png
-
-# Keep these tracked (Vercel config)
-!vercel.json
-!package.json
-!.env.example
