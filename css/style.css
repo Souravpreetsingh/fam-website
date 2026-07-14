@@ -766,6 +766,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: #1a1a1e;
 }
 
 .hero-bg-wrap {
