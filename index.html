@@ -138,50 +138,37 @@ tailwind.config = {
   </nav>
 
   <!-- ====== HERO SECTION ====== -->
-  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-visible">
-    <!-- Ken Burns Background -->
-    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+  <section class="hero-root">
+    <div class="hero-bg-wrap">
       <img
         src="images/hero-bg.jpg"
         alt="Himalayan mountain landscape at sunrise with boutique cabins"
-        class="absolute inset-0 w-full h-full object-cover ken-burns origin-center" />
-      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/40 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent"></div>
+        class="hero-bg-img ken-burns" />
+      <div class="hero-overlay-right"></div>
+      <div class="hero-overlay-bottom"></div>
     </div>
 
-    <!-- WebGL Shader Overlay -->
-    <div data-shader class="absolute inset-0 w-full h-full z-[1] opacity-30 mix-blend-screen pointer-events-none"></div>
-
-    <!-- Floating Elements -->
-    <div class="absolute inset-0 z-[2] pointer-events-none overflow-hidden">
-      <svg class="bird-1 absolute top-[15%] left-0 w-12 h-8 text-accent-gold/20" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
-      <svg class="bird-2 absolute top-[25%] left-0 w-10 h-6 text-accent-gold/15" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
-      <svg class="bird-3 absolute top-[20%] left-0 w-8 h-5 text-accent-gold/10" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
-      <div class="leaf absolute top-[60%] left-[10%] w-4 h-6 text-primary/20">&#127807;</div>
-      <div class="leaf-2 absolute top-[40%] left-[30%] w-3 h-5 text-accent-gold/15">&#127807;</div>
-      <div class="leaf-3 absolute top-[70%] left-[60%] w-4 h-6 text-primary/20">&#127807;</div>
-      <div class="fog-layer absolute bottom-0 left-0 w-[120%] h-[40%] bg-gradient-to-t from-white/5 to-transparent"></div>
-    </div>
-
-    <!-- Hero Content -->
-    <div class="relative z-10 w-full h-full flex flex-col items-center justify-start pt-28 px-4 md:px-margin-desktop">
-      <div class="text-center max-w-4xl mx-auto">
-        <div class="hero-label reveal-word">
+    <div class="hero-content-wrap">
+      <div class="hero-content-inner">
+        <div class="hero-label hero-seq hero-seq-1">
           FLAMINGO AUR MAINA
         </div>
-        <h1 class="hero-fam fade-in-up delay-100">
+        <h1 class="hero-fam hero-seq hero-seq-2">
           FAM
         </h1>
-        <div class="hero-label-secondary reveal-word delay-200">
-          Luxury Boutique Café &amp; Stays
+        <div class="hero-welcome hero-seq hero-seq-3">
+          Welcome Home
         </div>
-        <p class="hero-sub reveal-word delay-300">
+        <div class="hero-sub-label hero-seq hero-seq-4">
+          Luxury Boutique Café &amp; Mountain Stays
+        </div>
+        <p class="hero-tagline hero-seq hero-seq-5">
           Some Places Stay in Your Heart Forever
         </p>
-        <p class="hero-desc fade-in-up delay-400">
+        <p class="hero-desc hero-seq hero-seq-6">
           Discover peaceful mornings, breathtaking mountain sunsets, cozy boutique stays, and unforgettable memories at Flamingo aur Maina. Nestled in the heart of Jibhi, FAM is a place where nature, comfort, and heartfelt hospitality come together to make every stay feel like home.
         </p>
-        <div class="flex flex-wrap gap-4 justify-center pt-8 fade-in-up delay-500">
+        <div class="hero-btns hero-seq hero-seq-7">
           <a href="pages/rooms.html" class="hero-btn-primary">
             <span>Book Your Stay</span>
             <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
@@ -193,10 +180,14 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- Booking Bar -->
-    <div class="booking-bar">
+    <div class="booking-bar hero-seq hero-seq-8">
       <div class="bb-container">
         <div class="bb-inner">
+          <div class="bb-field">
+            <label class="bb-label">Location</label>
+            <button class="bb-value">Jibhi, Himachal</button>
+          </div>
+          <div class="bb-divider"></div>
           <div class="bb-field" data-popover="checkin">
             <label class="bb-label">Check-in</label>
             <button class="bb-value" id="bb-checkin">Select date</button>
@@ -271,9 +262,8 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator fade-in-up delay-700">
-      <span class="font-label-sm text-[10px] tracking-[0.2em] text-white/60">Scroll</span>
+    <div class="scroll-indicator hero-seq hero-seq-9">
+      <span class="scroll-label">Scroll</span>
       <div class="scroll-mouse"><div class="scroll-dot"></div></div>
     </div>
   </section>
