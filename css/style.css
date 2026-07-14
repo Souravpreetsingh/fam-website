@@ -755,12 +755,21 @@ body {
   margin: 0 0 16px;
 }
 
+.hero-label-secondary {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: #e8d5b5;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 .hero-sub {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 5vw, 52px);
-  font-weight: 500;
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 600;
   color: #f5efe0;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-desc {
