@@ -778,13 +778,6 @@ body {
   object-fit: cover;
 }
 
-.hero-overlay-uniform {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-
 .hero-overlay-right {
   position: absolute;
   inset: 0;
