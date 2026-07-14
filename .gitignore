@@ -1,6 +1,10 @@
 react-hero/
 stitch_flamingo_aur_maina_architecture*.zip
+stitch_flamingo_aur_maina_architecture/
+arch2/
 ChatGPT Image Jul 14, 2026, 02_53_17 PM.png
 node_modules/
 .DS_Store
 Thumbs.db
+
+.vercel
