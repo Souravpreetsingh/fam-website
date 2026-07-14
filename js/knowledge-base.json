@@ -1,0 +1,79 @@
+{
+  "topics": [
+    {
+      "id": "rooms",
+      "keywords": ["room", "rooms", "stay", "accommodation", "flamingo", "duplex", "attic", "suite", "garden", "king", "bed", "sleep", "guest", "price", "cost", "rate", "rent", "night", "book", "booking", "available"],
+      "answer": "We have three beautiful stays:\n\n🏡 **Flamingo 1 — Duplex**\n4 guests · 2 Beds · ₹6,000/night\nKing bed, mountain view, Wi-Fi, heater, private sit-out.\n\n🏡 **Flamingo 2 — King Attic**\n4 guests · 1 Bed · ₹5,000/night\nKing bed, skylight views, heater — perfect for couples.\n\n🏡 **Flamingo 3 — Garden Suite**\n6 guests · 3 Beds · ₹8,000/night\nGarden access, air conditioning, ideal for families.\n\nAll rooms include attached bathrooms, tea/coffee, and warm wooden interiors."
+    },
+    {
+      "id": "rooms-couples",
+      "keywords": ["couple", "couples", "romantic", "honeymoon", "anniversary", "valentine"],
+      "answer": "For couples, I'd recommend **Flamingo 2 — King Attic** (₹5,000/night). It features a cozy attic setup with a skylight — perfect for stargazing and romance. Flamingo 1 Duplex is also a great choice if you'd like more space with a private sit-out area."
+    },
+    {
+      "id": "rooms-family",
+      "keywords": ["family", "group", "kids", "children", "large", "big", "spacious"],
+      "answer": "For families or groups, **Flamingo 3 — Garden Suite** (₹8,000/night) is ideal. It sleeps 6 guests across 3 beds, has private garden access, and air conditioning. Flamingo 1 Duplex (₹6,000/night) is also great for 4 guests with two levels of space."
+    },
+    {
+      "id": "amenities",
+      "keywords": ["amenities", "amenity", "facilities", "facility", "what do you have", "offer", "services", "service", "features", "included"],
+      "answer": "We offer a range of thoughtful amenities:\n\n✅ **High-Speed Wi-Fi** — Stay connected throughout the property.\n✅ **In-House Cafe** — Artisanal coffee, local cuisine, handcrafted meals.\n✅ **Room Heaters** — Warm and cozy during chilly evenings.\n✅ **Bonfire Setup** — Evening bonfires under the stars.\n✅ **Free Parking** — Secure on-site parking.\n✅ **Garden Access** — 1.5 acres of open land with apple orchard and sitting areas.\n✅ **Mountain Views** — 360° views from every room.\n✅ **Laundry Service** — Available on request."
+    },
+    {
+      "id": "property",
+      "keywords": ["property", "grounds", "land", "orchard", "apple", "garden", "acre", "acres", "view", "mountain", "valley", "location", "situated", "where", "jibhi", "himachal"],
+      "answer": "Flamingo aur Maina is located in **Jibhi, Himachal Pradesh**, nestled in a quiet valley surrounded by 360° mountain views. The property spans **1.5 acres** of open land with an apple orchard, garden sitting areas, and a boutique café. It's a sanctuary designed to blend luxury with nature — just a short walk from the Jibhi waterfall and local village paths."
+    },
+    {
+      "id": "nearby",
+      "keywords": ["nearby", "attractions", "places", "around", "local", "explore", "visit", "sightseeing", "waterfall", "temple", "village", "jibhi", "jalori", "serolsar", "banjar", "tirthan"],
+      "answer": "There's plenty to explore around FAM:\n\n🏞️ **Jibhi Waterfall** — A short walk from the property.\n🌲 **Jalori Pass** — Stunning high-altitude views, ~45 min drive.\n🥾 **Serolsar Lake** — A beautiful trek from Jalori Pass.\n🛕 **Shoja & Chehni Kothi** — Ancient villages with historic architecture.\n🏞️ **Tirthan Valley** — Trout fishing & riverside walks.\nAll easily accessible by cab or on foot from Jibhi."
+    },
+    {
+      "id": "bonfire",
+      "keywords": ["bonfire", "fire", "campfire", "evening", "night", "stars", "stargazing", "outdoor", "seating", "warm"],
+      "answer": "Yes! We arrange **evening bonfires** under the stars. It's one of our most loved experiences. We provide comfortable seating and the perfect mountain ambiance. Just let us know in advance and we'll have everything set up for you."
+    },
+    {
+      "id": "wifi",
+      "keywords": ["wifi", "wi-fi", "internet", "network", "online", "connection", "broadband", "speed"],
+      "answer": "Yes, we offer **high-speed Wi-Fi** available throughout the property. The connection is reliable and suitable for video calls, streaming, and remote work. That said, we also encourage you to disconnect and soak in the mountains! 😊"
+    },
+    {
+      "id": "workcation",
+      "keywords": ["workcation", "work", "remote", "work from", "laptop", "meeting", "coworking", "office", "digital", "nomad", "productivity"],
+      "answer": "Absolutely — FAM is a wonderful workcation destination! We have:\n\n✅ **High-Speed Wi-Fi** throughout the property.\n✅ **Quiet corners** in the café and garden to take calls.\n✅ **Comfortable workspaces** in every room.\n✅ **Peaceful environment** with no city distractions.\n✅ **Great coffee & food** to keep you going.\n\nMany of our guests work remotely from here. Just be warned — the mountain views might distract you! 🏔️"
+    },
+    {
+      "id": "cafe",
+      "keywords": ["cafe", "coffee", "food", "restaurant", "dining", "eat", "breakfast", "lunch", "dinner", "meal", "cuisine", "menu", "kitchen", "cook"],
+      "answer": "Our **in-house café** serves artisanal coffee, local Himachali cuisine, and handcrafted meals daily. We use fresh local ingredients and traditional recipes. Whether it's a morning espresso, a hearty lunch, or a quiet dinner — the café is the heart of FAM. We also accommodate dietary preferences — just let us know!"
+    },
+    {
+      "id": "booking",
+      "keywords": ["book", "booking", "reserve", "reservation", "check in", "check-in", "check out", "checkout", "cancel", "cancellation", "pay", "payment", "advance", "deposit", "availability"],
+      "answer": "You can book directly through our website or by contacting us directly. For the best rates and personalized service, we recommend **booking directly** with us. A partial advance is required to confirm your reservation. Check-in is flexible, and our team will coordinate with you. For specific availability and offers, please reach out to our team!"
+    },
+    {
+      "id": "treks",
+      "keywords": ["trek", "treks", "trekking", "hike", "hiking", "trail", "trails", "walk", "nature walk", "serolsar", "jalori", "shoja", "waterfall", "forest trail"],
+      "answer": "Jibhi is a trekker's paradise! Popular options:\n\n🥾 **Serolsar Lake Trek** — From Jalori Pass, ~2 km through enchanting forests.\n🥾 **Jibhi Waterfall Walk** — Easy 15-min stroll from the property.\n🥾 **Shoja Village Trail** — Ancient village with panoramic views.\n🥾 **Raghupur Fort Trek** — Moderate trek with rewarding views.\n\nWe can arrange local guides and help you plan your trek. Just ask!"
+    },
+    {
+      "id": "cab",
+      "keywords": ["cab", "taxi", "car", "transport", "pickup", "drop", "airport", "bus", "station", "travel", "reach", "get there", "how to reach", "aut", "rickshaw"],
+      "answer": "Yes, we can arrange **cab services** from major nearby points:\n\n🚗 **Aut (Jibhi entry point)** to FAM\n🚗 **Banjar** to FAM\n🚗 **Bhuntar Airport (Kullu)** to FAM (~50 km)\n🚗 **Delhi** to FAM (overnight bus + cab)\n\nJust let us know your arrival details and we'll coordinate everything for you."
+    },
+    {
+      "id": "laundry",
+      "keywords": ["laundry", "wash", "washing", "clean", "clothes", "iron", "ironing"],
+      "answer": "Yes, **laundry service is available on request**. Please inform our team and we'll take care of it for you."
+    },
+    {
+      "id": "heating",
+      "keywords": ["heater", "heaters", "heating", "warm", "cold", "chilly", "temperature", "winter", "cool", "air conditioning", "ac", "cooler", "fan"],
+      "answer": "Absolutely — all our rooms are equipped with **room heaters** to keep you warm and cozy during chilly mountain evenings. Flamingo 1 and Flamingo 2 also feature heaters in the rooms, and Flamingo 3 (Garden Suite) has **air conditioning** as well. We know mountain weather can be unpredictable, so we've got you covered!"
+    }
+  ]
+}

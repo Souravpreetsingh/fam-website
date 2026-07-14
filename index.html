@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flamingo aur Maina | Boutique Stays in Jibhi</title>
+  <meta name="description" content="A sanctuary of refined luxury and untold stories amidst nature's embrace. Boutique stays in Jibhi, Himachal Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f8f4ec",
+        "background": "#f8f4ec",
+        "surface-bright": "#f9faf5",
+        "surface-container": "#eeeeea",
+        "surface-container-low": "#f3f4f0",
+        "surface-container-high": "#e8e8e4",
+        "surface-container-highest": "#e2e3df",
+        "surface-dim": "#d9dad6",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#1a1c1a",
+        "on-background": "#1a1c1a",
+        "on-surface-variant": "#414942",
+        "primary": "#0a341d",
+        "on-primary": "#ffffff",
+        "primary-container": "#234b32",
+        "on-primary-container": "#8fba9a",
+        "primary-fixed": "#c0edcb",
+        "primary-fixed-dim": "#a5d1b0",
+        "inverse-primary": "#a5d1b0",
+        "accent-gold": "#C9A86A",
+        "secondary": "#605e58",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#e6e2da",
+        "on-secondary-container": "#66645e",
+        "charcoal": "#1B1B1B",
+        "muted-gray": "#6B7280",
+        "outline": "#727972",
+        "outline-variant": "#c1c8c0",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "tertiary": "#4b1f27",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#65353c",
+        "on-tertiary-container": "#e09fa7"
+      },
+      fontFamily: {
+        'display-hero': ['Playfair Display', 'serif'],
+        'display-hero-mobile': ['Playfair Display', 'serif'],
+        'headline-lg': ['Playfair Display', 'serif'],
+        'headline-md': ['Playfair Display', 'serif'],
+        'body-lg': ['Inter', 'sans-serif'],
+        'body-md': ['Inter', 'sans-serif'],
+        'label-sm': ['Inter', 'sans-serif']
+      },
+      fontSize: {
+        'display-hero': ['80px', { lineHeight: '96px', letterSpacing: '0.04em', fontWeight: '700' }],
+        'display-hero-mobile': ['42px', { lineHeight: '48px', fontWeight: '700' }],
+        'headline-lg': ['48px', { lineHeight: '56px', fontWeight: '600' }],
+        'headline-md': ['32px', { lineHeight: '40px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'label-sm': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '600' }]
+      },
+      borderRadius: {
+        DEFAULT: "1rem",
+        lg: "2rem",
+        xl: "3rem",
+        full: "9999px"
+      },
+      spacing: {
+        'section-gap': '120px',
+        'margin-desktop': '64px',
+        'gutter': '24px',
+        'max-width': '1400px'
+      },
+      boxShadow: {
+        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+      }
+    }
+  }
+}
+</script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f8f4ec; color: #1a1c1a; }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+  <!-- ====== NAVBAR ====== -->
+  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">
+    <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto rounded-full">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="font-headline-md text-headline-md text-primary tracking-tight">
+          <span class="inline-block size-8 align-middle mr-2">
+            <svg class="w-full h-full text-accent-gold" fill="none" viewBox="0 0 48 48">
+              <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 40C15.16 40 8 32.84 8 24C8 15.16 15.16 8 24 8C32.84 8 40 15.16 40 24C40 32.84 32.84 40 24 40Z" fill="currentColor"/>
+              <path d="M24 14C18.48 14 14 18.48 14 24C14 29.52 18.48 34 24 34C29.52 34 34 29.52 34 24C34 18.48 29.52 14 24 14ZM24 30C20.69 30 18 27.31 18 24C18 20.69 20.69 18 24 18C27.31 18 30 20.69 30 24C30 27.31 27.31 30 24 30Z" fill="currentColor"/>
+            </svg>
+          </span>
+          Flamingo aur Maina
+        </a>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1 transition-colors">Home</a>
+        <a href="pages/rooms.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Rooms</a>
+        <a href="pages/life.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Life at FAM</a>
+<a href="pages/explore.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Explore</a>
+          <a href="pages/gallery.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Gallery</a>
+          <a href="pages/amenities.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
+        <button class="md:hidden text-primary p-2" id="mobile-menu-btn">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+    <!-- Ken Burns Background -->
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+      <img
+        src="images/hero-bg.jpg"
+        alt="Himalayan mountain landscape at sunrise with boutique cabins"
+        class="absolute inset-0 w-full h-full object-cover ken-burns origin-center" />
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- WebGL Shader Overlay -->
+    <div data-shader class="absolute inset-0 w-full h-full z-[1] opacity-30 mix-blend-screen pointer-events-none"></div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 z-[2] pointer-events-none overflow-hidden">
+      <svg class="bird-1 absolute top-[15%] left-0 w-12 h-8 text-accent-gold/20" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
+      <svg class="bird-2 absolute top-[25%] left-0 w-10 h-6 text-accent-gold/15" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
+      <svg class="bird-3 absolute top-[20%] left-0 w-8 h-5 text-accent-gold/10" viewBox="0 0 48 32" fill="currentColor"><path d="M0 16 Q12 4 24 16 Q36 4 48 16 Q36 12 24 20 Q12 12 0 16Z"/></svg>
+      <div class="leaf absolute top-[60%] left-[10%] w-4 h-6 text-primary/20">&#127807;</div>
+      <div class="leaf-2 absolute top-[40%] left-[30%] w-3 h-5 text-accent-gold/15">&#127807;</div>
+      <div class="leaf-3 absolute top-[70%] left-[60%] w-4 h-6 text-primary/20">&#127807;</div>
+      <div class="fog-layer absolute bottom-0 left-0 w-[120%] h-[40%] bg-gradient-to-t from-white/5 to-transparent"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 w-full max-w-max-width mx-auto px-4 md:px-margin-desktop">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-16">
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="hero-frame">
+
+            <!-- Ornate Corner Rosettes -->
+            <div class="frame-corner tl">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60 25 C55 18 48 12 38 8 C28 4 18 8 12 18 C6 28 8 42 18 52 C28 62 42 65 55 62 C58 50 62 38 60 25Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
+                <circle cx="35" cy="35" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
+                <circle cx="35" cy="35" r="5" fill="#8B5A3A"/>
+                <path d="M35 35 C35 22 28 12 18 8 C22 18 25 28 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 35 C22 35 12 28 8 18 C18 22 28 25 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 35 C35 48 28 58 18 62 C22 52 25 42 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M35 35 C48 35 58 42 62 52 C52 48 42 45 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <circle cx="15" cy="12" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
+                <circle cx="12" cy="18" r="3.5" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M15 12 C22 8 30 5 38 8 C30 10 22 14 15 12Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.8"/>
+                <path d="M55 62 C48 72 42 82 35 88 C42 82 48 72 55 62Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
+                <path d="M55 62 C62 72 68 82 72 92 C65 82 58 72 55 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
+                <path d="M55 62 C42 58 28 58 18 62 C28 65 42 65 55 62Z" fill="#7D4A32" opacity="0.5" stroke="#3A1A0A" stroke-width="0.3"/>
+              </svg>
+            </div>
+            <div class="frame-corner tr">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60 25 C55 18 48 12 38 8 C28 4 18 8 12 18 C6 28 8 42 18 52 C28 62 42 65 55 62 C58 50 62 38 60 25Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
+                <circle cx="35" cy="35" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
+                <circle cx="35" cy="35" r="5" fill="#8B5A3A"/>
+                <path d="M35 35 C35 22 28 12 18 8 C22 18 25 28 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 35 C22 35 12 28 8 18 C18 22 28 25 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 35 C35 48 28 58 18 62 C22 52 25 42 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M35 35 C48 35 58 42 62 52 C52 48 42 45 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <circle cx="15" cy="12" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
+                <circle cx="12" cy="18" r="3.5" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M15 12 C22 8 30 5 38 8 C30 10 22 14 15 12Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.8"/>
+                <path d="M55 62 C48 72 42 82 35 88 C42 82 48 72 55 62Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
+                <path d="M55 62 C62 72 68 82 72 92 C65 82 58 72 55 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="frame-corner bl">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60 95 C55 102 48 108 38 112 C28 116 18 112 12 102 C6 92 8 78 18 68 C28 58 42 55 55 58 C58 70 62 82 60 95Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
+                <circle cx="35" cy="85" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
+                <circle cx="35" cy="85" r="5" fill="#8B5A3A"/>
+                <path d="M35 85 C35 98 28 108 18 112 C22 102 25 92 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 85 C22 85 12 92 8 102 C18 98 28 95 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 85 C35 72 28 62 18 58 C22 68 25 78 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M35 85 C48 85 58 78 62 68 C52 72 42 75 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <circle cx="15" cy="108" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
+                <path d="M55 58 C48 48 42 38 35 32 C42 38 48 48 55 58Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
+                <path d="M55 58 C62 48 68 38 72 28 C65 38 58 48 55 58Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="frame-corner br">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M60 95 C55 102 48 108 38 112 C28 116 18 112 12 102 C6 92 8 78 18 68 C28 58 42 55 55 58 C58 70 62 82 60 95Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
+                <circle cx="35" cy="85" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
+                <circle cx="35" cy="85" r="5" fill="#8B5A3A"/>
+                <path d="M35 85 C35 98 28 108 18 112 C22 102 25 92 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 85 C22 85 12 92 8 102 C18 98 28 95 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
+                <path d="M35 85 C35 72 28 62 18 58 C22 68 25 78 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <path d="M35 85 C48 85 58 78 62 68 C52 72 42 75 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <circle cx="15" cy="108" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
+                <path d="M55 58 C48 48 42 38 35 32 C42 38 48 48 55 58Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
+                <path d="M55 58 C62 48 68 38 72 28 C65 38 58 48 55 58Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <!-- Side Carved Vines -->
+            <div class="frame-side left">
+              <svg viewBox="0 0 40 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10 C12 30 28 50 20 70 C12 90 28 110 20 130 C12 150 28 170 20 190 C12 210 28 230 20 250 C12 270 28 290 20 310" stroke="#5C3A1E" stroke-width="3" fill="none" opacity="0.7"/>
+                <path d="M20 20 C14 28 8 32 4 30 C8 28 14 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 20 C26 28 32 32 36 30 C32 28 26 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 70 C14 78 8 82 4 80 C8 78 14 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 70 C26 78 32 82 36 80 C32 78 26 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 130 C14 138 8 142 4 140 C8 138 14 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 130 C26 138 32 142 36 140 C32 138 26 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 190 C14 198 8 202 4 200 C8 198 14 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 190 C26 198 32 202 36 200 C32 198 26 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 250 C14 258 8 262 4 260 C8 258 14 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 250 C26 258 32 262 36 260 C32 258 26 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
+                <circle cx="6" cy="50" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="34" cy="100" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="6" cy="160" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="34" cy="220" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="6" cy="280" r="3" fill="#7D4A32" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="frame-side right">
+              <svg viewBox="0 0 40 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 10 C28 30 12 50 20 70 C28 90 12 110 20 130 C28 150 12 170 20 190 C28 210 12 230 20 250 C28 270 12 290 20 310" stroke="#5C3A1E" stroke-width="3" fill="none" opacity="0.7"/>
+                <path d="M20 20 C14 28 8 32 4 30 C8 28 14 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 20 C26 28 32 32 36 30 C32 28 26 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 70 C14 78 8 82 4 80 C8 78 14 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 70 C26 78 32 82 36 80 C32 78 26 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 130 C14 138 8 142 4 140 C8 138 14 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 130 C26 138 32 142 36 140 C32 138 26 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 190 C14 198 8 202 4 200 C8 198 14 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 190 C26 198 32 202 36 200 C32 198 26 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 250 C14 258 8 262 4 260 C8 258 14 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M20 250 C26 258 32 262 36 260 C32 258 26 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
+                <circle cx="6" cy="50" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="34" cy="100" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="6" cy="160" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="34" cy="220" r="3" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="6" cy="280" r="3" fill="#7D4A32" opacity="0.6"/>
+              </svg>
+            </div>
+
+            <!-- Top Crest -->
+            <div class="frame-crest">
+              <svg viewBox="0 0 560 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <!-- Left Apple Branch -->
+                <path d="M80 55 C110 52 140 48 170 42 C200 36 230 28 260 22" stroke="#5C3A1E" stroke-width="4" fill="none"/>
+                <path d="M100 55 C95 45 92 35 96 25 C100 35 100 45 100 55Z" fill="#6B3A2A"/>
+                <path d="M100 55 C110 45 118 38 128 35 C118 42 110 48 100 55Z" fill="#7D4A32"/>
+                <path d="M130 50 C125 40 122 30 126 20 C130 30 130 40 130 50Z" fill="#6B3A2A"/>
+                <path d="M130 50 C140 40 148 33 158 30 C148 37 140 43 130 50Z" fill="#7D4A32"/>
+                <circle cx="100" cy="30" r="5" fill="#8B5A3A" opacity="0.7"/>
+                <circle cx="130" cy="25" r="4" fill="#8B5A3A" opacity="0.7"/>
+                <circle cx="160" cy="28" r="4.5" fill="#8B5A3A" opacity="0.6"/>
+                <path d="M170 42 C165 35 160 28 165 20 C170 28 170 35 170 42Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M170 42 C180 35 188 30 198 28 C188 33 180 38 170 42Z" fill="#7D4A32" opacity="0.7"/>
+                <path d="M200 38 C195 30 192 22 196 14 C200 22 200 30 200 38Z" fill="#6B3A2A" opacity="0.7"/>
+                <path d="M200 38 C210 30 218 25 228 22 C218 28 210 33 200 38Z" fill="#7D4A32" opacity="0.6"/>
+                <circle cx="185" cy="22" r="3.5" fill="#8B5A3A" opacity="0.5"/>
+                <!-- Right Apple Branch -->
+                <path d="M480 55 C450 52 420 48 390 42 C360 36 330 28 300 22" stroke="#5C3A1E" stroke-width="4" fill="none"/>
+                <path d="M460 55 C465 45 468 35 464 25 C460 35 460 45 460 55Z" fill="#6B3A2A"/>
+                <path d="M460 55 C450 45 442 38 432 35 C442 42 450 48 460 55Z" fill="#7D4A32"/>
+                <path d="M430 50 C435 40 438 30 434 20 C430 30 430 40 430 50Z" fill="#6B3A2A"/>
+                <path d="M430 50 C420 40 412 33 402 30 C412 37 420 43 430 50Z" fill="#7D4A32"/>
+                <circle cx="460" cy="30" r="5" fill="#8B5A3A" opacity="0.7"/>
+                <circle cx="430" cy="25" r="4" fill="#8B5A3A" opacity="0.7"/>
+                <circle cx="400" cy="28" r="4.5" fill="#8B5A3A" opacity="0.6"/>
+                <path d="M390 42 C395 35 400 28 395 20 C390 28 390 35 390 42Z" fill="#6B3A2A" opacity="0.8"/>
+                <path d="M390 42 C380 35 372 30 362 28 C372 33 380 38 390 42Z" fill="#7D4A32" opacity="0.7"/>
+                <path d="M360 38 C365 30 368 22 364 14 C360 22 360 30 360 38Z" fill="#6B3A2A" opacity="0.7"/>
+                <circle cx="375" cy="22" r="3.5" fill="#8B5A3A" opacity="0.5"/>
+                <!-- Flamingo Bird (Left) -->
+                <path d="M190 60 C195 55 200 45 205 38 C210 31 218 28 222 32 C218 38 212 42 208 48 C212 44 218 40 224 38 C230 36 236 38 234 44 C230 50 222 54 216 56 L210 62 C208 66 210 70 214 72 L220 68" stroke="#4A2A14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <path d="M205 38 C200 36 196 38 198 42 C200 46 204 44 205 38Z" fill="#4A2A14"/>
+                <path d="M216 56 L212 74 L218 74" stroke="#4A2A14" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <!-- Central Mountain Peak -->
+                <path d="M260 72 L280 12 L300 72Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1"/>
+                <path d="M272 72 L280 28 L288 72Z" fill="#7D4A32"/>
+                <path d="M276 42 L280 28 L284 42Z" fill="#8B5A3A" opacity="0.6"/>
+                <!-- Maina Bird (Right) -->
+                <path d="M350 55 C345 48 342 40 344 32 C348 28 354 30 356 36 C352 34 348 36 346 40 C344 44 346 50 350 55Z" fill="#4A2A14"/>
+                <path d="M350 55 C354 50 360 46 366 44 C370 42 374 44 372 48 C368 52 362 54 356 55Z" fill="#4A2A14"/>
+                <path d="M366 44 C370 40 375 38 378 40 C375 44 370 46 366 44Z" fill="#3A1A0A"/>
+                <circle cx="350" cy="36" r="1.5" fill="#1A0A00"/>
+                <path d="M356 55 L358 68 L362 68" stroke="#4A2A14" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M352 55 L350 68 L354 68" stroke="#4A2A14" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M366 44 C370 42 374 44 372 48 C368 52 362 54 356 55 C360 50 364 46 366 44Z" fill="#5C3A1E"/>
+                <!-- Left side small branch -->
+                <path d="M150 62 C130 65 110 70 95 78" stroke="#5C3A1E" stroke-width="2.5" fill="none" opacity="0.6"/>
+                <path d="M120 68 C115 60 112 52 116 44 C120 52 120 60 120 68Z" fill="#6B3A2A" opacity="0.6"/>
+                <path d="M120 68 C130 60 138 55 148 52 C138 58 130 63 120 68Z" fill="#7D4A32" opacity="0.5"/>
+                <circle cx="100" cy="68" r="3.5" fill="#8B5A3A" opacity="0.5"/>
+                <!-- Right side small branch -->
+                <path d="M410 62 C430 65 450 70 465 78" stroke="#5C3A1E" stroke-width="2.5" fill="none" opacity="0.6"/>
+                <path d="M440 68 C445 60 448 52 444 44 C440 52 440 60 440 68Z" fill="#6B3A2A" opacity="0.6"/>
+                <path d="M440 68 C430 60 422 55 412 52 C422 58 430 63 440 68Z" fill="#7D4A32" opacity="0.5"/>
+                <circle cx="460" cy="68" r="3.5" fill="#8B5A3A" opacity="0.5"/>
+              </svg>
+            </div>
+
+            <!-- Inner Mountain Landscape Panel -->
+            <div class="frame-panel">
+              <div class="frame-scene">
+                <div class="scene-sky"></div>
+                <div class="scene-sun"></div>
+                <div class="scene-mountains-far"></div>
+                <div class="scene-mountains-mid"></div>
+                <div class="scene-forest"></div>
+                <div class="scene-fog f1"></div>
+                <div class="scene-fog f2"></div>
+                <div class="scene-cabin">
+                  <div class="scene-cabin-roof"></div>
+                  <div class="scene-cabin-body"></div>
+                  <div class="scene-cabin-window"></div>
+                </div>
+              </div>
+              <div class="frame-content">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 w-fit">
+                  <span class="material-symbols-outlined text-accent-gold text-sm">hotel_class</span>
+                  <span class="text-white/80 font-label-sm text-[11px] tracking-[0.2em] uppercase">Boutique Stays</span>
+                </div>
+                <h1 class="text-display-hero text-5xl md:text-7xl lg:text-8xl text-white font-display-hero leading-tight mt-6">
+                  <span class="reveal-word delay-100 block">Welcome</span>
+                  <span class="reveal-word delay-200 text-accent-gold italic block">Home.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 font-body-lg max-w-2xl fade-in-up delay-300 mt-4">
+                  Some places are built to impress. We built FAM to make people feel at home. Wake up to mountain views. Slow mornings. Warm conversations. Fresh coffee.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-6 fade-in-up delay-500">
+                  <a href="pages/rooms.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-on-primary font-label-sm tracking-widest uppercase hover:bg-primary transition-all hover:scale-105 shadow-lg">
+                    <span>Book Your Stay</span>
+                    <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                  </a>
+                  <a href="#story" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-accent-gold/50 text-white font-label-sm tracking-widest uppercase hover:bg-accent-gold/10 transition-all">
+                    Explore Rooms
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Badge -->
+            <div class="frame-badge">
+              <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <!-- Badge Leaves -->
+                <path d="M50 58 C42 50 32 48 22 52 C32 54 42 56 50 58Z" fill="#6B3A2A"/>
+                <path d="M50 58 C42 66 32 70 22 68 C32 66 42 62 50 58Z" fill="#7D4A32"/>
+                <path d="M150 58 C158 50 168 48 178 52 C168 54 158 56 150 58Z" fill="#6B3A2A"/>
+                <path d="M150 58 C158 66 168 70 178 68 C168 66 158 62 150 58Z" fill="#7D4A32"/>
+                <circle cx="25" cy="50" r="3" fill="#8B5A3A" opacity="0.6"/>
+                <circle cx="175" cy="50" r="3" fill="#8B5A3A" opacity="0.6"/>
+                <!-- Badge Shape -->
+                <path d="M60 18 C60 12 70 8 80 8 L120 8 C130 8 140 12 140 18 L140 65 C140 78 130 85 120 88 L100 95 L80 88 C70 85 60 78 60 65Z" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="2"/>
+                <path d="M66 22 C66 17 74 14 82 14 L118 14 C126 14 134 17 134 22 L134 62 C134 73 126 78 118 80 L100 86 L82 80 C74 78 66 73 66 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
+                <!-- Mountain Icon -->
+                <path d="M88 48 L100 24 L112 48Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.8"/>
+                <path d="M94 48 L100 32 L106 48Z" fill="#8B5A3A"/>
+                <!-- FAM Text -->
+                <text x="100" y="68" text-anchor="middle" fill="#3A1A0A" font-family="Georgia, serif" font-weight="bold" font-size="16" letter-spacing="4">F A M</text>
+                <!-- Welcome Home Text -->
+                <text x="100" y="80" text-anchor="middle" fill="#4A2A14" font-family="Georgia, serif" font-style="italic" font-size="8" letter-spacing="1">Welcome Home</text>
+              </svg>
+            </div>
+
+            <!-- Lantern -->
+            <div class="frame-lantern">
+              <svg viewBox="0 0 30 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <path d="M15 0 L15 12" stroke="#4A2A14" stroke-width="1.5"/>
+                <path d="M10 12 L20 12" stroke="#4A2A14" stroke-width="1.5"/>
+                <path d="M8 12 L8 40" stroke="#5C3A1E" stroke-width="1.2"/>
+                <path d="M22 12 L22 40" stroke="#5C3A1E" stroke-width="1.2"/>
+                <path d="M8 40 L22 40" stroke="#5C3A1E" stroke-width="1.2"/>
+                <path d="M10 40 L10 48 L20 48 L20 40" stroke="#5C3A1E" stroke-width="1"/>
+                <path d="M12 48 L18 48" stroke="#5C3A1E" stroke-width="1"/>
+                <path d="M15 48 L15 52" stroke="#5C3A1E" stroke-width="1"/>
+                <path d="M8 12 L6 12 L6 40 L8 40" fill="#4A2A14" opacity="0.4"/>
+                <path d="M22 12 L24 12 L24 40 L22 40" fill="#4A2A14" opacity="0.4"/>
+                <path d="M12 16 L18 16 L18 36 L12 36Z" fill="#D4A574" opacity="0.4"/>
+                <rect x="13" y="20" width="4" height="8" rx="1" fill="#F5DEB3" opacity="0.6"/>
+                <path d="M15 20 C14 16 16 14 15 10" stroke="#FFA500" stroke-width="1" fill="none" opacity="0.8"/>
+              </svg>
+            </div>
+
+            <!-- Shelf + Coffee Mug -->
+            <div class="frame-shelf">
+              <svg viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                <rect x="5" y="10" width="90" height="6" rx="1" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
+                <rect x="5" y="10" width="90" height="2" fill="#8B5A3A" opacity="0.3"/>
+                <path d="M15 16 L12 40 L18 40 L18 16" fill="#5C3A1E"/>
+                <path d="M82 16 L82 40 L88 40 L85 16" fill="#5C3A1E"/>
+                <rect x="28" y="2" width="22" height="8" rx="2" fill="#F5F0E8" stroke="#C8B8A0" stroke-width="0.5"/>
+                <path d="M50 4 L50 8 C50 10 54 10 54 8 L54 4" stroke="#C8B8A0" stroke-width="1" fill="none"/>
+                <text x="39" y="8" text-anchor="middle" fill="#6B3A2A" font-family="Georgia, serif" font-size="4" font-weight="bold">FAM</text>
+                <path d="M36 -2 C35 -5 37 -7 36 -10" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
+                <path d="M39 -2 C38 -6 40 -9 39 -12" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
+                <path d="M42 -2 C41 -5 43 -7 42 -10" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center lg:justify-end fade-in-up delay-700 mt-12 lg:mt-0 perspective-1000" data-card-parallax>
+          <div class="glass-panel p-8 rounded-xl shadow-2xl animate-float w-full max-w-sm">
+            <div class="flex flex-col gap-5">
+              <div class="flex items-center gap-4 border-b border-white/10 pb-4">
+                <div class="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                </div>
+                <span class="text-white font-body-lg font-medium tracking-wide">Jibhi, Himachal Pradesh</span>
+              </div>
+              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">landscape</span><span class="text-white/90 font-body-md">360&deg; Mountain Views</span></div>
+              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">nature</span><span class="text-white/90 font-body-md">Apple Orchard</span></div>
+              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">local_fire_department</span><span class="text-white/90 font-body-md">Bonfire Evenings</span></div>
+              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">coffee</span><span class="text-white/90 font-body-md">Tea &amp; Coffee</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator fade-in-up delay-700">
+      <span class="font-label-sm text-[10px] tracking-[0.2em] text-white/60">Scroll</span>
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ====== MOUNTAIN TIME EXPERIENCE ====== -->
+  <section class="mt-hero" id="mt-hero">
+    <div class="mt-hero-img-overlay">
+      <img
+        src="images/hero-bg.jpg"
+        alt="" />
+    </div>
+    <div class="mt-hero-content">
+      <div class="mt-icon-wrap">
+        <span class="mt-icon" id="mt-icon">&#x2600;&#xFE0F;</span>
+      </div>
+      <span class="mt-badge" id="mt-badge">Good Morning</span>
+      <h2 class="mt-headline" id="mt-headline">Wake up with the mountains.</h2>
+    </div>
+  </section>
+
+  <!-- ====== WELCOME HOME ====== -->
+  <section id="welcome" class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
+      <div class="md:col-span-7 img-container rounded-lg shadow-xl h-[400px] md:h-[600px] relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDChD6URBvMdJt1aM-0azn2L2FYPsgSF4Mv9I_R5nQgNWZpvlufxja5A3FxKoK3LTDR1_bj_AXzsqSyx9BIxCTziQMGsW76Niji84tnkxU7bmhWPXNUKDtfiAcmbBxDGpdW1QIEeqRIOL2m9YTvg8YUGqaOfNVLS3mfTdzj2VgoDklFXtFOO4zls3SlmnGy_Ad1l-zIJO1wPIjer8o1nKOYfJxIRrs_YPY5VdocZgThty1P5UoRAz8oS1D_qXM9XQhBhuFjkrDoZeo" alt="Morning sunlight over Himalayan mountains from the property" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="md:col-span-5 md:pl-12 mb-8 md:mb-0">
+        <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-2 block">Welcome Home</span>
+        <span class="font-body-md text-on-surface-variant italic block mb-6">(Flamingo &amp; Maina Birds)</span>
+        <div class="space-y-5 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+          <p>Some places are built to impress.</p>
+          <p>We built FAM to make people feel at home.</p>
+          <p>After spending nearly a decade in India's metro cities, our founders, Karanvir Singh Sapra and Rahul Yadav, returned to the mountains with a simple idea&mdash;to create the kind of place they would always want to come back to. A place where mornings begin with mountain views instead of alarms, where conversations need countless cups of tea, and where every guest is welcomed like an old friend.</p>
+          <p>Flamingo aur Maina (FAM) is nestled in the heart of Jibhi, surrounded by an apple orchard, 1.5 acres of open land, and uninterrupted 360&deg; mountain views. Every corner of the property has been thoughtfully designed to slow you down&mdash;from our cozy wooden cabins and comfortable rooms to our warm common spaces where we serve comforting food made with care.</p>
+          <p>But FAM isn't just about where you sleep.</p>
+          <p>It's about how you feel while you're here.</p>
+          <p>Whether you're escaping the city, working remotely, travelling with friends, celebrating something special, or simply looking for a quiet weekend, we hope you leave with more than just photographs.</p>
+          <p>We hope you leave with stories, friendships, and a reason to come back.</p>
+          <p>Because at FAM, we're not just hosting guests.</p>
+          <p>We're building a place people can belong to.</p>
+          <p><em class="text-accent-gold font-bold">Welcome home.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STORY CHAPTER 2 ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
+      <div class="md:col-span-5 md:pr-12 mb-8 md:mb-0">
+        <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Chapter 01</span>
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary leading-tight mb-6">A Journey Back Home</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Karanvir Singh Sapra and Rahul Yadav returned to the mountains, seeking the quiet strength of nature. What started as a personal retreat evolved into a shared sanctuary&mdash;a space curated with intentionality and profound respect for the landscape.</p>
+      </div>
+      <div class="md:col-span-7 img-container rounded-lg shadow-xl h-[400px] md:h-[600px] relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw6pZio4vFcZux0EkW3GrS3Y2Dupi297NFD-tEtNEAi_eXKU9sUn2kT9qPi-KKcS_17Jtk5_evjurv0knePcQlgVDcISnHF9-G6tAgwvkhKHnHNDR0zMmO59MpGCltkSBJdLvd7GOfIvqyFqTnXt4YAjocGsuyV1kbvqy2tOqZI7Eh2ACHlhL5stIsXSAjG1DdRwSvzpQyQuq-LiH20NKHAbmxTkVzwI-OZXeiwXOP55csVFIp3zYU8de2Pc1X2GIBsYzOI9CPfaI" alt="Founders enjoying tea on a wooden balcony overlooking mountains" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OUR VISION ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap text-center reveal">
+    <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Our Vision</span>
+    <h2 class="font-headline-lg text-3xl md:text-5xl text-primary mb-8 max-w-3xl mx-auto">Creating a Place Where Every Traveller Feels at Home</h2>
+    <div class="max-w-4xl mx-auto space-y-6 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+      <p>Our vision is to create a place where every traveller feels at home, reconnects with nature, builds meaningful memories, and experiences genuine mountain hospitality.</p>
+      <p>Inspired by our own journey back to the mountains, we believe true luxury is found in peace, warmth, meaningful conversations, and unforgettable moments.</p>
+      <p>At Flamingo aur Maina, we are not simply offering rooms.</p>
+      <p class="text-primary font-headline-md text-xl italic">We are creating a place where people belong and always look forward to returning.</p>
+    </div>
+  </section>
+
+  <!-- ====== PARALLAX DIVIDER ====== -->
+  <section class="w-full py-16 md:py-32 reveal">
+    <div class="max-w-max-width mx-auto px-4 md:px-margin-desktop mb-12 text-center">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Chapter 02</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary leading-tight">Built Around Nature</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-6">1.5 acres of open land, 360-degree mountain views. Architecture that doesn't dominate the landscape, but invites it inside.</p>
+    </div>
+    <div class="w-full h-[50vh] md:h-[70vh] relative parallax-bg rounded-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH-dj0QtkEbbKw02qnxG1lx4cMdiQ1j9jKPFHU0Uh3YRVLa_VJPtAFitgR1JAiABRzS9zFHBwuGUPaNfjG_1mzfkwDN8ueIf4sRnNsvzlGyUKcKKFPb1b3FQH__BGSF2F0DZe0eAz9NlFx23N70r7bX4MfujZl68sBTpmUCM1y8iHKKNmeDDinMFRWONdtEI-0FLpbD1cvAFLeccN85tPyl9hXcxb6xJicV3gPpgz3Ojj0otK4IVXVn6MibhvHWM0a-M2oOWCAZJk')">
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+  </section>
+
+  <!-- ====== GALLERY PREVIEW ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap text-center reveal">
+    <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Moments at FAM</span>
+    <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">A Glimpse of Paradise</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16">Every corner of FAM tells a story. From the misty mountains to the quiet corners of our cozy retreat.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:100ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Luxurious hotel suite with mountain views" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:200ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Cozy attic bedroom with skylight" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:300ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28" alt="Outdoor dining terrace overlooking pool" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+    </div>
+    <a href="pages/gallery.html" class="btn-secondary mt-12 inline-flex">View Full Gallery</a>
+  </section>
+
+  <!-- ====== QUOTE DIVIDER ====== -->
+  <section class="py-24 md:py-32 bg-surface-container-low text-center reveal">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="material-symbols-outlined text-5xl text-primary/30 mb-6 block">format_quote</span>
+      <blockquote class="font-headline-lg text-3xl md:text-4xl text-primary italic text-balance leading-snug">
+        &ldquo;Luxury isn't measured by marble floors. It's measured by how at home you feel.&rdquo;
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ====== ROOMS PREVIEW ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="text-center mb-16">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Stay With Us</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Spaces Designed to Feel Like Home</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Every room at Flamingo aur Maina has been thoughtfully designed to combine mountain charm, modern comfort, and peaceful living.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Flamingo 1 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrzL8aFnw29G--xO0xB7cJw5bUF6iErudebJK_udr_C-zjP4VVlPtTWtaytwm4XB9bodkmUPBFKrwg5wyEST0zHHzbh0yonox_YJAvHikynJjdiUhZFewW5B-CsIt8NgwdA3jZp77wdsLitsm4LimVKuNeWhudbzgqJBAT5IPUysrbNaWPH2y-7GiKzxfxaF6_4Lm1WjF9TxgQVW_6qgR5P0LdecGYW9beSuPCGHckRsHLUSsMdykqIEYZNHQqm2lcRClynYC64wM" alt="Flamingo 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 1</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Flamingo 2 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:80ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Flamingo 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">King Attic</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 2</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;5,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Flamingo 3 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:160ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28" alt="Flamingo 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 3</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 1 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:240ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Maina 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 1</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 2 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:320ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Maina 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 2</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 3 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:400ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Maina 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 3</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="pages/rooms.html" class="btn-primary">View All Rooms</a>
+    </div>
+  </section>
+
+  <!-- ====== AI TRIP PLANNER ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap" id="ai-trip-planner">
+    <div class="text-center mb-10 reveal">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">AI Trip Planner</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Plan Your Perfect Mountain Escape</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Answer a few simple questions and let FAM create your personalized Jibhi itinerary.</p>
+    </div>
+
+    <div class="trip-planner-wrap reveal">
+      <!-- LEFT: Illustration -->
+      <div class="tp-illustration">
+        <svg viewBox="0 0 500 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tpSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8dcc8"/>
+              <stop offset="100%" stop-color="#f8f4ec"/>
+            </linearGradient>
+            <linearGradient id="tpSunG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C9A86A"/>
+              <stop offset="100%" stop-color="#b8925a"/>
+            </linearGradient>
+            <filter id="tpGlowF">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="tpShadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+          </defs>
+          <rect width="500" height="550" fill="url(#tpSky)" rx="24"/>
+          <!-- Sun -->
+          <circle cx="380" cy="130" r="32" fill="#C9A86A" opacity="0.12" filter="url(#tpGlowF)"/>
+          <circle class="tp-float" cx="380" cy="130" r="18" fill="url(#tpSunG)" style="animation-delay:0s"/>
+          <!-- Clouds -->
+          <g class="tp-cloud" opacity="0.4" style="animation-delay:0s">
+            <ellipse cx="100" cy="95" rx="38" ry="12" fill="#fff"/>
+            <ellipse cx="125" cy="89" rx="26" ry="10" fill="#fff" opacity="0.7"/>
+          </g>
+          <g class="tp-cloud" opacity="0.3" style="animation-delay:2s">
+            <ellipse cx="320" cy="75" rx="30" ry="9" fill="#fff"/>
+            <ellipse cx="340" cy="70" rx="20" ry="7" fill="#fff" opacity="0.6"/>
+          </g>
+          <!-- Birds -->
+          <g opacity="0.25" class="tp-float" style="animation-delay:0.6s">
+            <path d="M220,110 Q228,104 236,110 Q244,104 252,110" stroke="#0a341d" fill="none" stroke-width="1.5"/>
+          </g>
+          <g opacity="0.2" class="tp-float" style="animation-delay:1.2s">
+            <path d="M265,95 Q272,90 279,95 Q286,90 293,95" stroke="#0a341d" fill="none" stroke-width="1.2"/>
+          </g>
+          <!-- Mountain layer 1 (back) -->
+          <path d="M0,340 L50,270 L90,300 L130,240 L180,280 L230,220 L280,270 L330,230 L370,260 L420,200 L460,240 L500,210 L500,400 L0,400 Z" fill="#234b32" opacity="0.35" class="tp-mtn" style="animation-delay:0s"/>
+          <!-- Mountain layer 2 (mid) -->
+          <path d="M0,380 L40,320 L80,350 L140,290 L190,330 L250,270 L310,320 L360,280 L410,310 L450,260 L500,300 L500,450 L0,450 Z" fill="#1a3d28" opacity="0.5" class="tp-mtn" style="animation-delay:0.3s"/>
+          <!-- Mountain layer 3 (front) -->
+          <path d="M0,420 L60,370 L120,400 L180,350 L230,380 L300,330 L360,370 L420,340 L470,370 L500,350 L500,500 L0,500 Z" fill="#0a341d" opacity="0.7" class="tp-mtn" style="animation-delay:0.6s"/>
+          <!-- Snow caps -->
+          <polygon points="230,220 222,240 238,240" fill="#f8f4ec" opacity="0.8"/>
+          <polygon points="420,200 412,220 428,220" fill="#f8f4ec" opacity="0.8"/>
+          <polygon points="300,330 293,348 307,348" fill="#f8f4ec" opacity="0.6"/>
+          <!-- Pine trees -->
+          <g opacity="0.3">
+            <polygon points="70,420 78,370 86,420" fill="#0a341d"/>
+            <polygon points="160,410 168,365 176,410" fill="#0a341d"/>
+            <polygon points="340,400 348,350 356,400" fill="#0a341d"/>
+            <polygon points="420,410 427,365 434,410" fill="#0a341d"/>
+          </g>
+          <!-- River -->
+          <path d="M400,320 Q410,350 395,380 Q380,410 390,440 Q400,470 395,500" stroke="#C9A86A" stroke-width="2.5" fill="none" opacity="0.2"/>
+          <path d="M402,320 Q412,350 397,380 Q382,410 392,440 Q402,470 397,500" stroke="#C9A86A" stroke-width="1" fill="none" opacity="0.1"/>
+          <!-- Trail -->
+          <path d="M180,480 Q220,450 280,430 Q340,410 380,380 Q420,350 440,300" stroke="#0a341d" stroke-width="1.5" fill="none" opacity="0.08" stroke-dasharray="4 4"/>
+          <!-- Floating travel icons -->
+          <text x="70" y="175" font-size="22" class="tp-float" style="animation-delay:0.2s">&#9992;</text>
+          <text x="410" y="290" font-size="20" class="tp-float" style="animation-delay:1s">&#128247;</text>
+          <text x="140" y="240" font-size="18" class="tp-float" style="animation-delay:0.7s">&#9749;</text>
+          <text x="340" y="420" font-size="20" class="tp-float" style="animation-delay:1.5s">&#129496;</text>
+          <text x="220" y="390" font-size="16" class="tp-float" style="animation-delay:0.4s">&#127826;</text>
+          <text x="60" y="320" font-size="18" class="tp-float" style="animation-delay:1.8s">&#127797;</text>
+          <!-- Bottom whisper -->
+          <text x="250" y="535" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#0a341d" opacity="0.12" font-style="italic">Begin your story in the mountains</text>
+        </svg>
+      </div>
+
+      <!-- RIGHT: Planner Card -->
+      <div class="tp-card" id="planner-card">
+        <div class="tp-badge"><span>&#10024;</span> AI Trip Planner</div>
+        <h3>Plan Your Perfect Mountain Escape</h3>
+        <p class="tp-desc">Answer a few simple questions and let FAM create your personalized Jibhi itinerary.</p>
+
+        <!-- Progress -->
+        <div class="tp-progress">
+          <div class="tp-progress-bar"><div class="tp-progress-fill" id="tp-fill"></div></div>
+          <div class="tp-step-dots" id="tp-dots">
+            <span class="tp-step-dot active" data-s="1">1</span>
+            <span class="tp-step-dot" data-s="2">2</span>
+            <span class="tp-step-dot" data-s="3">3</span>
+            <span class="tp-step-dot" data-s="4">4</span>
+            <span class="tp-step-dot" data-s="5">5</span>
+          </div>
+        </div>
+
+        <!-- Step content -->
+        <div id="tp-content"></div>
+
+        <!-- Navigation -->
+        <div class="tp-nav" id="tp-nav">
+          <button class="tp-btn tp-btn-back hidden" id="tp-back">&#8592; Back</button>
+          <div></div>
+          <button class="tp-btn tp-btn-next" id="tp-next">Next &#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var state = { step: 1, traveler: null, days: null, budget: null, interests: [] };
+    var content = document.getElementById('tp-content');
+    var fill = document.getElementById('tp-fill');
+    var dots = document.getElementById('tp-dots');
+    var backBtn = document.getElementById('tp-back');
+    var nextBtn = document.getElementById('tp-next');
+
+    var steps = {
+      1: { label: 'Step 1', question: 'Who are you travelling with?', type: 'traveler' },
+      2: { label: 'Step 2', question: 'How many days?', type: 'days' },
+      3: { label: 'Step 3', question: 'What\'s your budget?', type: 'budget' },
+      4: { label: 'Step 4', question: 'What interests you? (select all that apply)', type: 'interests' },
+      5: { label: 'Step 5', question: 'Ready to plan your escape?', type: 'generate' }
+    };
+
+    var travelers = [
+      { id:'couple', icon:'&#10084;&#65039;', label:'Couple' },
+      { id:'family', icon:'&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;', label:'Family' },
+      { id:'friends', icon:'&#128101;', label:'Friends' },
+      { id:'solo', icon:'&#127934;', label:'Solo' }
+    ];
+
+    var dayOpts = [
+      { id:1, label:'1 Day' }, { id:2, label:'2 Days' }, { id:3, label:'3 Days' },
+      { id:4, label:'4 Days' }, { id:5, label:'5+ Days' }
+    ];
+
+    var budgetOpts = [
+      { id:'budget', label:'&#8377;5,000', sub:'Budget Friendly' },
+      { id:'moderate', label:'&#8377;10,000', sub:'Comfortable' },
+      { id:'premium', label:'&#8377;20,000', sub:'Premium' },
+      { id:'luxury', label:'Luxury', sub:'Experience' }
+    ];
+
+    var interestOpts = [
+      { id:'cafe', icon:'&#9749;', label:'Coffee &amp; Snacks' },
+      { id:'trekking', icon:'&#129496;', label:'Trekking' },
+      { id:'photography', icon:'&#128247;', label:'Photography' },
+      { id:'bonfire', icon:'&#128293;', label:'Bonfire' },
+      { id:'nature', icon:'&#127796;', label:'Nature' },
+      { id:'workcation', icon:'&#128187;', label:'Workcation' },
+      { id:'orchard', icon:'&#127822;', label:'Apple Orchard' },
+      { id:'stargazing', icon:'&#127776;', label:'Stargazing' },
+      { id:'relaxation', icon:'&#129720;', label:'Relaxation' }
+    ];
+
+    var roomData = {
+      couple: { name:'Flamingo 2', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI', guests:'2 Guests', price:'&#8377;5,000 / night (incl. GST)', desc:'A cozy attic retreat with a skylight, heater, and bonfire — perfect for a romantic mountain escape.' },
+      solo: { name:'Maina 2', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI', guests:'1 Guest', price:'&#8377;2,000 / night (incl. GST)', desc:'A compact, cosy private room with valley views and a peaceful nook for quiet reflection.' },
+      friends: { name:'Flamingo 1', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBrzL8aFnw29G--xO0xB7cJw5bUF6iErudebJK_udr_C-zjP4VVlPtTWtaytwm4XB9bodkmUPBFKrwg5wyEST0zHHzbh0yonox_YJAvHikynJjdiUhZFewW5B-CsIt8NgwdA3jZp77wdsLitsm4LimVKuNeWhudbzgqJBAT5IPUysrbNaWPH2y-7GiKzxfxaF6_4Lm1WjF9TxgQVW_6qgR5P0LdecGYW9beSuPCGHckRsHLUSsMdykqIEYZNHQqm2lcRClynYC64wM', guests:'4 Guests', price:'&#8377;6,000 / night (incl. GST)', desc:'A spacious duplex with mountain views, Wi-Fi, heater, bonfire, and a private sit-out — ideal for groups.' },
+      family: { name:'Flamingo 3', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28', guests:'4 Guests', price:'&#8377;6,000 / night (incl. GST)', desc:'A generous duplex with garden access, heater, bonfire, and tea/coffee — built for family comfort.' }
+    };
+
+    var interestAddons = {
+      cafe: 'Relax in the garden with hot coffee &amp; snacks',
+      trekking: 'Guided nature trek through pine forests',
+      photography: 'Photography walk at golden hour',
+      bonfire: 'Bonfire under the stars',
+      nature: 'Nature walk through the apple orchard',
+      workcation: 'Work from the garden with mountain views',
+      orchard: 'Apple orchard tour &amp; fresh apple tasting',
+      stargazing: 'Stargazing session under clear mountain skies',
+      relaxation: 'Yoga &amp; meditation by the riverside'
+    };
+
+    var dayPlans = {
+      1: [ { d:1, acts:['Check in at FAM','Settle into your room','Relax in Apple Orchard','Bonfire Evening'] } ],
+      2: [ { d:1, acts:['Check in at FAM','Explore Jibhi Village','Photography walk','Bonfire Evening'] }, { d:2, acts:['Visit Jibhi Waterfall','Morning tea in the garden','Nature walk','Departure'] } ],
+      3: [ { d:1, acts:['Check in at FAM','Relax in Apple Orchard','Explore the property','Bonfire Evening'] }, { d:2, acts:['Jalori Pass Excursion','Serolsar Lake Trek','Photography Stop','Evening relax at FAM'] }, { d:3, acts:['Jibhi Waterfall','Morning tea in garden','Checkout'] } ],
+      4: [ { d:1, acts:['Check in at FAM','Explore the property','Bonfire Evening'] }, { d:2, acts:['Jalori Pass','Serolsar Lake Trek','Photography walk','Evening relax'] }, { d:3, acts:['Chehni Kothi Visit','Mini Thailand','Evening river walk','Bonfire Night'] }, { d:4, acts:['Jibhi Waterfall','Morning tea','Checkout'] } ],
+      5: [ { d:1, acts:['Check in at FAM','Relax &amp; settle in','Bonfire welcome'] }, { d:2, acts:['Jalori Pass Excursion','Serolsar Lake Trek','Photography stop','Evening relax at FAM'] }, { d:3, acts:['Great Himalayan NP Trek','Picnic lunch','Wildlife spotting','Return to FAM'] }, { d:4, acts:['Chehni Kothi Visit','Mini Thailand','River walk','Farewell bonfire'] }, { d:5, acts:['Jibhi Waterfall','Morning tea','Checkout'] } ]
+    };
+
+    function insertAddons(acts, interests) {
+      var result = acts.slice();
+      interests.forEach(function(id){
+        if (interestAddons[id]) {
+          var insertAt = Math.min(result.length - 1, Math.floor(result.length / 2));
+          result.splice(insertAt, 0, interestAddons[id]);
+        }
+      });
+      return result;
+    }
+
+    function generate() {
+      var plan = dayPlans[state.days] || dayPlans[3];
+      var traveler = state.traveler || 'couple';
+      var itinerary = plan.map(function(day){
+        var acts = day.acts.slice();
+        acts = insertAddons(acts, state.interests);
+        // Traveler-specific modifier
+        if (traveler === 'couple') {
+          acts.splice(1,0,'Romantic candlelight dinner setup');
+        } else if (traveler === 'family') {
+          acts.splice(2,0,'Family game night');
+        } else if (traveler === 'friends') {
+          acts.splice(2,0,'Group music night');
+        } else if (traveler === 'solo') {
+          acts.splice(1,0,'Solo journaling time at Caf&eacute;');
+        }
+        return { day: day.d, acts: acts };
+      });
+      return itinerary;
+    }
+
+    function getBudgetLabel(b) {
+      var map = { budget:'&#8377;5,000 - &#8377;8,000', moderate:'&#8377;10,000 - &#8377;15,000', premium:'&#8377;20,000 - &#8377;25,000', luxury:'&#8377;30,000+' };
+      return map[b] || 'Custom';
+    }
+
+    function getPacking(traveler, days) {
+      var base = ['Warm jacket','Comfortable shoes','Power bank','Water bottle','Toiletries'];
+      if (state.interests.indexOf('trekking') !== -1) base.push('Trekking poles','Snacks');
+      if (days > 3) base.push('Laundry bag','Extra socks');
+      if (state.interests.indexOf('photography') !== -1) base.push('Camera');
+      return base.slice(0,5+Math.min(days,2));
+    }
+
+    function getBestTime(traveler) {
+      if (traveler === 'family') return 'March-June, Sept-Oct';
+      if (traveler === 'solo') return 'Year-round';
+      return 'March-June, Sept-November';
+    }
+
+    function getAttractions() {
+      if (state.interests.length === 0) return 'Jibhi Waterfall, Jalori Pass, Serolsar Lake';
+      var map = { cafe:'Garden Cafe', trekking:'Forest Trails', photography:'Jalori Pass', bonfire:'FAM Bonfire Pit', nature:'Apple Orchard', workcation:'Garden Workspace', orchard:'Apple Orchard', stargazing:'Open Terrace', relaxation:'River Bank' };
+      var names = state.interests.map(function(i){ return map[i]; }).filter(Boolean);
+      return names.slice(0,4).join(', ');
+    }
+
+    function updateUI() {
+      // Progress
+      var pct = ((state.step - 1) / 4) * 100;
+      fill.style.width = pct + '%';
+      dots.querySelectorAll('.tp-step-dot').forEach(function(d){
+        var s = parseInt(d.getAttribute('data-s'));
+        d.classList.toggle('active', s === state.step);
+        d.classList.toggle('done', s < state.step);
+      });
+
+      // Back button
+      backBtn.classList.toggle('hidden', state.step === 1);
+
+      // Render step
+      renderStep();
+
+      // Next button
+      if (state.step === 5) {
+        nextBtn.textContent = 'Generate My Trip &#8594;';
+        nextBtn.disabled = false;
+      } else if (state.step === 4) {
+        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.disabled = state.interests.length === 0;
+      } else if (state.step === 3) {
+        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.disabled = !state.budget;
+      } else if (state.step === 2) {
+        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.disabled = !state.days;
+      } else if (state.step === 1) {
+        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.disabled = !state.traveler;
+      }
+    }
+
+    function renderStep() {
+      var info = steps[state.step];
+      var html = '<div class="tp-step"><div class="tp-step-label">' + info.label + '</div>';
+      html += '<div class="tp-step-question">' + info.question + '</div>';
+
+      if (state.step === 1) {
+        html += '<div class="tp-options col2">';
+        travelers.forEach(function(t){
+          var sel = state.traveler === t.id ? ' selected' : '';
+          html += '<div class="tp-option' + sel + '" data-val="' + t.id + '"><span class="tp-option-icon">' + t.icon + '</span><span class="tp-option-label">' + t.label + '</span></div>';
+        });
+        html += '</div>';
+      } else if (state.step === 2) {
+        html += '<div class="tp-pills">';
+        dayOpts.forEach(function(o){
+          var sel = state.days === o.id ? ' selected' : '';
+          html += '<span class="tp-pill' + sel + '" data-val="' + o.id + '">' + o.label + '</span>';
+        });
+        html += '</div>';
+      } else if (state.step === 3) {
+        html += '<div class="tp-options col4">';
+        budgetOpts.forEach(function(o){
+          var sel = state.budget === o.id ? ' selected' : '';
+          html += '<div class="tp-option budget-card' + sel + '" data-val="' + o.id + '"><span class="tp-price">' + o.label + '</span><span class="tp-option-sub">' + o.sub + '</span></div>';
+        });
+        html += '</div>';
+      } else if (state.step === 4) {
+        html += '<div class="tp-chips">';
+        interestOpts.forEach(function(o){
+          var sel = state.interests.indexOf(o.id) !== -1 ? ' selected' : '';
+          html += '<span class="tp-chip' + sel + '" data-val="' + o.id + '">' + o.icon + ' ' + o.label + '</span>';
+        });
+        html += '</div>';
+      } else if (state.step === 5) {
+        html += '<p style="font-size:14px;color:#414942;line-height:1.7;margin-bottom:12px;">We\'ll create a personalized itinerary based on your preferences. Click the button below to generate your perfect Jibhi escape.</p>';
+        var summary = '';
+        summary += '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">';
+        if (state.traveler) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + (state.traveler.charAt(0).toUpperCase() + state.traveler.slice(1)) + '</span>';
+        if (state.days) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + state.days + ' Day' + (state.days > 1 ? 's' : '') + '</span>';
+        if (state.budget) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + getBudgetLabel(state.budget) + '</span>';
+        summary += '</div>';
+        html += summary;
+        html += '<button class="tp-generate" id="tp-gen-btn"><span>Generate My Trip</span> <span style="font-size:18px;">&#8594;</span></button>';
+      }
+
+      html += '</div>';
+      content.innerHTML = html;
+
+      // Bind events
+      content.querySelectorAll('.tp-option').forEach(function(el){
+        el.addEventListener('click', function(){
+          var val = el.getAttribute('data-val');
+          if (state.step === 1) {
+            state.traveler = val;
+            el.parentElement.querySelectorAll('.tp-option').forEach(function(e){ e.classList.remove('selected'); });
+          } else if (state.step === 3) {
+            state.budget = val;
+            el.parentElement.querySelectorAll('.tp-option').forEach(function(e){ e.classList.remove('selected'); });
+          }
+          el.classList.add('selected');
+          updateUI();
+        });
+      });
+
+      content.querySelectorAll('.tp-pill').forEach(function(el){
+        el.addEventListener('click', function(){
+          state.days = parseInt(el.getAttribute('data-val'));
+          el.parentElement.querySelectorAll('.tp-pill').forEach(function(e){ e.classList.remove('selected'); });
+          el.classList.add('selected');
+          updateUI();
+        });
+      });
+
+      content.querySelectorAll('.tp-chip').forEach(function(el){
+        el.addEventListener('click', function(){
+          var val = el.getAttribute('data-val');
+          var idx = state.interests.indexOf(val);
+          if (idx !== -1) { state.interests.splice(idx, 1); el.classList.remove('selected'); }
+          else { state.interests.push(val); el.classList.add('selected'); }
+          updateUI();
+        });
+      });
+
+      var genBtn = document.getElementById('tp-gen-btn');
+      if (genBtn) {
+        genBtn.addEventListener('click', function(e){
+          e.preventDefault();
+          genBtn.classList.add('loading');
+          genBtn.innerHTML = '<span class="tp-spinner"></span><span>Generating your perfect trip...</span>';
+          genBtn.disabled = true;
+          setTimeout(function(){ showResult(); }, 1800);
+        });
+      }
+    }
+
+    function showResult() {
+      var itinerary = generate();
+      var room = roomData[state.traveler] || roomData.couple;
+      var days = state.days || 3;
+      var traveler = state.traveler || 'couple';
+
+      var html = '<div class="tp-result">';
+      html += '<div class="tp-result-badge"><span>&#10004;&#65039;</span> Your Personalized Itinerary is Ready</div>';
+      html += '<h4>Your Jibhi Escape</h4>';
+
+      // Days
+      itinerary.forEach(function(day){
+        html += '<div class="tp-day"><div class="tp-day-title">DAY ' + day.day + '</div><ul class="tp-day-list">';
+        day.acts.forEach(function(a){
+          html += '<li>' + a + '</li>';
+        });
+        html += '</ul></div>';
+      });
+
+      // Recommended room
+      html += '<div class="tp-room-card">';
+      html += '<img src="' + room.img + '" alt="' + room.name + '" loading="lazy">';
+      html += '<div class="tp-room-info"><h5>' + room.name + '</h5>';
+      html += '<div class="tp-room-tags"><span>' + room.guests + '</span><span>' + room.price + '</span></div>';
+      html += '<p>' + room.desc + '</p>';
+      html += '<a href="pages/rooms.html" class="tp-room-book">Book Now &#8594;</a>';
+      html += '</div></div>';
+
+      // Summary
+      html += '<div class="tp-summary-card"><h5>Trip Summary</h5><div class="tp-summary-grid">';
+      html += '<div class="tp-summary-item"><strong>Budget</strong>' + getBudgetLabel(state.budget || 'moderate') + '</div>';
+      html += '<div class="tp-summary-item"><strong>Duration</strong>' + days + ' Day' + (days > 1 ? 's' : '') + '</div>';
+      html += '<div class="tp-summary-item"><strong>Attractions</strong>' + getAttractions() + '</div>';
+      html += '<div class="tp-summary-item"><strong>Packing</strong>' + getPacking(traveler, days).join(', ') + '</div>';
+      html += '<div class="tp-summary-item" style="grid-column:1/-1;"><strong>Best Time</strong>' + getBestTime(traveler) + '</div>';
+      html += '</div></div>';
+
+      // Export buttons
+      html += '<div class="tp-export">';
+      html += '<button class="tp-export-btn" onclick="alert(\'PDF download coming soon. Your itinerary will be available as a beautifully formatted PDF.\')"><span>&#128196;</span> Download Itinerary</button>';
+      html += '<button class="tp-export-btn" onclick="if(navigator.share){navigator.share({title:\'My Jibhi Trip at Flamingo aur Maina\',text:\'Check out my personalized itinerary from FAM!\',url:window.location.href})}else{prompt(\'Copy this link to share:\',window.location.href)}"><span>&#128228;</span> Share Trip</button>';
+      html += '<a href="pages/rooms.html" class="tp-export-btn solid"><span>&#128205;</span> Book Recommended Room</a>';
+      html += '</div>';
+
+      html += '</div>';
+      content.innerHTML = html;
+      content.querySelector('.tp-result').style.animation = 'none';
+      void content.querySelector('.tp-result').offsetHeight;
+      content.querySelector('.tp-result').style.animation = '';
+
+      // Hide nav, show restart
+      document.getElementById('tp-nav').innerHTML = '<div></div><button class="tp-btn tp-btn-next" onclick="location.reload()">Plan Another Trip &#8594;</button>';
+    }
+
+    function goTo(n) {
+      state.step = Math.max(1, Math.min(5, n));
+      updateUI();
+    }
+
+    backBtn.addEventListener('click', function(){ goTo(state.step - 1); });
+    nextBtn.addEventListener('click', function(){
+      if (state.step === 5) {
+        var genBtn = document.getElementById('tp-gen-btn');
+        if (genBtn) { genBtn.click(); }
+        return;
+      }
+      if (state.step === 4 && state.interests.length === 0) return;
+      if (state.step === 3 && !state.budget) return;
+      if (state.step === 2 && !state.days) return;
+      if (state.step === 1 && !state.traveler) return;
+      goTo(state.step + 1);
+    });
+
+    updateUI();
+  })();
+  </script>
+
+  <!-- ====== CTA SECTION ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="relative w-full h-[500px] rounded-[3rem] overflow-hidden flex flex-col justify-center items-center text-center px-8">
+      <div class="absolute inset-0 z-0 parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDadx8bWjHH5cRqMoFbR_LdcYa4CxHl3FFV9NsqEp9XtvIQh_uqQa45hQ2Cod6q38T6ya0IMd0KBa91W2Hwen3fFK3tUV3-OdkAmlBw1eQCE84R43TaCIjwe6gyYNOyIjbDrySAhi8GMO8zPNh4YMELlQ7MqEQGS5c8l8DSVDbyYEFV4iA2k3EkiX6S_OvkZvSob2MEOEEgoGHkZ1kfs6VzIWXsHw1O0uRbQ1bdTYGBXZAtS3a3Po4KFyKlHsb0rnAJaX2wXzNnL7o')"></div>
+      <div class="absolute inset-0 bg-surface/80 z-10"></div>
+      <div class="relative z-20 max-w-2xl">
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-6">Find Your Perfect Stay.</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Every room has its own story. Choose the one that feels like yours.</p>
+        <a href="pages/rooms.html" class="btn-primary inline-flex items-center gap-2 text-base py-4 px-10">
+          <span>View All Availability</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact" class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="text-center mb-12">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Get in Touch</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Visit Us</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">We'd love to welcome you to FAM.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Address</h3>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Opposite Forest Rest House,<br/>
+            Rashala,<br/>
+            Jibhi,<br/>
+            Himachal Pradesh 175123
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Coordinates</h3>
+          <p class="text-on-surface-variant font-body-md">
+            31&deg; 34' 43.6598" N<br/>
+            77&deg; 22' 0.8252" E
+          </p>
+          <a href="https://www.google.com/maps?q=31.5787944,77.3668959" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-primary text-on-primary rounded-full font-label-sm text-sm uppercase tracking-widest hover:bg-primary-container transition-all duration-300">
+            <span class="material-symbols-outlined text-sm">map</span>
+            Get Directions
+          </a>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Property Manager</h3>
+          <a href="tel:9876575673" class="text-2xl md:text-3xl font-headline-md text-accent-gold hover:text-primary transition-colors block mb-2">98765 75673</a>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Founder</h3>
+          <a href="tel:9877381864" class="text-2xl md:text-3xl font-headline-md text-accent-gold hover:text-primary transition-colors block mb-2">98773 81864</a>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Email</h3>
+          <a href="mailto:flamingoaurmaina@gmail.com" class="text-lg font-body-md text-accent-gold hover:text-primary transition-colors break-all">flamingoaurmaina@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FINAL QUOTE ====== -->
+  <section class="max-w-3xl mx-auto px-4 text-center py-24 md:py-32 reveal">
+    <h2 class="font-headline-lg text-5xl md:text-7xl text-primary italic text-primary/90 leading-tight">
+      &ldquo;Welcome Home.&rdquo;
+    </h2>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-charcoal text-on-primary">
+    <div class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-16">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 border-b border-on-primary/10 pb-12">
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h3 class="font-headline-md text-2xl text-on-primary tracking-wider">Flamingo aur Maina</h3>
+          <p class="text-on-primary/60 font-body-md max-w-xs text-center md:text-left">A sanctuary of refined luxury and untold stories amidst nature's embrace.</p>
+        </div>
+        <div class="flex gap-16 text-center md:text-left">
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Explore</h4>
+            <a href="index.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Home</a>
+            <a href="pages/rooms.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Rooms</a>
+            <a href="pages/life.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Life at FAM</a>
+            <a href="pages/explore.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Explore</a>
+            <a href="pages/gallery.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Gallery</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Connect</h4>
+            <a href="pages/amenities.html" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Amenities</a>
+            <a href="#contact" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Contact Us</a>
+            <a href="#" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-primary/40 font-body-md">
+        <p>&copy; 2024 Flamingo aur Maina. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-on-primary transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-on-primary transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/shader.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/seasonal.js"></script>
+  <script src="js/mountain-time.js"></script>
+  <script src="js/concierge.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof initFogShaders === 'function') {
+        initFogShaders();
+      }
+      if (typeof FAM !== 'undefined' && FAM.Animations) {
+        FAM.Animations.init({ gsap: false, lenis: false });
+      }
+    });
+  </script>
+</body>
+</html>
