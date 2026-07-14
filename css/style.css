@@ -637,6 +637,13 @@ html.mode-winter ::selection {
   color: #fff;
 }
 
+/* ------ CSS Reset ------ */
+html, body, main, section, div, nav, header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 /* ------ Smooth Scroll ------ */
 html {
   scroll-behavior: smooth;
@@ -3713,12 +3720,12 @@ body.mobile-menu-open {
 
 /* ------ Fixed Navbar (pill shape) ------ */
 #main-nav {
-  border-radius: 9999px !important;
+  border-radius: 0 0 9999px 9999px !important;
   width: calc(100% - 2rem) !important;
   max-width: 1400px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  top: 8px !important;
+  top: 0;
   border: 1px solid rgba(193, 200, 192, 0.3) !important;
   padding-left: 8px !important;
   padding-right: 8px !important;
@@ -3731,7 +3738,7 @@ body.mobile-menu-open {
   max-width: 1400px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  top: 8px !important;
+  top: 8px;
   border: 1px solid rgba(193, 200, 192, 0.3) !important;
   padding-left: 8px !important;
   padding-right: 8px !important;
