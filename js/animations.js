@@ -55,9 +55,6 @@
 
   // ---- Navbar visibility ----
   FAM.Animations.initNavbar = function() {
-    const nav = document.getElementById('main-nav') || document.getElementById('navbar');
-    if (!nav) return;
-    nav.classList.add('nav-visible');
   };
 
   // ---- Glass Card 3D Mouse Parallax ----
