@@ -36,17 +36,11 @@ export default function HeroSection() {
         Welcome Home
       </motion.div>
 
-      <motion.div variants={item} className="hero-sub-label">
-        Luxury Boutique Café & Mountain Stays
+      <motion.div variants={item} className="hero-desc">
+        <p>Some places are built to impress.</p>
+        <p>We built FAM to make people feel at home.</p>
+        <p>Escape to the peaceful mountains of Jibhi, where breathtaking Himalayan views, cozy boutique stays, and heartfelt hospitality come together to create unforgettable memories.</p>
       </motion.div>
-
-      <motion.p variants={item} className="hero-tagline">
-        Some Places Stay in Your Heart Forever
-      </motion.p>
-
-      <motion.p variants={item} className="hero-desc">
-        Discover peaceful mornings, breathtaking mountain sunsets, cozy boutique stays, and unforgettable memories at Flamingo aur Maina. Nestled in the heart of Jibhi, FAM is a place where nature, comfort, and heartfelt hospitality come together to make every stay feel like home.
-      </motion.p>
 
       <motion.div variants={item} className="hero-btns">
         <a href="pages/rooms.html" className="hero-btn-primary">
