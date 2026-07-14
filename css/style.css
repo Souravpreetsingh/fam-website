@@ -3718,11 +3718,9 @@ main {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(248, 244, 236, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(193, 200, 192, 0.3);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  background: #f8f4ec;
+  border-bottom: 1px solid rgba(193, 200, 192, 0.5);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
 }
 .hero-nav.scrolled {
