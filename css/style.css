@@ -260,19 +260,24 @@ html.mode-winter .seasonal-toggle-btn.active {
 
 /* ------ Reduced Motion ------ */
 @media (prefers-reduced-motion: reduce) {
-  .seasonal-snowflake, .seasonal-grass::before,
-  .ken-burns, .animate-float, .bird-1, .bird-2, .bird-3,
-  .leaf, .leaf-2, .leaf-3, .fog-layer, .fog-layer-2,
-  .ember, .ember-2, .ember-3, .star, .star-2, .star-3,
-  .steam, .animate-scroll, .reveal-word, .fade-in-up,
-  .bounce-scroll, .bonfire-glow, .coffee-steam path,
-  .time-card-fog, .time-card-bird, .time-card-cloud,
-  .time-card-wind, .time-card-bonfire, .time-card-warm-light,
-  .time-card-moon-glow, .time-card-stars, .time-card-firefly {
-    animation: none !important;
-    opacity: 0 !important;
-    transition: none !important;
-  }
+    .seasonal-snowflake, .seasonal-grass::before,
+    .bird-1, .bird-2, .bird-3,
+    .leaf, .leaf-2, .leaf-3, .fog-layer, .fog-layer-2,
+    .ember, .ember-2, .ember-3, .star, .star-2, .star-3,
+    .steam, .animate-scroll, .reveal-word, .fade-in-up,
+    .bounce-scroll, .bonfire-glow, .coffee-steam path,
+    .time-card-fog, .time-card-bird, .time-card-cloud,
+    .time-card-wind, .time-card-bonfire, .time-card-warm-light,
+    .time-card-moon-glow, .time-card-stars, .time-card-firefly {
+      animation: none !important;
+      opacity: 0 !important;
+      transition: none !important;
+    }
+    .ken-burns {
+      animation: none !important;
+      opacity: 1 !important;
+      transition: none !important;
+    }
   .hero-seq {
     animation: none !important;
     opacity: 1 !important;
@@ -3709,30 +3714,28 @@ body.mobile-menu-open {
 /* ------ Fixed Navbar (pill shape) ------ */
 #main-nav {
   border-radius: 9999px !important;
-  max-width: calc(100% - 32px);
-  left: 16px;
-  right: 16px;
-  top: 16px;
+  width: calc(100% - 2rem) !important;
+  max-width: 1400px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: 8px !important;
+  border: 1px solid rgba(193, 200, 192, 0.3) !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
 }
 #main-nav > div {
   border-radius: 9999px;
 }
-#main-nav.fixed {
-  border-radius: 9999px !important;
-  max-width: calc(100% - 32px);
-  left: 16px;
-  right: 16px;
-  top: 16px;
-}
-#main-nav.fixed > div {
-  border-radius: 9999px;
-}
 #top-nav {
+  width: calc(100% - 2rem) !important;
+  max-width: 1400px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: 8px !important;
+  border: 1px solid rgba(193, 200, 192, 0.3) !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
   border-radius: 9999px !important;
-  max-width: calc(100% - 32px);
-  left: 16px;
-  right: 16px;
-  top: 16px;
 }
 #top-nav > div {
   border-radius: 9999px;
