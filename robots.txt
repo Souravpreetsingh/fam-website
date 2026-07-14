@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fam-mountain-retreat.vercel.app/sitemap.xml
