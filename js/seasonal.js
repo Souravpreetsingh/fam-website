@@ -44,6 +44,7 @@
   function spawnSnowflakes() {
     if (prefersReducedMotion) return;
     if (snowflakes.length > 0) return;
+    if (window.innerWidth < 768) return;
     for (var i = 0; i < SNOWFLAKE_COUNT; i++) {
       var flake = createSnowflake();
       snowflakes.push(flake);
@@ -89,36 +90,7 @@
     if (container) container.remove();
   }
 
-  /* --- Birds (green mode) --- */
-  function createBird(container) {
-    var el = document.createElement('div');
-    el.className = 'bird seasonal-bird';
-    el.style.cssText =
-      'position:fixed;pointer-events:none;z-index:50;font-size:22px;opacity:0.4;animation:birdFly linear infinite;user-select:none;';
-    el.style.top = 10 + Math.random() * 20 + '%';
-    el.style.animationDuration = 14 + Math.random() * 12 + 's';
-    el.style.animationDelay = -(Math.random() * 20) + 's';
-    el.textContent = '🐦';
-    container.appendChild(el);
-    return el;
-  }
-
-  function spawnBirds() {
-    if (prefersReducedMotion) return;
-    var container = document.getElementById('seasonal-birds');
-    if (container) container.remove();
-    container = document.createElement('div');
-    container.id = 'seasonal-birds';
-    document.body.appendChild(container);
-    for (var i = 0; i < 4; i++) {
-      createBird(container);
-    }
-  }
-
-  function destroyBirds() {
-    var container = document.getElementById('seasonal-birds');
-    if (container) container.remove();
-  }
+  /* --- Birds removed --- */
 
   /* --- Frost overlay --- */
   function ensureFrostOverlay() {
@@ -148,7 +120,6 @@
       html.classList.remove('mode-green');
       spawnSnowflakes();
       destroyLeaves();
-      destroyBirds();
       ensureFrostOverlay();
       ensureWinterGlow();
     } else {
@@ -156,7 +127,6 @@
       html.classList.add('mode-green');
       destroySnowflakes();
       spawnLeaves();
-      spawnBirds();
       var frost = document.querySelector('.seasonal-frost-overlay');
       if (frost) frost.remove();
       var glow = document.querySelector('.seasonal-winter-glow');

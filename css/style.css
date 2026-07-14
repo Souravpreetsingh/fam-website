@@ -15,18 +15,30 @@
   --mode-text-secondary: #414942;
   --mode-hero-overlay: linear-gradient(to right, rgba(27,27,27,0.8), rgba(27,27,27,0.4), transparent);
   --mode-hero-overlay-2: linear-gradient(to top, rgba(27,27,27,0.6), transparent);
+  --shadow-r: 0; --shadow-g: 0; --shadow-b: 0;
+  --gold-r: 201; --gold-g: 168; --gold-b: 106;
+  --gray-r: 193; --gray-g: 200; --gray-b: 192;
+  --forest-r: 10; --forest-g: 52; --forest-b: 29;
 }
 html.mode-winter {
-  --mode-primary: #1a3a5c;
-  --mode-primary-container: #2c5282;
+  --mode-primary: #1E3A8A;
+  --mode-primary-container: #1D4ED8;
+  --mode-heading: #050A14;
   --mode-accent: #e2e8f0;
-  --mode-bg: #eef2f7;
-  --mode-surface: #eef2f7;
-  --mode-overlay: rgba(44, 82, 130, 0.05);
-  --mode-shadow: rgba(26, 58, 92, 0.1);
-  --mode-text-secondary: #4a5568;
-  --mode-hero-overlay: linear-gradient(to right, rgba(15,25,45,0.85), rgba(15,25,45,0.45), transparent);
-  --mode-hero-overlay-2: linear-gradient(to top, rgba(15,25,45,0.65), transparent);
+  --mode-bg: #DAE2EE;
+  --mode-surface: #DAE2EE;
+  --mode-overlay: rgba(30, 58, 138, 0.08);
+  --mode-shadow: rgba(5, 10, 20, 0.12);
+  --mode-text-secondary: #2A3748;
+  --mode-hero-overlay: linear-gradient(to right, rgba(5,10,20,0.85), rgba(5,10,20,0.45), transparent);
+  --mode-hero-overlay-2: linear-gradient(to top, rgba(5,10,20,0.65), transparent);
+  --shadow-r: 5; --shadow-g: 10; --shadow-b: 20;
+  --gold-r: 226; --gold-g: 232; --gold-b: 240;
+  --gray-r: 180; --gray-g: 190; --gray-b: 200;
+  --forest-r: 30; --forest-g: 58; --forest-b: 138;
+  --cq-bg: rgba(255, 255, 255, 0.95);
+  --cq-border: rgba(180, 190, 200, 0.3);
+  --cq-shadow: 0 32px 72px -16px rgba(5, 10, 20, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 /* ------ Seasonal Mode: Smooth Transitions ------ */
@@ -208,8 +220,8 @@ html.mode-winter .seasonal-winter-glow {
   box-shadow: 0 2px 8px rgba(10, 52, 29, 0.2);
 }
 html.mode-winter .seasonal-toggle-btn.active {
-  background: #1a3a5c;
-  box-shadow: 0 2px 8px rgba(26, 58, 92, 0.2);
+  background: #1E3A8A;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
 }
 .seasonal-toggle-btn:hover:not(.active) {
   background: rgba(0,0,0,0.04);
@@ -623,6 +635,10 @@ html.mode-winter .seasonal-toggle-btn.active {
 ::selection {
   background: rgba(201, 168, 106, 0.3);
   color: #0a341d;
+}
+html.mode-winter ::selection {
+  background: rgba(30, 58, 138, 0.3);
+  color: #fff;
 }
 
 /* ------ Smooth Scroll ------ */
@@ -1334,9 +1350,11 @@ html.time-night .mt-bonfire {
    Premium Floating Booking Bar
    ============================================ */
 .booking-bar {
-  position: relative;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  right: 0;
   z-index: 20;
-  margin-top: -36px;
   padding: 0 16px;
 }
 .bb-container {
@@ -3231,8 +3249,8 @@ html.time-night .mt-bonfire {
 }
 .tp-room-tags span {
   font-size: 11px;
-  color: #414942;
-  background: rgba(10,52,29,0.05);
+  color: var(--mode-text-secondary);
+  background: rgba(var(--forest-r),var(--forest-g),var(--forest-b),0.05);
   padding: 2px 10px;
   border-radius: 9999px;
 }
@@ -3362,4 +3380,107 @@ html.time-night .mt-bonfire {
   .tp-option:hover, .tp-pill:hover, .tp-chip:hover { transform: none !important; }
   .tp-generate:hover, .tp-btn:hover { transform: none !important; }
   .tp-room-book:hover, .tp-export-btn:hover { transform: none !important; }
+}
+
+/* ============================================
+   Winter Mode Button Overrides
+   ============================================ */
+html.mode-winter .btn-primary,
+html.mode-winter .btn-primary:hover,
+html.mode-winter .btn-primary:active {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .btn-secondary,
+html.mode-winter .btn-secondary:hover,
+html.mode-winter .btn-secondary:active {
+  background: transparent !important;
+  color: #1E3A8A !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .hero-btn-primary,
+html.mode-winter .hero-btn-primary:hover {
+  background: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .hero-btn-secondary,
+html.mode-winter .hero-btn-secondary:hover {
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.5) !important;
+}
+html.mode-winter .bb-cta {
+  background: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .bb-cta:hover {
+  background: #1D4ED8 !important;
+}
+html.mode-winter .concierge-btn {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .concierge-btn.active {
+  background: #1D4ED8 !important;
+}
+html.mode-winter .concierge-send {
+  background: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .concierge-send:hover {
+  background: #1D4ED8 !important;
+}
+html.mode-winter .cq-rec-btn {
+  background: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .cq-rec-btn:hover {
+  background: #1D4ED8 !important;
+  box-shadow: 0 8px 24px rgba(30,58,138,0.25) !important;
+}
+html.mode-winter .cq-contact-btn {
+  border-color: #1E3A8A !important;
+  color: #1E3A8A !important;
+}
+html.mode-winter .tp-generate,
+html.mode-winter .tp-generate:hover {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .tp-btn-next,
+html.mode-winter .tp-btn-next:hover {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .tp-btn-back,
+html.mode-winter .tp-btn-back:hover {
+  color: #1E3A8A !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .tp-room-book,
+html.mode-winter .tp-room-book:hover {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .tp-export-btn,
+html.mode-winter .tp-export-btn:hover {
+  background: #1E3A8A !important;
+  color: #fff !important;
+  border-color: #1E3A8A !important;
+}
+html.mode-winter .tp-export-btn.solid {
+  background: #1E3A8A !important;
+  border-color: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .seasonal-toggle-btn.active {
+  background: #1E3A8A !important;
+  color: #fff !important;
+}
+html.mode-winter .tp-room-tags span {
+  color: var(--mode-heading, #050A14) !important;
 }

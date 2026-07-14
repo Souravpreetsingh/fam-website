@@ -53,18 +53,29 @@
     });
   };
 
-  // ---- Navbar Glass Scroll Effect ----
+  // ---- Navbar Reveal at 65% Scroll ----
   FAM.Animations.initNavbar = function() {
     const nav = document.getElementById('main-nav') || document.getElementById('navbar');
     if (!nav) return;
 
+    const revealAt = window.innerHeight * 0.65;
+    let revealed = false;
+
+    nav.classList.add('nav-hidden');
+
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('glass-nav', 'shadow-sm');
-        nav.classList.remove('bg-transparent');
+      if (window.scrollY > revealAt) {
+        if (!revealed) {
+          nav.classList.add('nav-visible');
+          nav.classList.remove('nav-hidden');
+          revealed = true;
+        }
       } else {
-        nav.classList.remove('glass-nav', 'shadow-sm');
-        nav.classList.add('bg-transparent');
+        if (revealed) {
+          nav.classList.remove('nav-visible');
+          nav.classList.add('nav-hidden');
+          revealed = false;
+        }
       }
     });
   };
