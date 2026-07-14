@@ -796,7 +796,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding-top: 80px;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 .hero-content-inner {
@@ -960,7 +960,7 @@ body {
   .hero-sub-label { font-size: 11px; letter-spacing: 4px; }
   .hero-tagline { font-size: clamp(18px, 4vw, 26px); }
   .hero-desc { font-size: 14px; }
-  .hero-content-wrap { padding-top: 64px; padding-bottom: 160px; }
+  .hero-content-wrap { padding-top: 64px; padding-bottom: 100px; }
   .hero-btn-primary,
   .hero-btn-secondary { padding: 14px 28px; font-size: 12px; }
 }
@@ -1465,13 +1465,12 @@ html.time-night .mt-bonfire {
    Premium Floating Booking Bar
    ============================================ */
 .booking-bar {
-  position: relative;
-  bottom: auto;
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 20;
-  width: 100%;
-  padding: 32px 16px 0;
+  padding: 0 16px 32px;
 }
 .bb-container {
   max-width: 1250px;
@@ -1728,7 +1727,7 @@ html.time-night .mt-bonfire {
   .bb-field { width: 100%; }
   .bb-summary { width: 100%; }
   .bb-cta { width: 100%; }
-  .booking-bar { padding: 0 12px; }
+  .booking-bar { padding: 0 12px 24px; }
 }
 
 /* ============================================
