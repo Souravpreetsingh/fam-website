@@ -758,37 +758,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
-}
-
-.hero-bg-wrap {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
   overflow: hidden;
 }
-
-.hero-bg-img {
+.hero-root::before {
+  content: '';
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  background: #1a1a1e url('/images/hero/luxury-hero.jpg') center top / cover no-repeat;
+  z-index: 0;
 }
 
 .hero-overlay-right {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgba(10, 10, 15, 0.75), rgba(10, 10, 15, 0.25), transparent);
+  z-index: 1;
 }
 
 .hero-overlay-bottom {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(10, 10, 15, 0.55), transparent);
+  z-index: 1;
 }
 
 .hero-content-wrap {
