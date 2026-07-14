@@ -142,36 +142,7 @@ tailwind.config = {
   </style>
 </head>
 <body class="antialiased overflow-x-hidden">
-  <!-- ====== NAVBAR ====== -->
-  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">
-    <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto rounded-full">
-      <div class="flex items-center gap-4">
-        <a href="index.html" class="font-headline-md text-headline-md text-primary tracking-tight">
-          <span class="inline-block size-8 align-middle mr-2">
-            <svg class="w-full h-full text-accent-gold" fill="none" viewBox="0 0 48 48">
-              <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 40C15.16 40 8 32.84 8 24C8 15.16 15.16 8 24 8C32.84 8 40 15.16 40 24C40 32.84 32.84 40 24 40Z" fill="currentColor"/>
-              <path d="M24 14C18.48 14 14 18.48 14 24C14 29.52 18.48 34 24 34C29.52 34 34 29.52 34 24C34 18.48 29.52 14 24 14ZM24 30C20.69 30 18 27.31 18 24C18 20.69 20.69 18 24 18C27.31 18 30 20.69 30 24C30 27.31 27.31 30 24 30Z" fill="currentColor"/>
-            </svg>
-          </span>
-          Flamingo aur Maina
-        </a>
-      </div>
-      <div class="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1 transition-colors" aria-current="page">Home</a>
-        <a href="pages/rooms.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Rooms</a>
-        <a href="pages/life.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Life at FAM</a>
-        <a href="pages/explore.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Explore</a>
-        <a href="pages/gallery.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Gallery</a>
-        <a href="pages/amenities.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
-        <button class="md:hidden text-primary p-2" id="mobile-menu-btn">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-      </div>
-    </div>
-  </nav>
+
 
   <!-- ====== MOBILE MENU ====== -->
   <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true"></div>
@@ -213,7 +184,8 @@ tailwind.config = {
 
     <div class="hero-content-wrap">
       <div class="hero-content-inner">
-        <div class="hero-label hero-seq hero-seq-1">
+        <div class="hero-text-wrap">
+          <div class="hero-label hero-seq hero-seq-1">
           FLAMINGO AUR MAINA
         </div>
         <h1 class="hero-fam hero-seq hero-seq-2">
@@ -236,96 +208,118 @@ tailwind.config = {
             Explore Rooms
           </a>
         </div>
-      </div>
-    </div>
-
-    <div class="booking-bar hero-fade-late">
-      <div class="bb-container">
-        <div class="bb-inner">
-          <div class="bb-field">
-            <label class="bb-label">Location</label>
-            <button class="bb-value">Jibhi, Himachal</button>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field" data-popover="checkin">
-            <label class="bb-label">Check-in</label>
-            <button class="bb-value" id="bb-checkin">Select date</button>
-            <div class="bb-popover" id="bb-popover-checkin">
-              <div class="bb-cal">
-                <div class="bb-cal-header">
-                  <button class="bb-cal-nav" id="bb-cal-prev">&#8592;</button>
-                  <span class="bb-cal-month" id="bb-cal-month"></span>
-                  <button class="bb-cal-nav" id="bb-cal-next">&#8594;</button>
-                </div>
-                <div class="bb-cal-grid" id="bb-cal-grid"></div>
+        </div>
+        <div class="booking-bar hero-fade-late">
+          <div class="bb-container">
+            <div class="bb-inner">
+              <div class="bb-field">
+                <label class="bb-label">Location</label>
+                <button class="bb-value">Jibhi, Himachal</button>
               </div>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field" data-popover="checkout">
-            <label class="bb-label">Check-out</label>
-            <button class="bb-value" id="bb-checkout">Select date</button>
-            <div class="bb-popover" id="bb-popover-checkout">
-              <div class="bb-cal">
-                <div class="bb-cal-header">
-                  <button class="bb-cal-nav" id="bb-cal-prev-out">&#8592;</button>
-                  <span class="bb-cal-month" id="bb-cal-month-out"></span>
-                  <button class="bb-cal-nav" id="bb-cal-next-out">&#8594;</button>
-                </div>
-                <div class="bb-cal-grid" id="bb-cal-grid-out"></div>
-              </div>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field" data-popover="guests">
-            <label class="bb-label">Guests</label>
-            <button class="bb-value" id="bb-guests">2 Adults</button>
-            <div class="bb-popover" id="bb-popover-guests">
-              <div class="bb-guest">
-                <div class="bb-guest-row">
-                  <div><div class="bb-guest-label">Adults</div><div class="bb-guest-sub">Age 18+</div></div>
-                  <div class="bb-counter">
-                    <button class="bb-counter-btn" id="bb-adults-minus">-</button>
-                    <span class="bb-counter-val" id="bb-adults-val">2</span>
-                    <button class="bb-counter-btn" id="bb-adults-plus">+</button>
-                  </div>
-                </div>
-                <div class="bb-guest-row">
-                  <div><div class="bb-guest-label">Children</div><div class="bb-guest-sub">Ages 2-12</div></div>
-                  <div class="bb-counter">
-                    <button class="bb-counter-btn" id="bb-children-minus">-</button>
-                    <span class="bb-counter-val" id="bb-children-val">0</span>
-                    <button class="bb-counter-btn" id="bb-children-plus">+</button>
+              <div class="bb-divider"></div>
+              <div class="bb-field" data-popover="checkin">
+                <label class="bb-label">Check-in</label>
+                <button class="bb-value" id="bb-checkin">Select date</button>
+                <div class="bb-popover" id="bb-popover-checkin">
+                  <div class="bb-cal">
+                    <div class="bb-cal-header">
+                      <button class="bb-cal-nav" id="bb-cal-prev">&#8592;</button>
+                      <span class="bb-cal-month" id="bb-cal-month"></span>
+                      <button class="bb-cal-nav" id="bb-cal-next">&#8594;</button>
+                    </div>
+                    <div class="bb-cal-grid" id="bb-cal-grid"></div>
                   </div>
                 </div>
               </div>
+              <div class="bb-divider"></div>
+              <div class="bb-field" data-popover="checkout">
+                <label class="bb-label">Check-out</label>
+                <button class="bb-value" id="bb-checkout">Select date</button>
+                <div class="bb-popover" id="bb-popover-checkout">
+                  <div class="bb-cal">
+                    <div class="bb-cal-header">
+                      <button class="bb-cal-nav" id="bb-cal-prev-out">&#8592;</button>
+                      <span class="bb-cal-month" id="bb-cal-month-out"></span>
+                      <button class="bb-cal-nav" id="bb-cal-next-out">&#8594;</button>
+                    </div>
+                    <div class="bb-cal-grid" id="bb-cal-grid-out"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="bb-divider"></div>
+              <div class="bb-field" data-popover="guests">
+                <label class="bb-label">Guests</label>
+                <button class="bb-value" id="bb-guests">2 Adults</button>
+                <div class="bb-popover" id="bb-popover-guests">
+                  <div class="bb-guest">
+                    <div class="bb-guest-row">
+                      <div><div class="bb-guest-label">Adults</div><div class="bb-guest-sub">Age 18+</div></div>
+                      <div class="bb-counter">
+                        <button class="bb-counter-btn" id="bb-adults-minus">-</button>
+                        <span class="bb-counter-val" id="bb-adults-val">2</span>
+                        <button class="bb-counter-btn" id="bb-adults-plus">+</button>
+                      </div>
+                    </div>
+                    <div class="bb-guest-row">
+                      <div><div class="bb-guest-label">Children</div><div class="bb-guest-sub">Ages 2-12</div></div>
+                      <div class="bb-counter">
+                        <button class="bb-counter-btn" id="bb-children-minus">-</button>
+                        <span class="bb-counter-val" id="bb-children-val">0</span>
+                        <button class="bb-counter-btn" id="bb-children-plus">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bb-divider"></div>
+              <div class="bb-field">
+                <label class="bb-label">Rooms</label>
+                <div class="bb-counter bb-counter-inline">
+                  <button class="bb-counter-btn" id="bb-rooms-minus">-</button>
+                  <span class="bb-counter-val" id="bb-rooms-val">1</span>
+                  <button class="bb-counter-btn" id="bb-rooms-plus">+</button>
+                </div>
+              </div>
+              <div class="bb-divider"></div>
+              <div class="bb-summary">
+                <div class="bb-summary-label">Stay Summary</div>
+                <div class="bb-summary-line" id="bb-summary-line">Select dates</div>
+                <div class="bb-price" id="bb-price">&#8377;0</div>
+              </div>
+              <button class="bb-cta" id="bb-cta">Check Availability</button>
             </div>
           </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field">
-            <label class="bb-label">Rooms</label>
-            <div class="bb-counter bb-counter-inline">
-              <button class="bb-counter-btn" id="bb-rooms-minus">-</button>
-              <span class="bb-counter-val" id="bb-rooms-val">1</span>
-              <button class="bb-counter-btn" id="bb-rooms-plus">+</button>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-summary">
-            <div class="bb-summary-label">Stay Summary</div>
-            <div class="bb-summary-line" id="bb-summary-line">Select dates</div>
-            <div class="bb-price" id="bb-price">&#8377;0</div>
-          </div>
-          <button class="bb-cta" id="bb-cta">Check Availability</button>
         </div>
       </div>
     </div>
+
+
 
     <div class="scroll-indicator hero-fade-late">
       <span class="scroll-label">Scroll</span>
       <div class="scroll-mouse"><div class="scroll-dot"></div></div>
     </div>
   </section>
+
+  <!-- ====== STICKY NAV ====== -->
+  <nav class="hero-nav" id="main-nav">
+    <div class="hero-nav-inner">
+      <div class="hero-nav-links">
+        <a href="index.html" class="hero-nav-link active" aria-current="page">Home</a>
+        <a href="pages/rooms.html" class="hero-nav-link">Rooms</a>
+        <a href="pages/life.html" class="hero-nav-link">Life at FAM</a>
+        <a href="pages/explore.html" class="hero-nav-link">Explore</a>
+        <a href="pages/gallery.html" class="hero-nav-link">Gallery</a>
+        <a href="pages/amenities.html" class="hero-nav-link">Amenities</a>
+      </div>
+      <div class="hero-nav-actions">
+        <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
+        <button class="md:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
 
   <!-- ====== MOUNTAIN TIME EXPERIENCE ====== -->
   <section class="mt-hero" id="mt-hero">
@@ -1117,6 +1111,15 @@ tailwind.config = {
       }
       initBookingBar();
       initMobileMenu();
+
+      var nav = document.getElementById('main-nav');
+      if (nav) {
+        var onScroll = function() {
+          nav.classList.toggle('scrolled', window.scrollY > 100);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
     });
   </script>
 

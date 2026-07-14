@@ -238,34 +238,7 @@ html.mode-winter .seasonal-toggle-btn.active {
   }
 }
 
-/* ------ Rounded Navbar ------ */
-#main-nav {
-  border-radius: 9999px !important;
-  width: calc(100% - 2rem) !important;
-  max-width: 1400px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  top: 8px !important;
-  border: 1px solid rgba(193, 200, 192, 0.3) !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-}
-#main-nav > div {
-  border-radius: 9999px;
-}
 
-
-/* life.html uses a nested structure */
-#top-nav {
-  width: calc(100% - 2rem) !important;
-  max-width: 1400px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  top: 12px !important;
-}
-#top-nav > div {
-  border-radius: 9999px !important;
-}
 
 /* ------ Seasonal: Floating Leaves (Green mode) ------ */
 @keyframes leafFloat {
@@ -816,21 +789,27 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
-  padding: 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding-top: 80px;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
 }
 
 .hero-content-inner {
   text-align: center;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text-wrap {
+  max-width: 900px;
+  width: 100%;
+  padding: 0 24px;
 }
 
 .hero-label {
@@ -981,7 +960,7 @@ body {
   .hero-sub-label { font-size: 11px; letter-spacing: 4px; }
   .hero-tagline { font-size: clamp(18px, 4vw, 26px); }
   .hero-desc { font-size: 14px; }
-  .hero-content-wrap { padding-top: 64px; padding-bottom: 120px; }
+  .hero-content-wrap { padding-top: 64px; padding-bottom: 160px; }
   .hero-btn-primary,
   .hero-btn-secondary { padding: 14px 28px; font-size: 12px; }
 }
@@ -1486,12 +1465,13 @@ html.time-night .mt-bonfire {
    Premium Floating Booking Bar
    ============================================ */
 .booking-bar {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: auto;
   left: 0;
   right: 0;
   z-index: 20;
-  padding: 0 16px;
+  width: 100%;
+  padding: 32px 16px 0;
 }
 .bb-container {
   max-width: 1250px;
@@ -1565,8 +1545,6 @@ html.time-night .mt-bonfire {
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
-  line-height: 1;
-  font-family: 'Inter', sans-serif;
 }
 .bb-counter-btn:hover {
   color: #fff;
@@ -3727,4 +3705,95 @@ html.mode-winter .tp-room-tags span {
 }
 body.mobile-menu-open {
   overflow: hidden;
+}
+
+/* ------ Hero Sticky Nav ------ */
+.hero-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: rgba(248, 244, 236, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(193, 200, 192, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+.hero-nav.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+.hero-nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.hero-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.hero-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #414942;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.hero-nav-link:hover {
+  color: #C9A86A;
+}
+.hero-nav-link.active {
+  color: #0a341d;
+  border-bottom: 2px solid #0a341d;
+  padding-bottom: 2px;
+}
+.hero-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .hero-nav-links {
+    display: none;
+  }
+  .hero-nav-inner {
+    justify-content: center;
+    padding: 12px 16px;
+  }
+}
+@media (min-width: 769px) {
+  .hero-nav-actions .md\:hidden {
+    display: none;
+  }
+}
+
+/* ------ Inner page navs (non-hero) ------ */
+#main-nav.fixed {
+  border-radius: 9999px !important;
+  max-width: calc(100% - 32px);
+  left: 16px;
+  right: 16px;
+  top: 16px;
+}
+#main-nav.fixed > div {
+  border-radius: 9999px;
+}
+#top-nav {
+  border-radius: 9999px !important;
+  max-width: calc(100% - 32px);
+  left: 16px;
+  right: 16px;
+  top: 16px;
+}
+#top-nav > div {
+  border-radius: 9999px;
 }
