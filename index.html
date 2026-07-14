@@ -135,7 +135,7 @@ tailwind.config = {
   </nav>
 
   <!-- ====== HERO SECTION ====== -->
-  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-visible">
     <!-- Ken Burns Background -->
     <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
       <img
@@ -161,290 +161,105 @@ tailwind.config = {
     </div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 w-full max-w-max-width mx-auto px-4 md:px-margin-desktop">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-16">
-        <div class="lg:col-span-7 flex flex-col">
-          <div class="hero-frame">
-
-            <!-- Ornate Corner Rosettes -->
-            <div class="frame-corner tl">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 25 C55 18 48 12 38 8 C28 4 18 8 12 18 C6 28 8 42 18 52 C28 62 42 65 55 62 C58 50 62 38 60 25Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
-                <circle cx="35" cy="35" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
-                <circle cx="35" cy="35" r="5" fill="#8B5A3A"/>
-                <path d="M35 35 C35 22 28 12 18 8 C22 18 25 28 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 35 C22 35 12 28 8 18 C18 22 28 25 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 35 C35 48 28 58 18 62 C22 52 25 42 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M35 35 C48 35 58 42 62 52 C52 48 42 45 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <circle cx="15" cy="12" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
-                <circle cx="12" cy="18" r="3.5" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M15 12 C22 8 30 5 38 8 C30 10 22 14 15 12Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.8"/>
-                <path d="M55 62 C48 72 42 82 35 88 C42 82 48 72 55 62Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
-                <path d="M55 62 C62 72 68 82 72 92 C65 82 58 72 55 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
-                <path d="M55 62 C42 58 28 58 18 62 C28 65 42 65 55 62Z" fill="#7D4A32" opacity="0.5" stroke="#3A1A0A" stroke-width="0.3"/>
-              </svg>
-            </div>
-            <div class="frame-corner tr">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 25 C55 18 48 12 38 8 C28 4 18 8 12 18 C6 28 8 42 18 52 C28 62 42 65 55 62 C58 50 62 38 60 25Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
-                <circle cx="35" cy="35" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
-                <circle cx="35" cy="35" r="5" fill="#8B5A3A"/>
-                <path d="M35 35 C35 22 28 12 18 8 C22 18 25 28 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 35 C22 35 12 28 8 18 C18 22 28 25 35 35Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 35 C35 48 28 58 18 62 C22 52 25 42 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M35 35 C48 35 58 42 62 52 C52 48 42 45 35 35Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <circle cx="15" cy="12" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
-                <circle cx="12" cy="18" r="3.5" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M15 12 C22 8 30 5 38 8 C30 10 22 14 15 12Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.8"/>
-                <path d="M55 62 C48 72 42 82 35 88 C42 82 48 72 55 62Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
-                <path d="M55 62 C62 72 68 82 72 92 C65 82 58 72 55 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="frame-corner bl">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 95 C55 102 48 108 38 112 C28 116 18 112 12 102 C6 92 8 78 18 68 C28 58 42 55 55 58 C58 70 62 82 60 95Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
-                <circle cx="35" cy="85" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
-                <circle cx="35" cy="85" r="5" fill="#8B5A3A"/>
-                <path d="M35 85 C35 98 28 108 18 112 C22 102 25 92 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 85 C22 85 12 92 8 102 C18 98 28 95 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 85 C35 72 28 62 18 58 C22 68 25 78 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M35 85 C48 85 58 78 62 68 C52 72 42 75 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <circle cx="15" cy="108" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
-                <path d="M55 58 C48 48 42 38 35 32 C42 38 48 48 55 58Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
-                <path d="M55 58 C62 48 68 38 72 28 C65 38 58 48 55 58Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="frame-corner br">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 95 C55 102 48 108 38 112 C28 116 18 112 12 102 C6 92 8 78 18 68 C28 58 42 55 55 58 C58 70 62 82 60 95Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="1"/>
-                <circle cx="35" cy="85" r="10" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1.5"/>
-                <circle cx="35" cy="85" r="5" fill="#8B5A3A"/>
-                <path d="M35 85 C35 98 28 108 18 112 C22 102 25 92 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 85 C22 85 12 92 8 102 C18 98 28 95 35 85Z" fill="#8B5A3A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.9"/>
-                <path d="M35 85 C35 72 28 62 18 58 C22 68 25 78 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <path d="M35 85 C48 85 58 78 62 68 C52 72 42 75 35 85Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <circle cx="15" cy="108" r="5" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="0.8"/>
-                <path d="M55 58 C48 48 42 38 35 32 C42 38 48 48 55 58Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5" opacity="0.7"/>
-                <path d="M55 58 C62 48 68 38 72 28 C65 38 58 48 55 58Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5" opacity="0.6"/>
-              </svg>
-            </div>
-
-            <!-- Side Carved Vines -->
-            <div class="frame-side left">
-              <svg viewBox="0 0 40 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 10 C12 30 28 50 20 70 C12 90 28 110 20 130 C12 150 28 170 20 190 C12 210 28 230 20 250 C12 270 28 290 20 310" stroke="#5C3A1E" stroke-width="3" fill="none" opacity="0.7"/>
-                <path d="M20 20 C14 28 8 32 4 30 C8 28 14 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 20 C26 28 32 32 36 30 C32 28 26 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 70 C14 78 8 82 4 80 C8 78 14 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 70 C26 78 32 82 36 80 C32 78 26 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 130 C14 138 8 142 4 140 C8 138 14 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 130 C26 138 32 142 36 140 C32 138 26 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 190 C14 198 8 202 4 200 C8 198 14 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 190 C26 198 32 202 36 200 C32 198 26 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 250 C14 258 8 262 4 260 C8 258 14 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 250 C26 258 32 262 36 260 C32 258 26 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
-                <circle cx="6" cy="50" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="34" cy="100" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="6" cy="160" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="34" cy="220" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="6" cy="280" r="3" fill="#7D4A32" opacity="0.6"/>
-              </svg>
-            </div>
-            <div class="frame-side right">
-              <svg viewBox="0 0 40 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 10 C28 30 12 50 20 70 C28 90 12 110 20 130 C28 150 12 170 20 190 C28 210 12 230 20 250 C28 270 12 290 20 310" stroke="#5C3A1E" stroke-width="3" fill="none" opacity="0.7"/>
-                <path d="M20 20 C14 28 8 32 4 30 C8 28 14 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 20 C26 28 32 32 36 30 C32 28 26 24 20 20Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 70 C14 78 8 82 4 80 C8 78 14 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 70 C26 78 32 82 36 80 C32 78 26 74 20 70Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 130 C14 138 8 142 4 140 C8 138 14 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 130 C26 138 32 142 36 140 C32 138 26 134 20 130Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 190 C14 198 8 202 4 200 C8 198 14 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 190 C26 198 32 202 36 200 C32 198 26 194 20 190Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 250 C14 258 8 262 4 260 C8 258 14 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M20 250 C26 258 32 262 36 260 C32 258 26 254 20 250Z" fill="#6B3A2A" opacity="0.8"/>
-                <circle cx="6" cy="50" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="34" cy="100" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="6" cy="160" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="34" cy="220" r="3" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="6" cy="280" r="3" fill="#7D4A32" opacity="0.6"/>
-              </svg>
-            </div>
-
-            <!-- Top Crest -->
-            <div class="frame-crest">
-              <svg viewBox="0 0 560 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <!-- Left Apple Branch -->
-                <path d="M80 55 C110 52 140 48 170 42 C200 36 230 28 260 22" stroke="#5C3A1E" stroke-width="4" fill="none"/>
-                <path d="M100 55 C95 45 92 35 96 25 C100 35 100 45 100 55Z" fill="#6B3A2A"/>
-                <path d="M100 55 C110 45 118 38 128 35 C118 42 110 48 100 55Z" fill="#7D4A32"/>
-                <path d="M130 50 C125 40 122 30 126 20 C130 30 130 40 130 50Z" fill="#6B3A2A"/>
-                <path d="M130 50 C140 40 148 33 158 30 C148 37 140 43 130 50Z" fill="#7D4A32"/>
-                <circle cx="100" cy="30" r="5" fill="#8B5A3A" opacity="0.7"/>
-                <circle cx="130" cy="25" r="4" fill="#8B5A3A" opacity="0.7"/>
-                <circle cx="160" cy="28" r="4.5" fill="#8B5A3A" opacity="0.6"/>
-                <path d="M170 42 C165 35 160 28 165 20 C170 28 170 35 170 42Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M170 42 C180 35 188 30 198 28 C188 33 180 38 170 42Z" fill="#7D4A32" opacity="0.7"/>
-                <path d="M200 38 C195 30 192 22 196 14 C200 22 200 30 200 38Z" fill="#6B3A2A" opacity="0.7"/>
-                <path d="M200 38 C210 30 218 25 228 22 C218 28 210 33 200 38Z" fill="#7D4A32" opacity="0.6"/>
-                <circle cx="185" cy="22" r="3.5" fill="#8B5A3A" opacity="0.5"/>
-                <!-- Right Apple Branch -->
-                <path d="M480 55 C450 52 420 48 390 42 C360 36 330 28 300 22" stroke="#5C3A1E" stroke-width="4" fill="none"/>
-                <path d="M460 55 C465 45 468 35 464 25 C460 35 460 45 460 55Z" fill="#6B3A2A"/>
-                <path d="M460 55 C450 45 442 38 432 35 C442 42 450 48 460 55Z" fill="#7D4A32"/>
-                <path d="M430 50 C435 40 438 30 434 20 C430 30 430 40 430 50Z" fill="#6B3A2A"/>
-                <path d="M430 50 C420 40 412 33 402 30 C412 37 420 43 430 50Z" fill="#7D4A32"/>
-                <circle cx="460" cy="30" r="5" fill="#8B5A3A" opacity="0.7"/>
-                <circle cx="430" cy="25" r="4" fill="#8B5A3A" opacity="0.7"/>
-                <circle cx="400" cy="28" r="4.5" fill="#8B5A3A" opacity="0.6"/>
-                <path d="M390 42 C395 35 400 28 395 20 C390 28 390 35 390 42Z" fill="#6B3A2A" opacity="0.8"/>
-                <path d="M390 42 C380 35 372 30 362 28 C372 33 380 38 390 42Z" fill="#7D4A32" opacity="0.7"/>
-                <path d="M360 38 C365 30 368 22 364 14 C360 22 360 30 360 38Z" fill="#6B3A2A" opacity="0.7"/>
-                <circle cx="375" cy="22" r="3.5" fill="#8B5A3A" opacity="0.5"/>
-                <!-- Flamingo Bird (Left) -->
-                <path d="M190 60 C195 55 200 45 205 38 C210 31 218 28 222 32 C218 38 212 42 208 48 C212 44 218 40 224 38 C230 36 236 38 234 44 C230 50 222 54 216 56 L210 62 C208 66 210 70 214 72 L220 68" stroke="#4A2A14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M205 38 C200 36 196 38 198 42 C200 46 204 44 205 38Z" fill="#4A2A14"/>
-                <path d="M216 56 L212 74 L218 74" stroke="#4A2A14" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <!-- Central Mountain Peak -->
-                <path d="M260 72 L280 12 L300 72Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="1"/>
-                <path d="M272 72 L280 28 L288 72Z" fill="#7D4A32"/>
-                <path d="M276 42 L280 28 L284 42Z" fill="#8B5A3A" opacity="0.6"/>
-                <!-- Maina Bird (Right) -->
-                <path d="M350 55 C345 48 342 40 344 32 C348 28 354 30 356 36 C352 34 348 36 346 40 C344 44 346 50 350 55Z" fill="#4A2A14"/>
-                <path d="M350 55 C354 50 360 46 366 44 C370 42 374 44 372 48 C368 52 362 54 356 55Z" fill="#4A2A14"/>
-                <path d="M366 44 C370 40 375 38 378 40 C375 44 370 46 366 44Z" fill="#3A1A0A"/>
-                <circle cx="350" cy="36" r="1.5" fill="#1A0A00"/>
-                <path d="M356 55 L358 68 L362 68" stroke="#4A2A14" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                <path d="M352 55 L350 68 L354 68" stroke="#4A2A14" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                <path d="M366 44 C370 42 374 44 372 48 C368 52 362 54 356 55 C360 50 364 46 366 44Z" fill="#5C3A1E"/>
-                <!-- Left side small branch -->
-                <path d="M150 62 C130 65 110 70 95 78" stroke="#5C3A1E" stroke-width="2.5" fill="none" opacity="0.6"/>
-                <path d="M120 68 C115 60 112 52 116 44 C120 52 120 60 120 68Z" fill="#6B3A2A" opacity="0.6"/>
-                <path d="M120 68 C130 60 138 55 148 52 C138 58 130 63 120 68Z" fill="#7D4A32" opacity="0.5"/>
-                <circle cx="100" cy="68" r="3.5" fill="#8B5A3A" opacity="0.5"/>
-                <!-- Right side small branch -->
-                <path d="M410 62 C430 65 450 70 465 78" stroke="#5C3A1E" stroke-width="2.5" fill="none" opacity="0.6"/>
-                <path d="M440 68 C445 60 448 52 444 44 C440 52 440 60 440 68Z" fill="#6B3A2A" opacity="0.6"/>
-                <path d="M440 68 C430 60 422 55 412 52 C422 58 430 63 440 68Z" fill="#7D4A32" opacity="0.5"/>
-                <circle cx="460" cy="68" r="3.5" fill="#8B5A3A" opacity="0.5"/>
-              </svg>
-            </div>
-
-            <!-- Inner Mountain Landscape Panel -->
-            <div class="frame-panel">
-              <div class="frame-scene">
-                <div class="scene-sky"></div>
-                <div class="scene-sun"></div>
-                <div class="scene-mountains-far"></div>
-                <div class="scene-mountains-mid"></div>
-                <div class="scene-forest"></div>
-                <div class="scene-fog f1"></div>
-                <div class="scene-fog f2"></div>
-                <div class="scene-cabin">
-                  <div class="scene-cabin-roof"></div>
-                  <div class="scene-cabin-body"></div>
-                  <div class="scene-cabin-window"></div>
-                </div>
-              </div>
-              <div class="frame-content">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 w-fit">
-                  <span class="material-symbols-outlined text-accent-gold text-sm">hotel_class</span>
-                  <span class="text-white/80 font-label-sm text-[11px] tracking-[0.2em] uppercase">Boutique Stays</span>
-                </div>
-                <h1 class="text-display-hero text-5xl md:text-7xl lg:text-8xl text-white font-display-hero leading-tight mt-6">
-                  <span class="reveal-word delay-100 block">Welcome</span>
-                  <span class="reveal-word delay-200 text-accent-gold italic block">Home.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-white/80 font-body-lg max-w-2xl fade-in-up delay-300 mt-4">
-                  Some places are built to impress. We built FAM to make people feel at home. Wake up to mountain views. Slow mornings. Warm conversations. Fresh coffee.
-                </p>
-                <div class="flex flex-wrap gap-4 pt-6 fade-in-up delay-500">
-                  <a href="pages/rooms.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-on-primary font-label-sm tracking-widest uppercase hover:bg-primary transition-all hover:scale-105 shadow-lg">
-                    <span>Book Your Stay</span>
-                    <span class="material-symbols-outlined ml-2">arrow_forward</span>
-                  </a>
-                  <a href="#story" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-accent-gold/50 text-white font-label-sm tracking-widest uppercase hover:bg-accent-gold/10 transition-all">
-                    Explore Rooms
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bottom Badge -->
-            <div class="frame-badge">
-              <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <!-- Badge Leaves -->
-                <path d="M50 58 C42 50 32 48 22 52 C32 54 42 56 50 58Z" fill="#6B3A2A"/>
-                <path d="M50 58 C42 66 32 70 22 68 C32 66 42 62 50 58Z" fill="#7D4A32"/>
-                <path d="M150 58 C158 50 168 48 178 52 C168 54 158 56 150 58Z" fill="#6B3A2A"/>
-                <path d="M150 58 C158 66 168 70 178 68 C168 66 158 62 150 58Z" fill="#7D4A32"/>
-                <circle cx="25" cy="50" r="3" fill="#8B5A3A" opacity="0.6"/>
-                <circle cx="175" cy="50" r="3" fill="#8B5A3A" opacity="0.6"/>
-                <!-- Badge Shape -->
-                <path d="M60 18 C60 12 70 8 80 8 L120 8 C130 8 140 12 140 18 L140 65 C140 78 130 85 120 88 L100 95 L80 88 C70 85 60 78 60 65Z" fill="#5C3A1E" stroke="#3A1A0A" stroke-width="2"/>
-                <path d="M66 22 C66 17 74 14 82 14 L118 14 C126 14 134 17 134 22 L134 62 C134 73 126 78 118 80 L100 86 L82 80 C74 78 66 73 66 62Z" fill="#7D4A32" stroke="#3A1A0A" stroke-width="0.5"/>
-                <!-- Mountain Icon -->
-                <path d="M88 48 L100 24 L112 48Z" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.8"/>
-                <path d="M94 48 L100 32 L106 48Z" fill="#8B5A3A"/>
-                <!-- FAM Text -->
-                <text x="100" y="68" text-anchor="middle" fill="#3A1A0A" font-family="Georgia, serif" font-weight="bold" font-size="16" letter-spacing="4">F A M</text>
-                <!-- Welcome Home Text -->
-                <text x="100" y="80" text-anchor="middle" fill="#4A2A14" font-family="Georgia, serif" font-style="italic" font-size="8" letter-spacing="1">Welcome Home</text>
-              </svg>
-            </div>
-
-            <!-- Lantern -->
-            <div class="frame-lantern">
-              <svg viewBox="0 0 30 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <path d="M15 0 L15 12" stroke="#4A2A14" stroke-width="1.5"/>
-                <path d="M10 12 L20 12" stroke="#4A2A14" stroke-width="1.5"/>
-                <path d="M8 12 L8 40" stroke="#5C3A1E" stroke-width="1.2"/>
-                <path d="M22 12 L22 40" stroke="#5C3A1E" stroke-width="1.2"/>
-                <path d="M8 40 L22 40" stroke="#5C3A1E" stroke-width="1.2"/>
-                <path d="M10 40 L10 48 L20 48 L20 40" stroke="#5C3A1E" stroke-width="1"/>
-                <path d="M12 48 L18 48" stroke="#5C3A1E" stroke-width="1"/>
-                <path d="M15 48 L15 52" stroke="#5C3A1E" stroke-width="1"/>
-                <path d="M8 12 L6 12 L6 40 L8 40" fill="#4A2A14" opacity="0.4"/>
-                <path d="M22 12 L24 12 L24 40 L22 40" fill="#4A2A14" opacity="0.4"/>
-                <path d="M12 16 L18 16 L18 36 L12 36Z" fill="#D4A574" opacity="0.4"/>
-                <rect x="13" y="20" width="4" height="8" rx="1" fill="#F5DEB3" opacity="0.6"/>
-                <path d="M15 20 C14 16 16 14 15 10" stroke="#FFA500" stroke-width="1" fill="none" opacity="0.8"/>
-              </svg>
-            </div>
-
-            <!-- Shelf + Coffee Mug -->
-            <div class="frame-shelf">
-              <svg viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <rect x="5" y="10" width="90" height="6" rx="1" fill="#6B3A2A" stroke="#3A1A0A" stroke-width="0.5"/>
-                <rect x="5" y="10" width="90" height="2" fill="#8B5A3A" opacity="0.3"/>
-                <path d="M15 16 L12 40 L18 40 L18 16" fill="#5C3A1E"/>
-                <path d="M82 16 L82 40 L88 40 L85 16" fill="#5C3A1E"/>
-                <rect x="28" y="2" width="22" height="8" rx="2" fill="#F5F0E8" stroke="#C8B8A0" stroke-width="0.5"/>
-                <path d="M50 4 L50 8 C50 10 54 10 54 8 L54 4" stroke="#C8B8A0" stroke-width="1" fill="none"/>
-                <text x="39" y="8" text-anchor="middle" fill="#6B3A2A" font-family="Georgia, serif" font-size="4" font-weight="bold">FAM</text>
-                <path d="M36 -2 C35 -5 37 -7 36 -10" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
-                <path d="M39 -2 C38 -6 40 -9 39 -12" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
-                <path d="M42 -2 C41 -5 43 -7 42 -10" stroke="white" stroke-width="0.6" fill="none" opacity="0.5"/>
-              </svg>
-            </div>
-
-          </div>
+        <div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 md:px-margin-desktop">
+      <div class="text-center max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 w-fit mx-auto mb-6">
+          <span class="material-symbols-outlined text-accent-gold text-sm">hotel_class</span>
+          <span class="text-white/80 font-label-sm text-[11px] tracking-[0.2em] uppercase">Boutique Stays in Jibhi</span>
         </div>
-        <div class="lg:col-span-5 flex justify-center lg:justify-end fade-in-up delay-700 mt-12 lg:mt-0 perspective-1000" data-card-parallax>
-          <div class="glass-panel p-8 rounded-xl shadow-2xl animate-float w-full max-w-sm">
-            <div class="flex flex-col gap-5">
-              <div class="flex items-center gap-4 border-b border-white/10 pb-4">
-                <div class="w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold">
-                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">location_on</span>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl text-white font-display-hero leading-tight mt-6">
+          <span class="reveal-word block">Welcome</span>
+          <span class="reveal-word text-accent-gold italic delay-200 block">Home.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/80 font-body-lg max-w-2xl mx-auto mt-6 fade-in-up delay-300">
+          Some places are built to impress. We built FAM to make people feel at home. Wake up to mountain views. Slow mornings. Warm conversations. Fresh coffee.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center pt-8 fade-in-up delay-500">
+          <a href="pages/rooms.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-on-primary font-label-sm tracking-widest uppercase hover:bg-primary transition-all hover:scale-105 shadow-lg">
+            <span>Book Your Stay</span>
+            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </a>
+          <a href="#story" class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-accent-gold/50 text-white font-label-sm tracking-widest uppercase hover:bg-accent-gold/10 transition-all">
+            Explore Rooms
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Bar -->
+    <div class="booking-bar">
+      <div class="bb-container">
+        <div class="bb-inner">
+          <div class="bb-field" data-popover="checkin">
+            <label class="bb-label">Check-in</label>
+            <button class="bb-value" id="bb-checkin">Select date</button>
+            <div class="bb-popover" id="bb-popover-checkin">
+              <div class="bb-cal">
+                <div class="bb-cal-header">
+                  <button class="bb-cal-nav" id="bb-cal-prev">&#8592;</button>
+                  <span class="bb-cal-month" id="bb-cal-month"></span>
+                  <button class="bb-cal-nav" id="bb-cal-next">&#8594;</button>
                 </div>
-                <span class="text-white font-body-lg font-medium tracking-wide">Jibhi, Himachal Pradesh</span>
+                <div class="bb-cal-grid" id="bb-cal-grid"></div>
               </div>
-              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">landscape</span><span class="text-white/90 font-body-md">360&deg; Mountain Views</span></div>
-              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">nature</span><span class="text-white/90 font-body-md">Apple Orchard</span></div>
-              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">local_fire_department</span><span class="text-white/90 font-body-md">Bonfire Evenings</span></div>
-              <div class="flex items-center gap-4"><span class="material-symbols-outlined text-white/70">coffee</span><span class="text-white/90 font-body-md">Tea &amp; Coffee</span></div>
             </div>
           </div>
+          <div class="bb-divider"></div>
+          <div class="bb-field" data-popover="checkout">
+            <label class="bb-label">Check-out</label>
+            <button class="bb-value" id="bb-checkout">Select date</button>
+            <div class="bb-popover" id="bb-popover-checkout">
+              <div class="bb-cal">
+                <div class="bb-cal-header">
+                  <button class="bb-cal-nav" id="bb-cal-prev-out">&#8592;</button>
+                  <span class="bb-cal-month" id="bb-cal-month-out"></span>
+                  <button class="bb-cal-nav" id="bb-cal-next-out">&#8594;</button>
+                </div>
+                <div class="bb-cal-grid" id="bb-cal-grid-out"></div>
+              </div>
+            </div>
+          </div>
+          <div class="bb-divider"></div>
+          <div class="bb-field" data-popover="guests">
+            <label class="bb-label">Guests</label>
+            <button class="bb-value" id="bb-guests">2 Adults</button>
+            <div class="bb-popover" id="bb-popover-guests">
+              <div class="bb-guest">
+                <div class="bb-guest-row">
+                  <div><div class="bb-guest-label">Adults</div><div class="bb-guest-sub">Age 18+</div></div>
+                  <div class="bb-counter">
+                    <button class="bb-counter-btn" id="bb-adults-minus">-</button>
+                    <span class="bb-counter-val" id="bb-adults-val">2</span>
+                    <button class="bb-counter-btn" id="bb-adults-plus">+</button>
+                  </div>
+                </div>
+                <div class="bb-guest-row">
+                  <div><div class="bb-guest-label">Children</div><div class="bb-guest-sub">Ages 2-12</div></div>
+                  <div class="bb-counter">
+                    <button class="bb-counter-btn" id="bb-children-minus">-</button>
+                    <span class="bb-counter-val" id="bb-children-val">0</span>
+                    <button class="bb-counter-btn" id="bb-children-plus">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bb-divider"></div>
+          <div class="bb-field">
+            <label class="bb-label">Rooms</label>
+            <div class="bb-counter bb-counter-inline">
+              <button class="bb-counter-btn" id="bb-rooms-minus">-</button>
+              <span class="bb-counter-val" id="bb-rooms-val">1</span>
+              <button class="bb-counter-btn" id="bb-rooms-plus">+</button>
+            </div>
+          </div>
+          <div class="bb-divider"></div>
+          <div class="bb-summary">
+            <div class="bb-summary-label">Stay Summary</div>
+            <div class="bb-summary-line" id="bb-summary-line">Select dates</div>
+            <div class="bb-price" id="bb-price">&#8377;0</div>
+          </div>
+          <button class="bb-cta" id="bb-cta">Check Availability</button>
         </div>
       </div>
     </div>
@@ -1247,7 +1062,250 @@ tailwind.config = {
       if (typeof FAM !== 'undefined' && FAM.Animations) {
         FAM.Animations.init({ gsap: false, lenis: false });
       }
+      initBookingBar();
     });
+  </script>
+
+  <script>
+  function initBookingBar() {
+    var state = {
+      checkIn: null,
+      checkOut: null,
+      adults: 2,
+      children: 0,
+      rooms: 1,
+      openPopover: null,
+      calYear: new Date().getFullYear(),
+      calMonth: new Date().getMonth(),
+      calYearOut: new Date().getFullYear(),
+      calMonthOut: new Date().getMonth() + 1,
+    };
+
+    var PRICE_PER_NIGHT = 6000;
+
+    function getDaysInMonth(y, m) { return new Date(y, m + 1, 0).getDate(); }
+    function getFirstDay(y, m) { return new Date(y, m, 1).getDay(); }
+    function isSameDay(a, b) { return a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
+    function isBeforeDay(a, b) { return a.getTime() < b.getTime(); }
+
+    function formatDate(d) {
+      return d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function today() { var d = new Date(); d.setHours(0,0,0,0); return d; }
+
+    function updateUI() {
+      var checkinBtn = document.getElementById('bb-checkin');
+      var checkoutBtn = document.getElementById('bb-checkout');
+      var guestsBtn = document.getElementById('bb-guests');
+      var roomsVal = document.getElementById('bb-rooms-val');
+      var summaryLine = document.getElementById('bb-summary-line');
+      var priceEl = document.getElementById('bb-price');
+
+      if (state.checkIn) {
+        checkinBtn.textContent = formatDate(state.checkIn);
+      } else {
+        checkinBtn.textContent = 'Select date';
+      }
+      if (state.checkOut) {
+        checkoutBtn.textContent = formatDate(state.checkOut);
+      } else {
+        checkoutBtn.textContent = 'Select date';
+      }
+
+      var totalGuests = state.adults + state.children;
+      guestsBtn.textContent = totalGuests + (totalGuests === 1 ? ' Guest' : ' Guests');
+      roomsVal.textContent = state.rooms;
+
+      if (state.checkIn && state.checkOut) {
+        var diff = Math.round((state.checkOut.getTime() - state.checkIn.getTime()) / (86400000));
+        var nights = Math.max(0, diff);
+        var parts = [];
+        if (nights > 0) parts.push(nights + ' Night' + (nights > 1 ? 's' : ''));
+        parts.push(totalGuests + ' Guest' + (totalGuests !== 1 ? 's' : ''));
+        parts.push(state.rooms + ' Room' + (state.rooms > 1 ? 's' : ''));
+        summaryLine.textContent = parts.join(' \u00B7 ');
+        var est = nights * state.rooms * PRICE_PER_NIGHT;
+        priceEl.textContent = '\u20B9' + est.toLocaleString('en-IN');
+      } else {
+        summaryLine.textContent = 'Select dates';
+        priceEl.textContent = '\u20B90';
+      }
+    }
+
+    function renderCalendar(prefix, year, month, minDate) {
+      var grid = document.getElementById('bb-cal-grid' + (prefix || ''));
+      var monthEl = document.getElementById('bb-cal-month' + (prefix || ''));
+      if (!grid || !monthEl) return;
+
+      var first = getFirstDay(year, month);
+      var days = getDaysInMonth(year, month);
+      var label = new Date(year, month).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+      monthEl.textContent = label;
+
+      var html = '';
+      for (var i = 0; i < first; i++) {
+        html += '<button class="bb-cal-day other" disabled></button>';
+      }
+      for (var d = 1; d <= days; d++) {
+        var date = new Date(year, month, d);
+        var disabled = minDate && isBeforeDay(date, minDate) ? ' disabled' : '';
+        var sel = '';
+        var ref = prefix === '-out' ? state.checkOut : state.checkIn;
+        if (ref && isSameDay(date, ref)) sel = ' selected';
+        html += '<button class="bb-cal-day' + sel + disabled + '" data-date="' + d + '">' + d + '</button>';
+      }
+      grid.innerHTML = html;
+
+      // Click handlers
+      grid.querySelectorAll('.bb-cal-day:not(.disabled):not(.other)').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var day = parseInt(btn.getAttribute('data-date'));
+          var date = new Date(year, month, day);
+          if (prefix === '-out') {
+            state.checkOut = date;
+            closePopover();
+          } else {
+            state.checkIn = date;
+            // Auto-set checkout to +1 day
+            if (!state.checkOut || isBeforeDay(state.checkOut, date) || isSameDay(state.checkOut, date)) {
+              var next = new Date(date);
+              next.setDate(next.getDate() + 1);
+              state.checkOut = next;
+              state.calYearOut = next.getFullYear();
+              state.calMonthOut = next.getMonth();
+              renderCalendar('-out', state.calYearOut, state.calMonthOut, state.checkIn);
+            }
+            closePopover();
+          }
+          updateUI();
+        });
+      });
+
+      // Prev/Next buttons
+      var prevBtn = document.getElementById('bb-cal-prev' + (prefix || ''));
+      var nextBtn = document.getElementById('bb-cal-next' + (prefix || ''));
+      if (prevBtn) {
+        if (prefix === '-out') {
+          var canPrev = year > state.checkIn.getFullYear() || (year === state.checkIn.getFullYear() && month > state.checkIn.getMonth());
+          prevBtn.disabled = !canPrev;
+        } else {
+          var todayDate = today();
+          prevBtn.disabled = year <= todayDate.getFullYear() && month <= todayDate.getMonth();
+        }
+        prevBtn.onclick = function() {
+          if (prefix === '-out') {
+            if (state.calMonthOut === 0) { state.calYearOut--; state.calMonthOut = 11; }
+            else state.calMonthOut--;
+            renderCalendar('-out', state.calYearOut, state.calMonthOut, state.checkIn);
+          } else {
+            if (state.calMonth === 0) { state.calYear--; state.calMonth = 11; }
+            else state.calMonth--;
+            renderCalendar('', state.calYear, state.calMonth, today());
+          }
+        };
+      }
+      if (nextBtn) {
+        nextBtn.disabled = false;
+        nextBtn.onclick = function() {
+          if (prefix === '-out') {
+            if (state.calMonthOut === 11) { state.calYearOut++; state.calMonthOut = 0; }
+            else state.calMonthOut++;
+            renderCalendar('-out', state.calYearOut, state.calMonthOut, state.checkIn);
+          } else {
+            if (state.calMonth === 11) { state.calYear++; state.calMonth = 0; }
+            else state.calMonth++;
+            renderCalendar('', state.calYear, state.calMonth, today());
+          }
+        };
+      }
+    }
+
+    function openPopover(id) {
+      closePopover();
+      state.openPopover = id;
+      var el = document.getElementById('bb-popover-' + id);
+      if (el) {
+        el.classList.add('open');
+        if (id === 'checkin') {
+          renderCalendar('', state.calYear, state.calMonth, today());
+        } else if (id === 'checkout') {
+          if (state.checkIn) renderCalendar('-out', state.calYearOut, state.calMonthOut, state.checkIn);
+          else renderCalendar('-out', state.calYearOut, state.calMonthOut, today());
+        }
+      }
+    }
+
+    function closePopover() {
+      state.openPopover = null;
+      document.querySelectorAll('.bb-popover').forEach(function(el) { el.classList.remove('open'); });
+    }
+
+    // Outside click
+    document.addEventListener('click', function(e) {
+      if (!state.openPopover) return;
+      var field = document.querySelector('.bb-field[data-popover="' + state.openPopover + '"]');
+      if (field && !field.contains(e.target)) {
+        closePopover();
+      }
+    });
+
+    // Field clicks
+    document.querySelectorAll('.bb-field[data-popover]').forEach(function(field) {
+      var btn = field.querySelector('.bb-value');
+      if (btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var id = field.getAttribute('data-popover');
+          if (state.openPopover === id) { closePopover(); }
+          else { openPopover(id); }
+        });
+      }
+    });
+
+    // Adults counter
+    document.getElementById('bb-adults-minus').addEventListener('click', function() {
+      if (state.adults > 1) { state.adults--; updateUI(); }
+    });
+    document.getElementById('bb-adults-plus').addEventListener('click', function() {
+      if (state.adults < 20) { state.adults++; updateUI(); }
+    });
+
+    // Children counter
+    document.getElementById('bb-children-minus').addEventListener('click', function() {
+      if (state.children > 0) { state.children--; updateUI(); }
+    });
+    document.getElementById('bb-children-plus').addEventListener('click', function() {
+      if (state.children < 10) { state.children++; updateUI(); }
+    });
+
+    // Rooms counter
+    document.getElementById('bb-rooms-minus').addEventListener('click', function() {
+      if (state.rooms > 1) { state.rooms--; updateUI(); }
+    });
+    document.getElementById('bb-rooms-plus').addEventListener('click', function() {
+      if (state.rooms < 10) { state.rooms++; updateUI(); }
+    });
+
+    // CTA Button
+    document.getElementById('bb-cta').addEventListener('click', function() {
+      if (state.checkIn && state.checkOut) {
+        var nights = Math.round((state.checkOut.getTime() - state.checkIn.getTime()) / 86400000);
+        var params = new URLSearchParams({
+          checkin: state.checkIn.toISOString().split('T')[0],
+          checkout: state.checkOut.toISOString().split('T')[0],
+          adults: state.adults,
+          children: state.children,
+          rooms: state.rooms,
+        });
+        window.location.href = 'pages/rooms.html?' + params.toString();
+      } else {
+        openPopover('checkin');
+      }
+    });
+
+    updateUI();
+  }
   </script>
 </body>
 </html>
