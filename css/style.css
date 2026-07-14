@@ -3706,18 +3706,23 @@ body.mobile-menu-open {
   overflow: hidden;
 }
 
+/* ------ Fixed nav offset ------ */
+main {
+  padding-top: 52px;
+}
+
 /* ------ Hero Sticky Nav ------ */
 .hero-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  width: 100%;
-    margin-top: -64px;
-  background: rgba(248, 244, 236, 0.85);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(248, 244, 236, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(193, 200, 192, 0.3);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s ease;
 }
 .hero-nav.scrolled {
@@ -3726,22 +3731,33 @@ body.mobile-menu-open {
 .hero-nav-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
+.hero-nav-brand {
+  flex-shrink: 0;
+}
+.hero-nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a341d;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
 .hero-nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
 }
 .hero-nav-link {
   font-family: 'Inter', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #414942;
   transition: color 0.3s ease;
@@ -3761,17 +3777,25 @@ body.mobile-menu-open {
   align-items: center;
   gap: 8px;
 }
+.hero-nav-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #0a341d;
+  padding: 4px;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .hero-nav-links {
     display: none;
   }
-  .hero-nav-inner {
-    justify-content: center;
-    padding: 12px 16px;
+  .hero-nav-mobile-btn {
+    display: inline-flex;
   }
-}
-@media (min-width: 769px) {
-  .hero-nav-actions .md\:hidden {
+  .hero-nav-inner {
+    padding: 10px 16px;
+  }
+  .hero-nav-actions .btn-primary {
     display: none;
   }
 }

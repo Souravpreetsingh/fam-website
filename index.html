@@ -303,6 +303,9 @@ tailwind.config = {
   <!-- ====== STICKY NAV ====== -->
   <nav class="hero-nav" id="main-nav">
     <div class="hero-nav-inner">
+      <div class="hero-nav-brand">
+        <a href="index.html" class="hero-nav-logo">FAM</a>
+      </div>
       <div class="hero-nav-links">
         <a href="index.html" class="hero-nav-link active" aria-current="page">Home</a>
         <a href="pages/rooms.html" class="hero-nav-link">Rooms</a>
@@ -312,8 +315,8 @@ tailwind.config = {
         <a href="pages/amenities.html" class="hero-nav-link">Amenities</a>
       </div>
       <div class="hero-nav-actions">
-        <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
-        <button class="md:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-6">Book Now</a>
+        <button class="hero-nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
