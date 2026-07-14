@@ -228,15 +228,8 @@ html.mode-winter .seasonal-toggle-btn.active {
 
 /* ------ Rounded Navbar ------ */
 #main-nav {
-  border-radius: 9999px !important;
-  width: calc(100% - 2rem) !important;
-  max-width: 1400px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  top: 12px !important;
-  border: 1px solid rgba(193, 200, 192, 0.3) !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
+  top: 0 !important;
+  border-bottom: 1px solid rgba(193, 200, 192, 0.3) !important;
 }
 #main-nav > div {
   border-radius: 9999px;
