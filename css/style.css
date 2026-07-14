@@ -1334,11 +1334,9 @@ html.time-night .mt-bonfire {
    Premium Floating Booking Bar
    ============================================ */
 .booking-bar {
-  position: absolute;
-  top: 65%;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 20;
+  margin-top: -36px;
   padding: 0 16px;
 }
 .bb-container {

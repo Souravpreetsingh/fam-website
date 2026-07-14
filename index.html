@@ -135,7 +135,7 @@ tailwind.config = {
   </nav>
 
   <!-- ====== HERO SECTION ====== -->
-  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-visible">
+  <section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
     <!-- Ken Burns Background -->
     <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
       <img
@@ -190,90 +190,90 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- Booking Bar -->
-    <div class="booking-bar">
-      <div class="bb-container">
-        <div class="bb-inner">
-          <div class="bb-field" data-popover="checkin">
-            <label class="bb-label">Check-in</label>
-            <button class="bb-value" id="bb-checkin">Select date</button>
-            <div class="bb-popover" id="bb-popover-checkin">
-              <div class="bb-cal">
-                <div class="bb-cal-header">
-                  <button class="bb-cal-nav" id="bb-cal-prev">&#8592;</button>
-                  <span class="bb-cal-month" id="bb-cal-month"></span>
-                  <button class="bb-cal-nav" id="bb-cal-next">&#8594;</button>
-                </div>
-                <div class="bb-cal-grid" id="bb-cal-grid"></div>
-              </div>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field" data-popover="checkout">
-            <label class="bb-label">Check-out</label>
-            <button class="bb-value" id="bb-checkout">Select date</button>
-            <div class="bb-popover" id="bb-popover-checkout">
-              <div class="bb-cal">
-                <div class="bb-cal-header">
-                  <button class="bb-cal-nav" id="bb-cal-prev-out">&#8592;</button>
-                  <span class="bb-cal-month" id="bb-cal-month-out"></span>
-                  <button class="bb-cal-nav" id="bb-cal-next-out">&#8594;</button>
-                </div>
-                <div class="bb-cal-grid" id="bb-cal-grid-out"></div>
-              </div>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field" data-popover="guests">
-            <label class="bb-label">Guests</label>
-            <button class="bb-value" id="bb-guests">2 Adults</button>
-            <div class="bb-popover" id="bb-popover-guests">
-              <div class="bb-guest">
-                <div class="bb-guest-row">
-                  <div><div class="bb-guest-label">Adults</div><div class="bb-guest-sub">Age 18+</div></div>
-                  <div class="bb-counter">
-                    <button class="bb-counter-btn" id="bb-adults-minus">-</button>
-                    <span class="bb-counter-val" id="bb-adults-val">2</span>
-                    <button class="bb-counter-btn" id="bb-adults-plus">+</button>
-                  </div>
-                </div>
-                <div class="bb-guest-row">
-                  <div><div class="bb-guest-label">Children</div><div class="bb-guest-sub">Ages 2-12</div></div>
-                  <div class="bb-counter">
-                    <button class="bb-counter-btn" id="bb-children-minus">-</button>
-                    <span class="bb-counter-val" id="bb-children-val">0</span>
-                    <button class="bb-counter-btn" id="bb-children-plus">+</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-field">
-            <label class="bb-label">Rooms</label>
-            <div class="bb-counter bb-counter-inline">
-              <button class="bb-counter-btn" id="bb-rooms-minus">-</button>
-              <span class="bb-counter-val" id="bb-rooms-val">1</span>
-              <button class="bb-counter-btn" id="bb-rooms-plus">+</button>
-            </div>
-          </div>
-          <div class="bb-divider"></div>
-          <div class="bb-summary">
-            <div class="bb-summary-label">Stay Summary</div>
-            <div class="bb-summary-line" id="bb-summary-line">Select dates</div>
-            <div class="bb-price" id="bb-price">&#8377;0</div>
-          </div>
-          <button class="bb-cta" id="bb-cta">Check Availability</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Scroll Indicator -->
     <div class="scroll-indicator fade-in-up delay-700">
       <span class="font-label-sm text-[10px] tracking-[0.2em] text-white/60">Scroll</span>
       <div class="scroll-mouse"><div class="scroll-dot"></div></div>
     </div>
   </section>
+
+  <!-- Booking Bar -->
+  <div class="booking-bar">
+    <div class="bb-container">
+      <div class="bb-inner">
+        <div class="bb-field" data-popover="checkin">
+          <label class="bb-label">Check-in</label>
+          <button class="bb-value" id="bb-checkin">Select date</button>
+          <div class="bb-popover" id="bb-popover-checkin">
+            <div class="bb-cal">
+              <div class="bb-cal-header">
+                <button class="bb-cal-nav" id="bb-cal-prev">&#8592;</button>
+                <span class="bb-cal-month" id="bb-cal-month"></span>
+                <button class="bb-cal-nav" id="bb-cal-next">&#8594;</button>
+              </div>
+              <div class="bb-cal-grid" id="bb-cal-grid"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bb-divider"></div>
+        <div class="bb-field" data-popover="checkout">
+          <label class="bb-label">Check-out</label>
+          <button class="bb-value" id="bb-checkout">Select date</button>
+          <div class="bb-popover" id="bb-popover-checkout">
+            <div class="bb-cal">
+              <div class="bb-cal-header">
+                <button class="bb-cal-nav" id="bb-cal-prev-out">&#8592;</button>
+                <span class="bb-cal-month" id="bb-cal-month-out"></span>
+                <button class="bb-cal-nav" id="bb-cal-next-out">&#8594;</button>
+              </div>
+              <div class="bb-cal-grid" id="bb-cal-grid-out"></div>
+            </div>
+          </div>
+        </div>
+        <div class="bb-divider"></div>
+        <div class="bb-field" data-popover="guests">
+          <label class="bb-label">Guests</label>
+          <button class="bb-value" id="bb-guests">2 Adults</button>
+          <div class="bb-popover" id="bb-popover-guests">
+            <div class="bb-guest">
+              <div class="bb-guest-row">
+                <div><div class="bb-guest-label">Adults</div><div class="bb-guest-sub">Age 18+</div></div>
+                <div class="bb-counter">
+                  <button class="bb-counter-btn" id="bb-adults-minus">-</button>
+                  <span class="bb-counter-val" id="bb-adults-val">2</span>
+                  <button class="bb-counter-btn" id="bb-adults-plus">+</button>
+                </div>
+              </div>
+              <div class="bb-guest-row">
+                <div><div class="bb-guest-label">Children</div><div class="bb-guest-sub">Ages 2-12</div></div>
+                <div class="bb-counter">
+                  <button class="bb-counter-btn" id="bb-children-minus">-</button>
+                  <span class="bb-counter-val" id="bb-children-val">0</span>
+                  <button class="bb-counter-btn" id="bb-children-plus">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bb-divider"></div>
+        <div class="bb-field">
+          <label class="bb-label">Rooms</label>
+          <div class="bb-counter bb-counter-inline">
+            <button class="bb-counter-btn" id="bb-rooms-minus">-</button>
+            <span class="bb-counter-val" id="bb-rooms-val">1</span>
+            <button class="bb-counter-btn" id="bb-rooms-plus">+</button>
+          </div>
+        </div>
+        <div class="bb-divider"></div>
+        <div class="bb-summary">
+          <div class="bb-summary-label">Stay Summary</div>
+          <div class="bb-summary-line" id="bb-summary-line">Select dates</div>
+          <div class="bb-price" id="bb-price">&#8377;0</div>
+        </div>
+        <button class="bb-cta" id="bb-cta">Check Availability</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ====== MOUNTAIN TIME EXPERIENCE ====== -->
   <section class="mt-hero" id="mt-hero">
