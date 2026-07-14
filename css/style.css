@@ -731,6 +731,14 @@ body {
   clip-path: inset(0 0 100% 0);
 }
 
+/* ------ Hero FAM Heading ------ */
+.text-hero-fam {
+  font-size: clamp(80px, 18vw, 180px);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
 /* ------ Text Balance ------ */
 .text-balance {
   text-wrap: balance;
