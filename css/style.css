@@ -731,12 +731,107 @@ body {
   clip-path: inset(0 0 100% 0);
 }
 
-/* ------ Hero FAM Heading ------ */
-.text-hero-fam {
+/* ------ Premium Editorial Hero ------ */
+.hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  letter-spacing: 10px;
+  color: #e8d5b5;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+@media (max-width: 768px) {
+  .hero-label { font-size: 12px; letter-spacing: 6px; }
+}
+
+.hero-fam {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(80px, 18vw, 180px);
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 0.85;
   letter-spacing: -0.04em;
+  color: #f5efe0;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  margin: 0 0 16px;
+}
+
+.hero-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  color: #f5efe0;
+  margin-bottom: 24px;
+}
+
+.hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto 8px;
+}
+@media (max-width: 768px) {
+  .hero-desc { font-size: 15px; }
+}
+
+.hero-desc-secondary {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .hero-desc-secondary { font-size: 14px; }
+}
+
+.hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  background: #0a341d;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: none;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(10, 52, 29, 0.25);
+  cursor: pointer;
+}
+.hero-btn-primary:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(10, 52, 29, 0.35);
+  background: #0f4026;
+}
+
+.hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(201, 168, 106, 0.5);
+  color: #e8d5b5;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+.hero-btn-secondary:hover {
+  background: rgba(201, 168, 106, 0.1);
+  border-color: #C9A86A;
+  transform: scale(1.04) translateY(-2px);
 }
 
 /* ------ Text Balance ------ */
