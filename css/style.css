@@ -3748,3 +3748,219 @@ body.mobile-menu-open {
 #top-nav > div {
   border-radius: 9999px;
 }
+
+/* ============================================
+   Comprehensive Responsive Overrides
+   ============================================ */
+/* Prevent horizontal scroll at all sizes */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* 320px–414px: small phones */
+@media (max-width: 414px) {
+  .hero-label { font-size: 10px; letter-spacing: 6px; }
+  .hero-fam { font-size: clamp(42px, 18vw, 64px) !important; line-height: 1.1 !important; }
+  .hero-welcome { font-size: clamp(16px, 5vw, 22px) !important; }
+  .hero-sub { font-size: clamp(13px, 3.5vw, 15px) !important; line-height: 1.6 !important; }
+  .hero-content-wrap { padding-top: 60px; padding-left: 12px; padding-right: 12px; }
+  .hero-content-inner { gap: 8px; }
+  .hero-btn-wrap { flex-direction: column; gap: 10px; width: 100%; }
+  .hero-btn-wrap .btn-primary,
+  .hero-btn-wrap .btn-secondary { width: 100%; text-align: center; justify-content: center; padding: 14px 20px; font-size: 14px; min-height: 48px; }
+  .section-gap { padding-top: 60px; padding-bottom: 60px; }
+  .text-headline-lg { font-size: 28px !important; line-height: 36px !important; }
+  .text-display-hero { font-size: 42px !important; line-height: 48px !important; }
+  .font-headline-lg.text-3xl { font-size: 26px !important; line-height: 34px !important; }
+  .font-headline-md.text-xl { font-size: 18px !important; line-height: 26px !important; }
+  .h-\[300px\] { height: 200px !important; }
+  .h-\[400px\] { height: 250px !important; }
+  .h-\[500px\] { height: 300px !important; }
+  .h-\[600px\] { height: 350px !important; }
+  .py-section-gap { padding-top: 60px !important; padding-bottom: 60px !important; }
+  .px-4 { padding-left: 12px !important; padding-right: 12px !important; }
+  .py-16 { padding-top: 40px !important; padding-bottom: 40px !important; }
+  .py-24 { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .gap-12 { gap: 24px !important; }
+  .gap-16 { gap: 24px !important; }
+  .gap-32 { gap: 40px !important; }
+  .mb-16 { margin-bottom: 32px !important; }
+  .mt-12 { margin-top: 24px !important; }
+  .mt-16 { margin-top: 32px !important; }
+  .p-6 { padding: 16px !important; }
+  .p-8 { padding: 16px !important; }
+  .p-12 { padding: 24px !important; }
+}
+
+/* 480px: larger phones */
+@media (max-width: 480px) {
+  .hero-fam { font-size: clamp(48px, 16vw, 72px) !important; }
+  .hero-content-wrap { padding-left: 16px; padding-right: 16px; }
+  .hero-btn-wrap { gap: 12px; }
+  .section-gap { padding-top: 64px; padding-bottom: 64px; }
+}
+
+/* 640px: small tablets */
+@media (max-width: 640px) {
+  .concierge-panel { width: calc(100vw - 24px); right: 12px; bottom: 80px; max-height: 70vh; }
+  .concierge-btn { bottom: 16px; right: 16px; }
+}
+
+/* 768px: tablets */
+@media (max-width: 768px) {
+  .hero-label { font-size: 11px; letter-spacing: 8px; }
+  .hero-fam { font-size: clamp(64px, 16vw, 100px); }
+  .hero-content-wrap { padding-top: 64px; padding-bottom: 100px; }
+  .hero-btn-wrap { gap: 14px; }
+  .section-gap { padding-top: 80px; padding-bottom: 80px; }
+}
+
+/* 820px–1024px: small laptops / large tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-headline-lg { font-size: 36px !important; line-height: 44px !important; }
+  .text-display-hero { font-size: 60px !important; line-height: 72px !important; }
+  .section-gap { padding-top: 80px; padding-bottom: 80px; }
+}
+
+/* 1280px+: desktops */
+@media (min-width: 1280px) {
+  .text-headline-lg { font-size: 48px; line-height: 56px; }
+}
+
+/* Image containers - prevent overflow and maintain aspect */
+img { max-width: 100%; height: auto; }
+.img-container img,
+.relative img { max-width: 100%; }
+
+/* Booking bar mobile: full width fields */
+@media (max-width: 768px) {
+  .bb-inner { padding: 12px; gap: 8px; border-radius: 20px; }
+  .bb-field { width: 100%; }
+  .bb-cta { width: 100%; }
+  .bb-cta button { width: 100%; justify-content: center; }
+  .bb-summary { flex: 1 1 100%; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); }
+}
+
+/* Rooms grid responsive */
+@media (max-width: 480px) {
+  .rooms-grid .h-56 { height: 200px !important; }
+  .rooms-grid .p-6 { padding: 12px !important; }
+}
+
+/* Explore cards responsive */
+@media (max-width: 640px) {
+  .explore-card { height: auto !important; min-height: 360px; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .explore-card { height: 440px; }
+}
+
+/* Map responsive */
+@media (max-width: 768px) {
+  .fam-map-wrap { border-radius: 1rem; height: 400px !important; }
+  .map-info-panel { width: calc(100vw - 32px) !important; max-width: 360px; }
+}
+
+/* Footer responsive */
+@media (max-width: 640px) {
+  footer .flex.gap-16 { flex-direction: column; gap: 32px !important; }
+  footer .flex.flex-col.md\:flex-row { gap: 32px !important; }
+  footer .text-center.md\:text-left { text-align: center; }
+  footer .items-center.md\:items-start { align-items: center; }
+  footer .max-w-xs { max-width: 100%; }
+}
+
+/* Trip planner responsive */
+@media (max-width: 414px) {
+  .trip-planner-wrap { grid-template-columns: 1fr; }
+  .tp-illustration { display: none; }
+  .tp-card { padding: 20px 14px; }
+  .tp-options.col2, .tp-options.col4 { grid-template-columns: 1fr; }
+  .tp-step-indicators { gap: 4px; }
+  .tp-step { min-width: 32px; height: 32px; font-size: 12px; }
+}
+
+/* Amenities grid */
+@media (max-width: 640px) {
+  .amenities-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 414px) {
+  .amenities-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Gallery grid */
+@media (max-width: 768px) {
+  .gallery-grid { gap: 8px; }
+}
+@media (max-width: 480px) {
+  .gallery-grid { gap: 4px; }
+}
+
+/* About/welcome section stacking */
+@media (max-width: 768px) {
+  .welcome-stack { grid-template-columns: 1fr !important; }
+  .welcome-stack .md\:col-span-5,
+  .welcome-stack .md\:col-span-7 { grid-column: span 1 !important; }
+}
+
+/* Animation performance on mobile */
+@media (max-width: 768px) {
+  .parallax-bg { background-attachment: scroll !important; }
+}
+
+/* Mobile menu link touch targets */
+.mobile-menu-link {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* Ensure all buttons have proper touch targets */
+.btn-primary, .btn-secondary, button, a.btn-primary, a.btn-secondary {
+  min-height: 44px;
+}
+
+/* Scroll indicator responsive */
+@media (max-width: 480px) {
+  .scroll-indicator { bottom: 16px; }
+  .scroll-label { font-size: 10px; letter-spacing: 3px; }
+}
+
+/* Lifetime page responsive */
+@media (max-width: 768px) {
+  .life-chapter-grid { grid-template-columns: 1fr !important; }
+  .life-chapter-grid .md\:col-span-6 { grid-column: span 1 !important; }
+}
+
+/* Rooms page responsive */
+@media (max-width: 768px) {
+  .room-detail-grid { grid-template-columns: 1fr !important; }
+  .room-gallery { height: 300px !important; }
+}
+@media (max-width: 480px) {
+  .room-detail-card .p-8 { padding: 16px !important; }
+  .room-detail-card .gap-8 { gap: 12px !important; }
+}
+
+/* Testimonials/quote section responsive */
+@media (max-width: 480px) {
+  blockquote.text-3xl { font-size: 22px !important; line-height: 30px !important; }
+  blockquote.text-5xl { font-size: 32px !important; line-height: 40px !important; }
+  blockquote.text-7xl { font-size: 36px !important; line-height: 44px !important; }
+}
+
+/* Contact section responsive */
+@media (max-width: 640px) {
+  #contact .grid { grid-template-columns: 1fr !important; }
+}
+
+/* CTA section responsive */
+@media (max-width: 640px) {
+  .cta-section { padding: 40px 16px !important; }
+  .cta-section h2 { font-size: 24px !important; line-height: 32px !important; }
+}
+
+/* Remove any leftover nav gap */
+#main-nav { top: 0; }
