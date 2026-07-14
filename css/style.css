@@ -3713,6 +3713,7 @@ body.mobile-menu-open {
   top: 0;
   z-index: 50;
   width: 100%;
+  margin-top: -40px;
   background: rgba(248, 244, 236, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
