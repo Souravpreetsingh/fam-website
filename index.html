@@ -129,13 +129,39 @@ tailwind.config = {
           <a href="pages/amenities.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
       </div>
       <div class="flex items-center gap-4">
-        <a href="#" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
+        <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex">Book Now</a>
         <button class="md:hidden text-primary p-2" id="mobile-menu-btn">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
     </div>
   </nav>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-panel" id="mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <span class="font-headline-md text-xl text-primary">Menu</span>
+      <button class="mobile-menu-close" id="mobile-close" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links" aria-label="Mobile navigation">
+      <a href="index.html" class="mobile-menu-link">Home</a>
+      <a href="pages/rooms.html" class="mobile-menu-link">Rooms</a>
+      <a href="pages/life.html" class="mobile-menu-link">Life at FAM</a>
+      <a href="pages/explore.html" class="mobile-menu-link">Explore</a>
+      <a href="pages/gallery.html" class="mobile-menu-link">Gallery</a>
+      <a href="pages/amenities.html" class="mobile-menu-link">Amenities</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="pages/rooms.html" class="btn-primary w-full justify-center text-sm py-3">Book Your Stay</a>
+      <a href="tel:9876575673" class="mobile-menu-phone">
+        <span class="material-symbols-outlined text-lg">phone</span>
+        Property Manager: 98765 75673
+      </a>
+    </div>
+  </div>
 
   <!-- ====== HERO SECTION ====== -->
   <section class="hero-root">
@@ -169,7 +195,7 @@ tailwind.config = {
             <span>Book Your Stay</span>
             <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
           </a>
-          <a href="#story" class="hero-btn-secondary">
+          <a href="pages/rooms.html" class="hero-btn-secondary">
             Explore Rooms
           </a>
         </div>
@@ -393,7 +419,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 1</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -409,7 +435,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">King Attic</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 2</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;5,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;5,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -425,7 +451,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 3</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -441,7 +467,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Maina 1</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -457,7 +483,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Maina 2</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -473,7 +499,7 @@ tailwind.config = {
             <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
           </div>
           <h3 class="font-headline-md text-xl text-primary mb-1">Maina 3</h3>
-          <p class="font-headline-md text-base text-accent-gold mb-4">&pi;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
           <a href="pages/rooms.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
         </div>
       </div>
@@ -1056,7 +1082,45 @@ tailwind.config = {
         FAM.Animations.init({ gsap: false, lenis: false });
       }
       initBookingBar();
+      initMobileMenu();
     });
+  </script>
+
+  <script>
+  function initMobileMenu() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var panel = document.getElementById('mobile-panel');
+    var overlay = document.getElementById('mobile-overlay');
+    var closeBtn = document.getElementById('mobile-close');
+    if (!btn || !panel || !overlay) return;
+
+    function open() {
+      panel.classList.add('open');
+      overlay.classList.add('open');
+      document.body.classList.add('mobile-menu-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+      panel.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.classList.remove('mobile-menu-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (panel.classList.contains('open')) close(); else open();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (overlay) overlay.addEventListener('click', close);
+    if (panel) {
+      panel.querySelectorAll('.mobile-menu-link').forEach(function(link) {
+        link.addEventListener('click', close);
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && panel && panel.classList.contains('open')) close();
+    });
+  }
   </script>
 
   <script>
