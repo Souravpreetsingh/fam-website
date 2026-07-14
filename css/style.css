@@ -1223,11 +1223,10 @@ html.time-night .mt-bonfire {
    ============================================ */
 .booking-bar {
   position: absolute;
-  bottom: 0;
+  top: 62%;
   left: 0;
   right: 0;
   z-index: 20;
-  transform: translateY(50%);
   padding: 0 16px;
 }
 .bb-container {
