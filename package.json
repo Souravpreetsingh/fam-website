@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "description": "Flamingo aur Maina — Boutique Stays in Jibhi",
   "scripts": {
-    "build": "echo 'Static site - no build required' && exit 0",
-    "dev": "echo 'Open index.html in browser or use a local server' && exit 0",
-    "start": "npx serve ."
+    "build": "cd react-hero && npm install && npm run build",
+    "dev": "cd react-hero && npm run dev",
+    "start": "npx serve react-hero/dist"
   },
   "engines": {
     "node": ">=18"

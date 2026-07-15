@@ -1,124 +1,35 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "npm run build",
-  "outputDirectory": ".",
-  "installCommand": "npm install",
-  "devCommand": null,
-  "cleanUrls": false,
+  "buildCommand": "cd react-hero && npm run build",
+  "outputDirectory": "react-hero/dist",
+  "installCommand": "cd react-hero && npm install",
+  "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     },
     {
-      "source": "/pages/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/index.html",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     }
   ],
   "rewrites": [
-    {
-      "source": "/rooms",
-      "destination": "/pages/rooms.html"
-    },
-    {
-      "source": "/life",
-      "destination": "/pages/life.html"
-    },
-    {
-      "source": "/explore",
-      "destination": "/pages/explore.html"
-    },
-    {
-      "source": "/gallery",
-      "destination": "/pages/gallery.html"
-    },
-    {
-      "source": "/amenities",
-      "destination": "/pages/amenities.html"
-    },
-    {
-      "source": "/login",
-      "destination": "/pages/login.html"
-    },
-    {
-      "source": "/signup",
-      "destination": "/pages/signup.html"
-    },
-    {
-      "source": "/forgot-password",
-      "destination": "/pages/forgot-password.html"
-    },
-    {
-      "source": "/reset-password",
-      "destination": "/pages/reset-password.html"
-    },
-    {
-      "source": "/verify-email",
-      "destination": "/pages/verify-email.html"
-    },
-    {
-      "source": "/email-verified",
-      "destination": "/pages/email-verified.html"
-    }
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

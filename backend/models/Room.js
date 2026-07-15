@@ -101,6 +101,11 @@ const roomSchema = new mongoose.Schema(
       min: 1,
       default: 1,
     },
+    status: {
+      type: String,
+      enum: ['available', 'booked', 'occupied', 'cleaning', 'maintenance', 'out_of_service'],
+      default: 'available',
+    },
     bookedDates: [
       {
         date: Date,
@@ -108,8 +113,32 @@ const roomSchema = new mongoose.Schema(
           type: Number,
           default: 1,
         },
+        bookingId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Booking',
+        },
       },
     ],
+    maintenanceBlocks: [
+      {
+        startDate: Date,
+        endDate: Date,
+        reason: {
+          type: String,
+          default: 'Scheduled maintenance',
+        },
+      },
+    ],
+    minStay: {
+      type: Number,
+      default: 1,
+      min: 1,
+    },
+    maxStay: {
+      type: Number,
+      default: 30,
+      min: 1,
+    },
     cancellationPolicy: {
       type: String,
       default: 'Free cancellation up to 48 hours before check-in',
@@ -141,6 +170,7 @@ const roomSchema = new mongoose.Schema(
 roomSchema.index({ slug: 1 });
 roomSchema.index({ isAvailable: 1, isFeatured: 1 });
 roomSchema.index({ pricePerNight: 1 });
+roomSchema.index({ status: 1 });
 
 roomSchema.pre('save', function (next) {
   if (this.isModified('name') && !this.slug) {
@@ -151,5 +181,26 @@ roomSchema.pre('save', function (next) {
   }
   next();
 });
+
+roomSchema.methods.isDateBlockedForMaintenance = function (date) {
+  return this.maintenanceBlocks.some(
+    (block) => date >= block.startDate && date < block.endDate
+  );
+};
+
+roomSchema.methods.isDateAvailable = function (date, excludeBookingId) {
+  if (this.status === 'maintenance' || this.status === 'out_of_service') {
+    if (!this.isDateBlockedForMaintenance(date)) return true;
+    return false;
+  }
+  const bookingOnDate = this.bookedDates.find((bd) => {
+    const bdDate = new Date(bd.date);
+    return (
+      bdDate.toDateString() === date.toDateString() &&
+      bd.count >= this.totalRooms
+    );
+  });
+  return !bookingOnDate || bookingOnDate.bookingId?.toString() === excludeBookingId;
+};
 
 module.exports = mongoose.model('Room', roomSchema);

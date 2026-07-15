@@ -49,7 +49,17 @@ const bookingSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ['pending', 'confirmed', 'cancelled', 'completed', 'refunded'],
+      enum: [
+        'draft',
+        'pending',
+        'confirmed',
+        'checked_in',
+        'checked_out',
+        'completed',
+        'cancelled',
+        'no_show',
+        'expired',
+      ],
       default: 'pending',
     },
     paymentStatus: {
@@ -77,7 +87,41 @@ const bookingSchema = new mongoose.Schema(
     },
     cancelledAt: Date,
     confirmedAt: Date,
+    checkedInAt: Date,
+    checkedOutAt: Date,
     completedAt: Date,
+    expiredAt: Date,
+    previousRoom: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Room',
+    },
+    statusHistory: [
+      {
+        status: {
+          type: String,
+          enum: [
+            'draft',
+            'pending',
+            'confirmed',
+            'checked_in',
+            'checked_out',
+            'completed',
+            'cancelled',
+            'no_show',
+            'expired',
+          ],
+        },
+        changedAt: {
+          type: Date,
+          default: Date.now,
+        },
+        changedBy: {
+          type: String,
+          default: 'system',
+        },
+        note: String,
+      },
+    ],
   },
   {
     timestamps: true,
@@ -91,17 +135,63 @@ bookingSchema.index({ checkIn: 1, checkOut: 1 });
 
 bookingSchema.pre('save', function (next) {
   if (this.isModified('status')) {
+    const now = new Date();
+    const entry = { status: this.status, changedAt: now, changedBy: 'system' };
     if (this.status === 'confirmed' && !this.confirmedAt) {
-      this.confirmedAt = new Date();
+      this.confirmedAt = now;
+      entry.note = 'Booking confirmed';
     }
     if (this.status === 'cancelled' && !this.cancelledAt) {
-      this.cancelledAt = new Date();
+      this.cancelledAt = now;
+      entry.note = this.cancellationReason || 'Booking cancelled';
+    }
+    if (this.status === 'checked_in' && !this.checkedInAt) {
+      this.checkedInAt = now;
+      entry.note = 'Guest checked in';
+    }
+    if (this.status === 'checked_out' && !this.checkedOutAt) {
+      this.checkedOutAt = now;
+      entry.note = 'Guest checked out';
     }
     if (this.status === 'completed' && !this.completedAt) {
-      this.completedAt = new Date();
+      this.completedAt = now;
+      entry.note = 'Stay completed';
     }
+    if (this.status === 'no_show') {
+      entry.note = 'Guest did not show';
+    }
+    if (this.status === 'expired' && !this.expiredAt) {
+      this.expiredAt = now;
+      entry.note = 'Booking expired';
+    }
+    this.statusHistory.push(entry);
   }
   next();
 });
+
+bookingSchema.methods.canModify = function () {
+  return ['draft', 'pending', 'confirmed'].includes(this.status);
+};
+
+bookingSchema.methods.canCancel = function () {
+  return ['draft', 'pending', 'confirmed'].includes(this.status);
+};
+
+bookingSchema.statics.statusFlow = {
+  draft: ['pending', 'cancelled'],
+  pending: ['confirmed', 'cancelled', 'expired'],
+  confirmed: ['checked_in', 'cancelled', 'no_show', 'expired'],
+  checked_in: ['checked_out', 'cancelled'],
+  checked_out: ['completed'],
+  completed: [],
+  cancelled: [],
+  no_show: [],
+  expired: [],
+};
+
+bookingSchema.statics.isValidTransition = function (from, to) {
+  const validNext = this.statusFlow[from];
+  return validNext && validNext.includes(to);
+};
 
 module.exports = mongoose.model('Booking', bookingSchema);
