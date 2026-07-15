@@ -4865,28 +4865,26 @@ img { max-width: 100%; height: auto; }
   min-height: 44px;
   padding: 10px 24px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #0a341d 0%, #1a5a30 100%);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(10, 52, 29, 0.3);
   cursor: pointer;
   white-space: nowrap;
   transition: all 300ms ease;
   line-height: 1;
+  border: none;
   text-decoration: none;
 }
 
 .nav-signin-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 32px rgba(10, 52, 29, 0.45);
+  background: linear-gradient(135deg, #0f3d23 0%, #1f6a3a 100%);
 }
 
 .nav-signin-btn:active {
@@ -4982,14 +4980,16 @@ html.mode-winter .nav-book-btn:hover {
 }
 
 .nav-mobile-signin {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(10, 52, 29, 0.2);
-  color: #0a341d;
+  background: linear-gradient(135deg, #0a341d 0%, #1a5a30 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 2px 12px rgba(10, 52, 29, 0.3);
 }
 
 .nav-mobile-signin:hover {
-  background: rgba(255, 255, 255, 0.7);
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(10, 52, 29, 0.4);
+  background: linear-gradient(135deg, #0f3d23 0%, #1f6a3a 100%);
 }
 
 .nav-mobile-book {
