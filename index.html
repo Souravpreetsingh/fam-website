@@ -159,8 +159,8 @@ tailwind.config = {
         <a href="pages/amenities.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
       </div>
       <div class="flex items-center gap-4">
-        <a href="login.html" class="nav-signin-btn hidden lg:inline-flex" aria-label="Sign in to your account">Sign In</a>
-        <a href="pages/rooms.html" class="nav-book-btn hidden lg:inline-flex" aria-label="Book your stay at FAM">Book Your Stay</a>
+        <button type="button" onclick="window.location.href='login.html'" class="nav-signin-btn hidden lg:inline-flex" aria-label="Sign in to your account">Sign In</button>
+        <button type="button" onclick="window.location.href='pages/rooms.html'" class="nav-book-btn hidden lg:inline-flex" aria-label="Book your stay at FAM">Book Your Stay</button>
         <button class="lg:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
       </div>
     </div>
@@ -185,8 +185,8 @@ tailwind.config = {
     </nav>
     <div class="mobile-menu-footer">
       <div class="mobile-menu-cta-group">
-        <a href="login.html" class="nav-mobile-signin">Sign In</a>
-        <a href="pages/rooms.html" class="nav-mobile-book">Book Your Stay</a>
+        <button type="button" onclick="window.location.href='login.html'" class="nav-mobile-signin">Sign In</button>
+        <button type="button" onclick="window.location.href='pages/rooms.html'" class="nav-mobile-book">Book Your Stay</button>
       </div>
       <a href="tel:9876575673" class="mobile-menu-phone">
         <span class="material-symbols-outlined text-lg">phone</span>
