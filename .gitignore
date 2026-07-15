@@ -29,7 +29,6 @@ desktop.ini
 npm-debug.log*
 
 # --- Archives / unrelated projects (not part of the main site) ---
-react-hero/
 stitch_flamingo_aur_maina_architecture*.zip
 stitch_flamingo_aur_maina_architecture/
 arch2/
