@@ -6,11 +6,6 @@
   "installCommand": "cd react-hero && npm install && cd .. && npm install",
   "cleanUrls": true,
   "trailingSlash": false,
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs@18.x"
-    }
-  },
   "headers": [
     {
       "source": "/(.*)",
