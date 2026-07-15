@@ -644,6 +644,11 @@ html, body, main, section, div, nav, header {
   padding: 0;
   border: 0;
 }
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 
 /* ------ Smooth Scroll ------ */
 html {
@@ -768,6 +773,8 @@ body {
   justify-content: center;
   overflow: hidden;
   background: #1a1a1e;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-bg-wrap {
@@ -775,6 +782,7 @@ body {
   inset: 0;
   z-index: 0;
   overflow: hidden;
+  background: #1a1a1e url('/images/hero/luxury-hero.jpg') center top / cover no-repeat;
 }
 
 .hero-bg-img {
