@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Georgia', serif; margin: 0; padding: 0; background: #f8f4ec; }
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 2px solid #C9A86A; }
+    .logo { font-size: 28px; color: #0a341d; font-weight: bold; letter-spacing: 2px; }
+    .content { padding: 30px 0; color: #333; line-height: 1.8; }
+    .footer { text-align: center; padding-top: 30px; border-top: 1px solid #ddd; color: #888; font-size: 14px; }
+    h1 { color: #0a341d; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Flamingo aur Maina</div>
+    </div>
+    <div class="content">
+      <h1>Thank You for Contacting Us</h1>
+      <p>Dear {{name}},</p>
+      <p>Thank you for reaching out to Flamingo aur Maina regarding "{{subject}}".</p>
+      <p>We have received your message and our team will get back to you within 24-48 hours.</p>
+      <p>In the meantime, feel free to explore our website to learn more about our luxury retreat.</p>
+      <p>Warm regards,<br>The Flamingo aur Maina Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} Flamingo aur Maina. All rights reserved.</p>
+      <p>Flamingo aur Maina, Himalayas, India</p>
+    </div>
+  </div>
+</body>
+</html>

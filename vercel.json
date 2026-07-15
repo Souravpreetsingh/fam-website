@@ -95,6 +95,30 @@
     {
       "source": "/amenities",
       "destination": "/pages/amenities.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/pages/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/pages/signup.html"
+    },
+    {
+      "source": "/forgot-password",
+      "destination": "/pages/forgot-password.html"
+    },
+    {
+      "source": "/reset-password",
+      "destination": "/pages/reset-password.html"
+    },
+    {
+      "source": "/verify-email",
+      "destination": "/pages/verify-email.html"
+    },
+    {
+      "source": "/email-verified",
+      "destination": "/pages/email-verified.html"
     }
   ]
 }
