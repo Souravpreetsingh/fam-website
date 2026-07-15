@@ -3,9 +3,14 @@
   "framework": null,
   "buildCommand": "cd react-hero && npm run build",
   "outputDirectory": "react-hero/dist",
-  "installCommand": "cd react-hero && npm install",
+  "installCommand": "cd react-hero && npm install && cd .. && npm install",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs@18.x"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
@@ -30,6 +35,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/api/(.*)", "destination": "/api" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
