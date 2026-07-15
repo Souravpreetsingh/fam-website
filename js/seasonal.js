@@ -44,7 +44,7 @@
   function spawnSnowflakes() {
     if (prefersReducedMotion) return;
     if (snowflakes.length > 0) return;
-    if (window.innerWidth < 768) return;
+    if (window.innerWidth < 1024) return;
     for (var i = 0; i < SNOWFLAKE_COUNT; i++) {
       var flake = createSnowflake();
       snowflakes.push(flake);
@@ -75,6 +75,7 @@
 
   function spawnLeaves() {
     if (prefersReducedMotion) return;
+    if (window.innerWidth < 1024) return;
     var container = document.getElementById('seasonal-leaves');
     if (container) container.remove();
     container = document.createElement('div');
@@ -175,6 +176,19 @@
     });
   }
 
+  /* --- Handle resize for mobile cleanup --- */
+  function handleResize() {
+    var isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      destroySnowflakes();
+      destroyLeaves();
+    } else if (currentMode === 'winter') {
+      spawnSnowflakes();
+    } else if (currentMode === 'green') {
+      spawnLeaves();
+    }
+  }
+
   /* --- Init --- */
   function init() {
     buildToggle();
@@ -183,6 +197,8 @@
     try { var stored = localStorage.getItem(STORAGE_KEY); if (stored) saved = stored; } catch (e) { /* */ }
 
     applyMode(saved, false);
+
+    window.addEventListener('resize', handleResize);
   }
 
   if (document.readyState === 'loading') {

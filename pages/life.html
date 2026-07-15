@@ -80,7 +80,7 @@ tailwind.config = {
       <div class="flex items-center gap-4">
         <a href="../index.html" class="font-headline-md text-headline-md text-primary tracking-tight">Flamingo aur Maina</a>
       </div>
-      <div class="hidden md:flex items-center gap-8">
+      <div class="hidden lg:flex items-center gap-8">
         <a href="../index.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Home</a>
         <a href="rooms.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Rooms</a>
         <a href="life.html" class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1">Life at FAM</a>
@@ -89,8 +89,8 @@ tailwind.config = {
         <a href="amenities.html" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
       </div>
       <div class="flex items-center gap-4">
-        <a href="rooms.html" class="btn-primary text-sm py-2 px-6 hidden md:inline-flex" aria-label="Book your stay at FAM">Book Now</a>
-        <button class="md:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+        <a href="rooms.html" class="btn-primary text-sm py-2 px-6 hidden lg:inline-flex" aria-label="Book your stay at FAM">Book Now</a>
+        <button class="lg:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
       </div>
     </div>
   </nav>
@@ -294,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const leafContainer = document.getElementById('leaf-container');
-  if(leafContainer) {
+  if(leafContainer && window.innerWidth >= 1024) {
     for(let i=0; i<20; i++) {
       let leaf = document.createElement('div');
       leaf.className = `leaf ${Math.random() > 0.5 ? 'gold' : ''}`;
@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const bonfireContainer = document.getElementById('bonfire-container');
-  if(bonfireContainer) {
+  if(bonfireContainer && window.innerWidth >= 1024) {
     for(let i=0; i<15; i++) {
       let ember = document.createElement('div');
       ember.className = 'ember';
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const starContainer = document.getElementById('star-container');
-  if(starContainer) {
+  if(starContainer && window.innerWidth >= 1024) {
     for(let i=0; i<50; i++) {
       let star = document.createElement('div');
       star.className = 'star';

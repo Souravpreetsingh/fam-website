@@ -133,6 +133,7 @@
   };
 
   function spawnParticles(mode) {
+    if (window.innerWidth < 1024) return;
     var existing = document.getElementById('mt-particles');
     if (existing) existing.remove();
 
@@ -169,6 +170,14 @@
     document.body.appendChild(container);
   }
 
+  /* --- Handle resize for mobile cleanup --- */
+  function handleResize() {
+    if (window.innerWidth < 1024) {
+      var existing = document.getElementById('mt-particles');
+      if (existing) existing.remove();
+    }
+  }
+
   /* --- Init --- */
   function init() {
     try {
@@ -189,6 +198,8 @@
         if (!frozen) applyMode(getMode());
       }
     }, 60000);
+
+    window.addEventListener('resize', handleResize);
   }
 
   if (document.readyState === 'loading') {

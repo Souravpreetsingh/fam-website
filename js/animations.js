@@ -158,6 +158,16 @@
   // ---- Init All ----
   FAM.Animations.init = function(opts) {
     opts = opts || {};
+    var mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var reducedMotion = mediaQuery.matches;
+    var isMobile = window.innerWidth < 1024;
+    
+    // Skip heavy animations on mobile or when reduced motion is preferred
+    if (reducedMotion || isMobile) {
+      if (opts.reveal !== false) FAM.Animations.initReveal();
+      if (opts.revealHidden !== false) FAM.Animations.initRevealHidden();
+      return;
+    }
     
     if (opts.reveal !== false) FAM.Animations.initReveal();
     if (opts.revealHidden !== false) FAM.Animations.initRevealHidden();
@@ -169,5 +179,14 @@
   };
 
   global.FAM = FAM;
+
+  // ---- Lazy-load all images without explicit loading attr ----
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img:not([loading])').forEach(function(img) {
+      if (!img.hasAttribute('fetchpriority')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  });
 
 })(window);

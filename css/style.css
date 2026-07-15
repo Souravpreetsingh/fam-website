@@ -268,7 +268,8 @@ html.mode-winter .seasonal-toggle-btn.active {
     .bounce-scroll, .bonfire-glow, .coffee-steam path,
     .time-card-fog, .time-card-bird, .time-card-cloud,
     .time-card-wind, .time-card-bonfire, .time-card-warm-light,
-    .time-card-moon-glow, .time-card-stars, .time-card-firefly {
+    .time-card-moon-glow, .time-card-stars, .time-card-firefly,
+    .mt-bird, .mt-cloud, .mt-star, .mt-firefly, .mt-bonfire, .mt-fog {
       animation: none !important;
       opacity: 0 !important;
       transition: none !important;
@@ -3657,8 +3658,8 @@ html.mode-winter .tp-room-tags span {
   border-bottom: 1px solid rgba(193, 200, 192, 0.15);
 }
 .mobile-menu-close {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: none;
   background: rgba(0, 0, 0, 0.04);
@@ -3964,3 +3965,122 @@ img { max-width: 100%; height: auto; }
 
 /* Remove any leftover nav gap */
 #main-nav { top: 0; }
+
+/* ============================================
+   Mobile & Tablet: Disable Decorative Effects
+   ============================================ */
+@media (max-width: 1023px) {
+  /* Flying birds */
+  .bird-1, .bird-2, .bird-3,
+  /* Floating leaves */
+  .leaf, .leaf-2, .leaf-3, .seasonal-leaf,
+  /* Snow */
+  .seasonal-snowflake,
+  /* Fog */
+  .fog-layer, .fog-layer-2,
+  /* Embers */
+  .ember, .ember-2, .ember-3,
+  /* Stars */
+  .star, .star-2, .star-3,
+  /* Steam */
+  .steam,
+  /* Grass sway */
+  .seasonal-grass::before,
+  /* Bonfire glow */
+  .bonfire-glow,
+  /* Coffee steam path */
+  .coffee-steam path,
+  /* Time card animations */
+  .time-card-fog, .time-card-bird, .time-card-cloud,
+  .time-card-wind, .time-card-bonfire, .time-card-warm-light,
+  .time-card-moon-glow, .time-card-stars, .time-card-firefly,
+  /* Mountain Time particles */
+  .mt-bird, .mt-cloud, .mt-star, .mt-firefly, .mt-bonfire, .mt-fog,
+  /* Seasonal decorations */
+  .seasonal-frost-overlay, .seasonal-winter-glow {
+    display: none !important;
+    animation: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Ken Burns animation - disable on mobile for performance */
+  .ken-burns {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Parallax - use scroll on mobile */
+  .parallax-bg {
+    background-attachment: scroll !important;
+  }
+
+  /* Reduce motion on all animations */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Restore opacity for elements that should remain visible */
+  .ken-burns, 
+  img.ken-burns {
+    opacity: 1 !important;
+  }
+}
+
+/* ============================================
+   Mobile Navigation Improvements
+   ============================================ */
+@media (max-width: 1023px) {
+  /* Mobile nav padding */
+  #main-nav {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  #main-nav > div {
+    padding: 12px 12px !important;
+  }
+
+  /* Nav logo - scale down on small screens */
+  #main-nav .font-headline-md {
+    font-size: clamp(14px, 3.5vw, 18px) !important;
+  }
+
+  /* Hamburger button larger touch target */
+  #mobile-menu-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Seasonal toggle - hide on mobile */
+  .seasonal-toggle {
+    display: none !important;
+  }
+}
+
+/* Mobile menu panel improvements */
+.mobile-menu-link {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+/* Hero section - ensure no overlap with nav on very small screens */
+@media (max-width: 480px) {
+  .hero-content-wrap {
+    padding-top: 70px !important;
+  }
+}
+
+/* Disable GSAP parallax on mobile */
+@media (max-width: 1023px) {
+  [data-speed] {
+    transform: none !important;
+  }
+}
