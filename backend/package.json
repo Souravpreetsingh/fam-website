@@ -2,6 +2,7 @@
   "name": "fam-backend",
   "version": "1.0.0",
   "description": "Flamingo aur Maina - Luxury Boutique Stay Backend",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
