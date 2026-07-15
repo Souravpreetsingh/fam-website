@@ -39,7 +39,7 @@ export default function Navbar() {
             </>
           ) : (
             <>
-              <Link to="/login" className="px-4 py-2 rounded-full text-sm font-medium text-white bg-white/10 hover:bg-white/20 transition-all">
+              <Link to="/login" className="px-4 py-2 rounded-full text-sm font-medium text-white bg-[#2E5E4E] hover:bg-[#3a705e] transition-all">
                 Sign In
               </Link>
               <Link to="/register" className="px-4 py-2 rounded-full text-sm font-medium text-white bg-[#2E5E4E] hover:bg-[#3a705e] transition-all">
