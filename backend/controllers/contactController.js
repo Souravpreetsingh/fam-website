@@ -6,14 +6,14 @@ const ApiError = require('../utils/ApiError');
 const asyncHandler = require('../utils/asyncHandler');
 
 const submitContact = asyncHandler(async (req, res) => {
-  const { name, email, phone, subject, message } = req.validated.body;
+  const { name, email, phone, subject, message } = req.validated?.body || {};
   const contact = await Contact.create({ name, email, phone, subject, message });
   await emailService.sendContactAutoReply(contact);
   ApiResponse.created(null, 'Thank you for your message. We will get back to you soon.').send(res);
 });
 
 const subscribeNewsletter = asyncHandler(async (req, res) => {
-  const { email } = req.validated.body;
+  const { email } = req.validated?.body || {};
   const existing = await Newsletter.findOne({ email });
   if (existing) {
     if (!existing.isActive) {

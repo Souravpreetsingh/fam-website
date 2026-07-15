@@ -6,7 +6,7 @@ const asyncHandler = require('../utils/asyncHandler');
 const { paginate, paginationResponse } = require('../utils/pagination');
 
 const createReview = asyncHandler(async (req, res) => {
-  const { room, booking, rating, title, comment } = req.validated.body;
+  const { room, booking, rating, title, comment } = req.validated?.body || {};
 
   const existing = await Review.findOne({ user: req.user._id, room });
   if (existing) {
@@ -68,7 +68,7 @@ const updateReview = asyncHandler(async (req, res) => {
     throw ApiError.forbidden('Not authorized to update this review');
   }
 
-  const { rating, title, comment } = req.validated.body;
+  const { rating, title, comment } = req.validated?.body || {};
   if (rating) review.rating = rating;
   if (title !== undefined) review.title = title;
   if (comment) review.comment = comment;

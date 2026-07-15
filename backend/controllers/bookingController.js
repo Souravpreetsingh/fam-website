@@ -57,7 +57,7 @@ async function unblockRoomDates(roomId, checkIn, checkOut) {
 }
 
 const createBooking = asyncHandler(async (req, res) => {
-  const { room: roomId, checkIn, checkOut, guests, specialRequests } = req.validated.body;
+  const { room: roomId, checkIn, checkOut, guests, specialRequests } = req.validated?.body || {};
 
   const room = await Room.findById(roomId);
   if (!room) throw ApiError.notFound('Room not found');

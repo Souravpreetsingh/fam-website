@@ -4,8 +4,8 @@ const validate = (schema) => (req, res, next) => {
   try {
     const parsed = {};
     for (const key of ['body', 'query', 'params']) {
-      if (schema[key]) {
-        const result = schema[key].safeParse(req[key]);
+      if (schema.shape[key]) {
+        const result = schema.shape[key].safeParse(req[key]);
         if (!result.success) {
           const errors = result.error.errors.map((e) => ({
             field: e.path.join('.'),

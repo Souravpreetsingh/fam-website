@@ -4,7 +4,7 @@ const ApiResponse = require('../utils/ApiResponse');
 const asyncHandler = require('../utils/asyncHandler');
 
 const register = asyncHandler(async (req, res) => {
-  const { name, email, password, phone } = req.validated.body;
+  const { name, email, password, phone } = req.validated?.body || {};
   const { user, verificationToken } = await authService.register({
     name,
     email,
@@ -19,7 +19,7 @@ const register = asyncHandler(async (req, res) => {
 });
 
 const login = asyncHandler(async (req, res) => {
-  const { email, password } = req.validated.body;
+  const { email, password } = req.validated?.body || {};
   const { user, accessToken, refreshToken } = await authService.login(email, password);
   ApiResponse.success(
     { user, accessToken, refreshToken },
@@ -45,7 +45,7 @@ const refreshToken = asyncHandler(async (req, res) => {
 });
 
 const verifyEmail = asyncHandler(async (req, res) => {
-  const { token } = req.validated.query;
+  const { token } = req.validated?.query || {};
   const user = await authService.verifyEmail(token);
   await emailService.sendWelcomeEmail(user);
   ApiResponse.success({ user }, 'Email verified successfully').send(res);
@@ -66,7 +66,7 @@ const resendVerification = asyncHandler(async (req, res) => {
 });
 
 const forgotPassword = asyncHandler(async (req, res) => {
-  const { email } = req.validated.body;
+  const { email } = req.validated?.body || {};
   const result = await authService.forgotPassword(email);
   if (result) {
     await emailService.sendPasswordResetEmail(result.user, result.resetToken);
@@ -78,7 +78,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 });
 
 const resetPassword = asyncHandler(async (req, res) => {
-  const { token, password } = req.validated.body;
+  const { token, password } = req.validated?.body || {};
   await authService.resetPassword(token, password);
   ApiResponse.success(null, 'Password reset successful').send(res);
 });

@@ -105,13 +105,13 @@ const getRoomBySlug = asyncHandler(async (req, res) => {
 });
 
 const createRoom = asyncHandler(async (req, res) => {
-  const roomData = req.validated.body;
+  const roomData = req.validated?.body || {};
   const room = await Room.create(roomData);
   ApiResponse.created({ room }, 'Room created successfully').send(res);
 });
 
 const updateRoom = asyncHandler(async (req, res) => {
-  const room = await Room.findByIdAndUpdate(req.params.id, req.validated.body, {
+  const room = await Room.findByIdAndUpdate(req.params.id, req.validated?.body || {}, {
     new: true,
     runValidators: true,
   });
@@ -158,7 +158,7 @@ const deleteRoomImage = asyncHandler(async (req, res) => {
 });
 
 const checkAvailability = asyncHandler(async (req, res) => {
-  const { checkIn, checkOut, roomId } = req.query;
+  const { checkIn, checkOut, roomId } = req.validated?.query || req.query;
   const checkInDate = new Date(checkIn);
   const checkOutDate = new Date(checkOut);
 

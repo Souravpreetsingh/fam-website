@@ -23,7 +23,7 @@ const updateProfile = asyncHandler(async (req, res) => {
 });
 
 const changePassword = asyncHandler(async (req, res) => {
-  const { currentPassword, newPassword } = req.validated.body;
+  const { currentPassword, newPassword } = req.validated?.body || {};
   await authService.changePassword(req.user._id, currentPassword, newPassword);
   ApiResponse.success(null, 'Password changed successfully. Please login again.').send(res);
 });
