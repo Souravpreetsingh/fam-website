@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const razorpay = require('../config/razorpay');
+const getRazorpay = require('../config/razorpay');
 const Payment = require('../models/Payment');
 const Booking = require('../models/Booking');
 const ApiError = require('../utils/ApiError');
@@ -29,7 +29,7 @@ class PaymentService {
       },
     };
 
-    const order = await razorpay.orders.create(options);
+    const order = await getRazorpay().orders.create(options);
 
     const payment = await Payment.create({
       booking: booking._id,
@@ -110,7 +110,7 @@ class PaymentService {
     const refundAmount = amount || payment.amount;
     const refundAmountPaise = Math.round(refundAmount * 100);
 
-    const refund = await razorpay.payments.refund(payment.razorpayPaymentId, {
+    const refund = await getRazorpay().payments.refund(payment.razorpayPaymentId, {
       amount: refundAmountPaise,
       notes: {
         bookingId: booking._id.toString(),
