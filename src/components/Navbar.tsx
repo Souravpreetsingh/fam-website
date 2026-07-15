@@ -1,28 +1,27 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export default function Navbar() {
   const { isAuthenticated, logout } = useAuth()
-  const navigate = useNavigate()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleLogout = async () => {
     await logout()
-    navigate('/')
+    window.location.href = '/'
   }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#06080A]/80 backdrop-blur-md border-b border-white/10">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 md:px-8 py-3">
-        <Link to="/" className="font-display text-xl text-white tracking-tight">
+        <a href="/" className="font-display text-xl text-white tracking-tight">
           Flamingo aur Maina
-        </Link>
+        </a>
 
         <div className="hidden md:flex items-center gap-6">
-          <Link to="/" className="text-sm text-white/70 hover:text-white transition-colors font-body tracking-wide">
+          <a href="/" className="text-sm text-white/70 hover:text-white transition-colors font-body tracking-wide">
             Home
-          </Link>
+          </a>
           <Link to="/rooms" className="text-sm text-white/70 hover:text-white transition-colors font-body tracking-wide">
             Rooms
           </Link>
@@ -64,7 +63,7 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden border-t border-white/10 bg-[#06080A]/95 backdrop-blur-md">
           <div className="flex flex-col px-4 py-4 gap-3">
-            <Link to="/" onClick={() => setMobileOpen(false)} className="text-sm text-white/70 hover:text-white py-2">Home</Link>
+            <a href="/" className="text-sm text-white/70 hover:text-white py-2">Home</a>
             <Link to="/rooms" onClick={() => setMobileOpen(false)} className="text-sm text-white/70 hover:text-white py-2">Rooms</Link>
             {isAuthenticated ? (
               <>

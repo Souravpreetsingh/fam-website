@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Outlet, useNavigate, Link } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import DashboardSidebar from './DashboardSidebar'
 import Breadcrumbs from './Breadcrumbs'
 import { useAuth } from '../../context/AuthContext'
@@ -7,11 +7,10 @@ import { useAuth } from '../../context/AuthContext'
 export default function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { user, logout } = useAuth()
-  const navigate = useNavigate()
 
   const handleLogout = async () => {
     await logout()
-    navigate('/')
+    window.location.href = '/'
   }
 
   return (
@@ -26,9 +25,9 @@ export default function DashboardLayout() {
               </button>
             </div>
             <div className="flex items-center gap-4 ml-auto">
-              <Link to="/" className="text-sm text-white/40 hover:text-white transition-colors hidden sm:block">
+              <a href="/" className="text-sm text-white/40 hover:text-white transition-colors hidden sm:block">
                 Back to Site
-              </Link>
+              </a>
               <span className="text-white/50 text-sm hidden md:block">{user?.email}</span>
               <Link
                 to="/dashboard/notifications"
