@@ -4854,3 +4854,148 @@ img { max-width: 100%; height: auto; }
     transform: none !important;
   }
 }
+
+/* ------ NAV CTA BUTTONS ------ */
+.nav-signin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-signin-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.nav-signin-btn:active {
+  transform: scale(0.98);
+}
+
+.nav-signin-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.nav-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #0a341d 0%, #1a5a30 100%);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(10, 52, 29, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav-book-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 24px rgba(10, 52, 29, 0.4);
+}
+
+.nav-book-btn:active {
+  transform: scale(0.98);
+}
+
+.nav-book-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Winter mode overrides */
+html.mode-winter .nav-signin-btn {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+html.mode-winter .nav-book-btn {
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B5CB8 100%);
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.3);
+}
+
+html.mode-winter .nav-book-btn:hover {
+  box-shadow: 0 6px 24px rgba(30, 58, 138, 0.4);
+}
+
+/* Mobile nav CTA buttons */
+.nav-mobile-signin,
+.nav-mobile-book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-mobile-signin {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.nav-mobile-signin:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-mobile-book {
+  background: linear-gradient(135deg, #0a341d 0%, #1a5a30 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 12px rgba(10, 52, 29, 0.3);
+}
+
+.nav-mobile-book:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(10, 52, 29, 0.4);
+}
+
+.mobile-menu-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-signin-btn,
+  .nav-book-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .nav-book-btn {
+    padding: 8px 18px;
+  }
+}
