@@ -35,17 +35,15 @@ app.use(async (req, res, next) => {
   next();
 });
 
-app.use('/uploads', express.static(path.join(__dirname, '..', 'backend', 'uploads')));
-
-app.use('/api/v1/auth', require('../backend/routes/authRoutes'));
-app.use('/api/v1/users', require('../backend/routes/userRoutes'));
-app.use('/api/v1/rooms', require('../backend/routes/roomRoutes'));
-app.use('/api/v1/bookings', require('../backend/routes/bookingRoutes'));
-app.use('/api/v1/payments', require('../backend/routes/paymentRoutes'));
-app.use('/api/v1/reviews', require('../backend/routes/reviewRoutes'));
-app.use('/api/v1/contact', require('../backend/routes/contactRoutes'));
-app.use('/api/v1/admin', require('../backend/routes/adminRoutes'));
-app.use('/api/v1/notifications', require('../backend/routes/notificationRoutes'));
+app.use('/api/v1/auth', require('../../backend/routes/authRoutes'));
+app.use('/api/v1/users', require('../../backend/routes/userRoutes'));
+app.use('/api/v1/rooms', require('../../backend/routes/roomRoutes'));
+app.use('/api/v1/bookings', require('../../backend/routes/bookingRoutes'));
+app.use('/api/v1/payments', require('../../backend/routes/paymentRoutes'));
+app.use('/api/v1/reviews', require('../../backend/routes/reviewRoutes'));
+app.use('/api/v1/contact', require('../../backend/routes/contactRoutes'));
+app.use('/api/v1/admin', require('../../backend/routes/adminRoutes'));
+app.use('/api/v1/notifications', require('../../backend/routes/notificationRoutes'));
 
 app.get('/api/v1/health', (req, res) => {
   res.json({ success: true, message: 'Server is running', timestamp: new Date().toISOString() });

@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "framework": null,
-  "buildCommand": "cd react-hero && npm run build",
-  "outputDirectory": "react-hero/dist",
-  "installCommand": "cd react-hero && npm install && cd .. && npm install",
+  "rootDirectory": "react-hero",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
