@@ -563,7 +563,7 @@ if ('serviceWorker' in navigator) {
         <div class="tp-nav" id="tp-nav">
           <button class="tp-btn tp-btn-back hidden" id="tp-back">&#8592; Back</button>
           <div></div>
-          <button class="tp-btn tp-btn-next" id="tp-next">Next &#8594;</button>
+          <button class="tp-btn tp-btn-next" id="tp-next">Next </button>
         </div>
       </div>
     </div>
@@ -720,19 +720,19 @@ if ('serviceWorker' in navigator) {
 
       // Next button
       if (state.step === 5) {
-        nextBtn.textContent = 'Generate My Trip &#8594;';
+        nextBtn.textContent = 'Generate My Trip ';
         nextBtn.disabled = false;
       } else if (state.step === 4) {
-        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.textContent = 'Next ';
         nextBtn.disabled = state.interests.length === 0;
       } else if (state.step === 3) {
-        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.textContent = 'Next ';
         nextBtn.disabled = !state.budget;
       } else if (state.step === 2) {
-        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.textContent = 'Next ';
         nextBtn.disabled = !state.days;
       } else if (state.step === 1) {
-        nextBtn.textContent = 'Next &#8594;';
+        nextBtn.textContent = 'Next ';
         nextBtn.disabled = !state.traveler;
       }
     }
@@ -779,7 +779,7 @@ if ('serviceWorker' in navigator) {
         if (state.budget) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + getBudgetLabel(state.budget) + '</span>';
         summary += '</div>';
         html += summary;
-        html += '<button class="tp-generate" id="tp-gen-btn"><span>Generate My Trip</span> <span style="font-size:18px;">&#8594;</span></button>';
+        html += '<button class="tp-generate" id="tp-gen-btn"><span>Generate My Trip</span> <span style="font-size:18px;"></span></button>';
       }
 
       html += '</div>';
@@ -857,7 +857,7 @@ if ('serviceWorker' in navigator) {
       html += '<div class="tp-room-info"><h5>' + room.name + '</h5>';
       html += '<div class="tp-room-tags"><span>' + room.guests + '</span><span>' + room.price + '</span></div>';
       html += '<p>' + room.desc + '</p>';
-      html += '<a href="/pages/rooms" class="tp-room-book">Book Now &#8594;</a>';
+      html += '<a href="/pages/rooms" class="tp-room-book">Book Now </a>';
       html += '</div></div>';
 
       // Summary
@@ -883,7 +883,7 @@ if ('serviceWorker' in navigator) {
       content.querySelector('.tp-result').style.animation = '';
 
       // Hide nav, show restart
-      document.getElementById('tp-nav').innerHTML = '<div></div><button class="tp-btn tp-btn-next" onclick="location.reload()">Plan Another Trip &#8594;</button>';
+      document.getElementById('tp-nav').innerHTML = '<div></div><button class="tp-btn tp-btn-next" onclick="location.reload()">Plan Another Trip </button>';
     }
 
     function goTo(n) {

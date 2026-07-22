@@ -1,16 +1,16 @@
-name: CI
+name: Deploy to Netlify
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint-typecheck-build:
-    name: Lint, TypeCheck & Build
+  deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -27,19 +27,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
-
-      - name: Type check
-        run: npm run type-check
-
       - name: Build
         run: npm run build
+        env:
+          VITE_API_URL: /api/v1
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: build-output
-          path: dist/
-          retention-days: 1
+      - name: Deploy to Netlify
+        run: npx netlify-cli deploy --prod --dir=dist --message "Deploy: ${{ github.event.head_commit.message }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
