@@ -31,3 +31,5 @@ backend/.env
 backend/uploads/*
 !backend/uploads/.gitkeep
 backend/package-lock.json
+
+.vercel
