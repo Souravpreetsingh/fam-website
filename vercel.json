@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": null,
+  "outputDirectory": "public",
   "headers": [
     {
       "source": "/(.*)",
@@ -27,17 +29,10 @@
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
-    },
-    {
-      "source": "/app.html",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
-      ]
     }
   ],
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/app.html" }
+    { "source": "/api/(.*)", "destination": "https://fam-backend.onrender.com/api/$1" },
+    { "source": "/pages/:page", "destination": "/pages/:page.html" }
   ]
 }
