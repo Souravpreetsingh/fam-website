@@ -36,31 +36,21 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 20 (see `.nvmrc`)
-- npm
-
-### Install
+### 1. Static HTML Site
 
 ```bash
+npx serve public -l 3000
+```
+
+Opens the hero frames + static pages at `http://localhost:3000`.
+
+### 2. Backend
+
+```bash
+cd backend
 npm install
-```
-
-### Development
-
-```bash
-npm run dev
-```
-
-Opens the Vite dev server at `http://localhost:5173`.
-
-### Code Quality
-
-```bash
-npm run lint       # ESLint via oxlint
-npm run type-check # TypeScript type checking
-npm run build      # Production build
+# Set up backend/.env with your MongoDB URI and keys
+npm start
 ```
 
 ## CI/CD
@@ -99,11 +89,25 @@ The backend API is deployed separately on Render (configured via `render.yaml`).
 
 Copy `.env.example` to `.env` and configure:
 
-```env
-VITE_API_URL=/api/v1
+### Backend (backend/.env)
 ```
-
-Backend variables are stored in `backend/.env` and deployed separately.
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/fam?retryWrites=true&w=majority
+JWT_ACCESS_SECRET=...
+JWT_REFRESH_SECRET=...
+CLOUDINARY_CLOUD_NAME=...
+CLOUDINARY_API_KEY=...
+CLOUDINARY_API_SECRET=...
+RAZORPAY_KEY_ID=...
+RAZORPAY_KEY_SECRET=...
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=...
+SMTP_PASS=...
+EMAIL_FROM=Flamingo aur Maina <noreply@flamingoaurmaina.com>
+FRONTEND_URL=http://localhost:3000
+```
 
 ## API
 
@@ -113,4 +117,4 @@ The frontend communicates with the backend via a Netlify proxy:
 /api/* → https://fam-backend.onrender.com/api/*
 ```
 
-For local development, the Vite proxy forwards `/api/*` to `http://localhost:5000`.
+For local development, the backend runs directly on `http://localhost:5000`.
