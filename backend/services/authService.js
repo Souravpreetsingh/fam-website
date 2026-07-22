@@ -1,0 +1,173 @@
+const crypto = require('crypto');
+const User = require('../models/User');
+const ApiError = require('../utils/ApiError');
+const {
+  generateAccessToken,
+  generateRefreshToken,
+  verifyRefreshToken,
+} = require('../utils/generateToken');
+
+const REFRESH_TOKEN_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000;
+
+class AuthService {
+  async register({ name, email, password, phone }) {
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      throw ApiError.conflict('A user with this email already exists');
+    }
+
+    const verificationToken = crypto.randomBytes(32).toString('hex');
+    const verificationTokenExpires = new Date(Date.now() + 24 * 60 * 60 * 1000);
+
+    const user = await User.create({
+      name,
+      email,
+      password,
+      phone,
+      verificationToken,
+      verificationTokenExpires,
+    });
+
+    return {
+      user,
+      verificationToken,
+    };
+  }
+
+  async login(email, password) {
+    const user = await User.findOne({ email }).select('+password');
+    if (!user) {
+      throw ApiError.unauthorized('Invalid email or password');
+    }
+
+    const isMatch = await user.comparePassword(password);
+    if (!isMatch) {
+      throw ApiError.unauthorized('Invalid email or password');
+    }
+
+    const accessToken = generateAccessToken(user._id, user.role);
+    const refreshToken = generateRefreshToken(user._id, user.role);
+
+    user.refreshTokens.push({
+      token: refreshToken,
+      expiresAt: new Date(Date.now() + REFRESH_TOKEN_EXPIRY_MS),
+    });
+
+    if (user.refreshTokens.length > 5) {
+      user.refreshTokens = user.refreshTokens.slice(-5);
+    }
+    await user.save();
+
+    return { user, accessToken, refreshToken };
+  }
+
+  async refreshAccessToken(refreshToken) {
+    let decoded;
+    try {
+      decoded = verifyRefreshToken(refreshToken);
+    } catch {
+      throw ApiError.unauthorized('Invalid or expired refresh token');
+    }
+
+    const user = await User.findById(decoded.id);
+    if (!user) {
+      throw ApiError.unauthorized('User not found');
+    }
+
+    const storedToken = user.refreshTokens.find((t) => t.token === refreshToken);
+    if (!storedToken || storedToken.expiresAt < new Date()) {
+      throw ApiError.unauthorized('Refresh token expired or invalid');
+    }
+
+    const newAccessToken = generateAccessToken(user._id, user.role);
+    const newRefreshToken = generateRefreshToken(user._id, user.role);
+
+    user.refreshTokens = user.refreshTokens.filter((t) => t.token !== refreshToken);
+    user.refreshTokens.push({
+      token: newRefreshToken,
+      expiresAt: new Date(Date.now() + REFRESH_TOKEN_EXPIRY_MS),
+    });
+    await user.save();
+
+    return { accessToken: newAccessToken, refreshToken: newRefreshToken };
+  }
+
+  async logout(userId, refreshToken) {
+    const user = await User.findById(userId);
+    if (!user) return;
+
+    user.refreshTokens = user.refreshTokens.filter((t) => t.token !== refreshToken);
+    await user.save();
+  }
+
+  async verifyEmail(token) {
+    const user = await User.findOne({
+      verificationToken: token,
+      verificationTokenExpires: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      throw ApiError.badRequest('Invalid or expired verification token');
+    }
+
+    user.isVerified = true;
+    user.verificationToken = undefined;
+    user.verificationTokenExpires = undefined;
+    await user.save();
+
+    return user;
+  }
+
+  async forgotPassword(email) {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return null;
+    }
+
+    const resetToken = crypto.randomBytes(32).toString('hex');
+    user.resetPasswordToken = resetToken;
+    user.resetPasswordExpires = new Date(Date.now() + 60 * 60 * 1000);
+    await user.save();
+
+    return { user, resetToken };
+  }
+
+  async resetPassword(token, newPassword) {
+    const user = await User.findOne({
+      resetPasswordToken: token,
+      resetPasswordExpires: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      throw ApiError.badRequest('Invalid or expired reset token');
+    }
+
+    user.password = newPassword;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpires = undefined;
+    user.refreshTokens = [];
+    await user.save();
+
+    return user;
+  }
+
+  async changePassword(userId, currentPassword, newPassword) {
+    const user = await User.findById(userId).select('+password');
+    if (!user) {
+      throw ApiError.notFound('User not found');
+    }
+
+    const isMatch = await user.comparePassword(currentPassword);
+    if (!isMatch) {
+      throw ApiError.badRequest('Current password is incorrect');
+    }
+
+    user.password = newPassword;
+    user.refreshTokens = [];
+    await user.save();
+
+    return user;
+  }
+}
+
+module.exports = new AuthService();

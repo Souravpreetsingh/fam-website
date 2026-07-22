@@ -1,0 +1,224 @@
+[
+  {
+    "id": "property-intro",
+    "category": "property",
+    "keywords": ["flamingo","maina","fam","property","about","description","what is","tell me","introduce","yourself","place","fam"],
+    "answer": "Flamingo aur Maina (FAM) is a boutique caf\u00e9 and stays located in Jibhi, Himachal Pradesh, surrounded by an apple orchard, 1.5 acres of open land, and uninterrupted 360\u00b0 mountain views. It\u2019s a place where you can slow down, breathe deeply, and feel at home in the mountains."
+  },
+  {
+    "id": "address",
+    "category": "property",
+    "keywords": ["address","location","where","reach","find","map","direction","google","located","situated","come","how to"],
+    "answer": "You can find us at:\n\nOpposite Forest Rest House,\nRashala,\nJibhi,\nHimachal Pradesh 175123\n\nHere\u2019s the Google Maps location: https://www.google.com/maps?q=31.5787944,77.3668959"
+  },
+  {
+    "id": "contact",
+    "category": "property",
+    "keywords": ["contact","phone","number","call","reach","talk","speak","message","whatsapp","mobile","telephone"],
+    "answer": "You can reach us at:\n\n\ud83d\udcde Property Manager: 98765 75673\n\ud83d\udcde Founder: 98773 81864\n\u2709\ufe0f Email: flamingoaurmaina@gmail.com\n\nFeel free to call or message \u2014 we\u2019re always happy to hear from you!"
+  },
+  {
+    "id": "manager",
+    "category": "property",
+    "keywords": ["manager","property manager","management","caretaker","host"],
+    "answer": "Our Property Manager can be reached at 98765 75673. They\u2019ll be happy to assist you with bookings, inquiries, or anything you need during your stay."
+  },
+  {
+    "id": "founder",
+    "category": "property",
+    "keywords": ["founder","owner","who started","who owns","behind","created","started"],
+    "answer": "Our Founder is available at 98773 81864. If you\u2019d like to know more about the story behind Flamingo aur Maina, just ask \u2014 we love sharing how FAM came to life!"
+  },
+  {
+    "id": "email",
+    "category": "property",
+    "keywords": ["email","mail","send","inbox","gmail","flamingoaurmaina"],
+    "answer": "You can email us at flamingoaurmaina@gmail.com. We typically respond within a few hours."
+  },
+  {
+    "id": "rooms-all",
+    "category": "rooms",
+    "keywords": ["room","rooms","stay","accommodation","place to sleep","where to sleep","available rooms","options","choices","types","kinds"],
+    "answer": "We have six beautiful rooms to choose from:\n\n\ud83e\udda7 Flamingo 1 \u2014 Duplex, 4 Guests, \u20b96,000 / night (incl. GST)\n\ud83e\udda7 Flamingo 2 \u2014 King Attic, 4 Guests, \u20b95,000 / night (incl. GST)\n\ud83e\udda7 Flamingo 3 \u2014 Duplex, 4 Guests, \u20b96,000 / night (incl. GST)\n\ud83d\udc26 Maina 1 \u2014 Private Room, 2 Guests, \u20b92,500 / night (incl. GST)\n\ud83d\udc26 Maina 2 \u2014 Private Room, 2 Guests, \u20b92,000 / night (incl. GST)\n\ud83d\udc26 Maina 3 \u2014 Private Room, 2 Guests, \u20b92,500 / night (incl. GST)\n\nEach room has its own charm \u2014 from wooden duplexes with mountain views to cozy private rooms with garden access."
+  },
+  {
+    "id": "price",
+    "category": "rooms",
+    "keywords": ["price","prices","cost","rate","rent","how much","charges","tariff","pricing","expensive","cheap","budget"],
+    "answer": "Here\u2019s a quick overview of our prices (all inclusive of GST):\n\n\ud83e\udda7 Flamingo 1 \u2014 \u20b96,000 / night (Duplex, 4 Guests)\n\ud83e\udda7 Flamingo 2 \u2014 \u20b95,000 / night (King Attic, 4 Guests)\n\ud83e\udda7 Flamingo 3 \u2014 \u20b96,000 / night (Duplex, 4 Guests)\n\ud83d\udc26 Maina 1 \u2014 \u20b92,500 / night (Private, 2 Guests)\n\ud83d\udc26 Maina 2 \u2014 \u20b92,000 / night (Private, 2 Guests)\n\ud83d\udc26 Maina 3 \u2014 \u20b92,500 / night (Private, 2 Guests)\n\nEach booking includes complimentary Wi-Fi, heater, electric blankets, and access to all common areas."
+  },
+  {
+    "id": "rooms-flamingo1",
+    "category": "rooms",
+    "keywords": ["flamingo 1","flamingo one","duplex","signature","biggest","spacious","two level","two story","two floor"],
+    "answer": "Flamingo 1 is our signature Duplex, perfect for 4 guests at \u20b96,000 / night (incl. GST). It features a spacious two-level layout with a king bed, mountain-facing windows, a private sit-out area, Wi-Fi, heater, and bonfire access. It\u2019s the most loved room at FAM."
+  },
+  {
+    "id": "rooms-flamingo2",
+    "category": "rooms",
+    "keywords": ["flamingo 2","flamingo two","attic","skylight","king attic","cozy","couple","romantic","star","stargazing"],
+    "answer": "Flamingo 2 is our charming King Attic, ideal for 4 guests at \u20b95,000 / night (incl. GST). It features a cozy attic setup with a beautiful skylight \u2014 perfect for stargazing and romantic evenings. Comes with a king bed, heater, and bonfire access."
+  },
+  {
+    "id": "rooms-flamingo3",
+    "category": "rooms",
+    "keywords": ["flamingo 3","flamingo three","garden","family","group","large","big group"],
+    "answer": "Flamingo 3 is a beautiful Duplex designed for 4 guests at \u20b96,000 / night (incl. GST). It offers direct garden access, two beds, a heater, bonfire setup, and tea/coffee. Ideal for families or friends who want space and nature."
+  },
+  {
+    "id": "rooms-main1",
+    "category": "rooms",
+    "keywords": ["maina 1","maina one","budget","affordable","solo","single","private room","simple"],
+    "answer": "Maina 1 is a cozy Private Room for 2 guests at just \u20b92,500 / night (incl. GST). It offers a queen bed, mountain views, Wi-Fi, and bonfire access. A warm and peaceful space for solo travellers or couples on a budget."
+  },
+  {
+    "id": "rooms-main2",
+    "category": "rooms",
+    "keywords": ["maina 2","maina two","cheapest","lowest","valley view","compact","minimum","small"],
+    "answer": "Maina 2 is our most affordable stay \u2014 a cosy Private Room for 2 guests at \u20b92,000 / night (incl. GST). It features beautiful valley views, a queen bed, heater, and bonfire access. Perfect for the minimalist traveller."
+  },
+  {
+    "id": "rooms-main3",
+    "category": "rooms",
+    "keywords": ["maina 3","maina three","garden room","queen","value","good value"],
+    "answer": "Maina 3 is a charming Private Room for 2 guests at \u20b92,500 / night (incl. GST). It features a queen bed, garden access, Wi-Fi, and bonfire access. Great value for travellers who want comfort without compromise."
+  },
+  {
+    "id": "recommend-couple",
+    "category": "rooms",
+    "keywords": ["couple","couples","romantic","honeymoon","anniversary","valentine","love","together","for two","two people","pair"],
+    "answer": "For couples, I\u2019d recommend Flamingo 2 \u2014 the King Attic (\u20b95,000/night). It has a beautiful skylight for stargazing and a cozy attic vibe that\u2019s perfect for romance. Maina 1 (\u20b92,500/night) is also a lovely budget-friendly option with mountain views."
+  },
+  {
+    "id": "recommend-family",
+    "category": "rooms",
+    "keywords": ["family","families","kids","children","parents","baby","infant","toddler","multi generation"],
+    "answer": "For families, Flamingo 1 (\u20b96,000/night) or Flamingo 3 (\u20b96,000/night) are both excellent choices. Both are duplex rooms that sleep 4 guests with 2 beds, have garden access, bonfire setup, and plenty of space for everyone to relax."
+  },
+  {
+    "id": "recommend-friends",
+    "category": "rooms",
+    "keywords": ["friends","group","group of","gang","buddies","mate","pals","together","3 people","4 people","four"],
+    "answer": "For friends travelling together, Flamingo 2 (\u20b95,000/night) and Flamingo 3 (\u20b96,000/night) are great picks. Flamingo 2 has a fun attic setup with a skylight, while Flamingo 3 offers garden access and more space. Both sleep 4 guests comfortably."
+  },
+  {
+    "id": "recommend-solo",
+    "category": "rooms",
+    "keywords": ["solo","alone","single","by myself","just me","traveller","backpacker"],
+    "answer": "For solo travellers, Maina 1 (\u20b92,500/night) or Maina 2 (\u20b92,000/night) are wonderful choices. Both offer private, peaceful spaces with beautiful views \u2014 perfect for some quiet time in the mountains."
+  },
+  {
+    "id": "amenities",
+    "category": "amenities",
+    "keywords": ["amenities","amenity","facilities","facility","offer","services","service","features","included","what do you have","whats available","things","offerings"],
+    "answer": "We offer a range of thoughtful amenities to make your stay comfortable:\n\n\ud83d\udcf6 High-Speed Wi-Fi \u2014 Stay connected throughout the property.\n\ud83dudd25 Heater \u2014 Warm and cozy during chilly evenings.\n\ud83d\udecb\ufe0f Electric Heating Blankets \u2014 Ultra-cosy blankets in every room.\n\ud83d\udd25 Bonfire \u2014 Evening bonfires under the stars.\n\ud83e\uddf7 Laundry (On Demand) \u2014 Available when you need it.\n\ud83d\udee2\ufe0f Ironing (On Demand) \u2014 Iron & board on request.\n\ud83d\ude95 Cab Service (On Demand) \u2014 Local cab arrangements for sightseeing & transfers.\n\ud83e\udef1 Luggage Assistance (On Demand) \u2014 Help with your bags on arrival & departure.\n\ud83e\uddcd Trek Guide (On Demand) \u2014 Local guide for Jibhi\u2019s best trails."
+  },
+  {
+    "id": "wifi",
+    "category": "amenities",
+    "keywords": ["wifi","wi-fi","internet","network","online","connection","broadband","speed","fast","web","browse","download","upload"],
+    "answer": "Yes! We offer High-Speed Wi-Fi throughout the property, making FAM a great place for workcations and remote work while enjoying the peaceful mountains."
+  },
+  {
+    "id": "heater",
+    "category": "amenities",
+    "keywords": ["heater","heating","warm","cold","chilly","temperature","winter","cool","blanket","electric blanket","thermal"],
+    "answer": "Absolutely! Every room comes with a Heater and Electric Heating Blankets to keep you warm and snug during those chilly mountain evenings. We know mountain weather can be unpredictable, but we\u2019ve got you covered."
+  },
+  {
+    "id": "bonfire",
+    "category": "amenities",
+    "keywords": ["bonfire","fire","campfire","evening","night","stars","stargazing","outdoor","seating","warm","roast","marshmallow"],
+    "answer": "Yes! We arrange evening bonfires under the stars \u2014 it\u2019s one of our most loved experiences. Just let us know in advance and we\u2019ll have everything set up with comfortable seating and the perfect mountain ambiance."
+  },
+  {
+    "id": "laundry",
+    "category": "amenities",
+    "keywords": ["laundry","wash","washing","clean","clothes","dirty","launder"],
+    "answer": "Yes, laundry service is available on demand. Just let our team know and we\u2019ll take care of it for you."
+  },
+  {
+    "id": "ironing",
+    "category": "amenities",
+    "keywords": ["iron","ironing","press","clothes","crease","wrinkle"],
+    "answer": "Yes, we offer ironing facilities on demand. Simply let us know and we\u2019ll arrange an iron and ironing board for you."
+  },
+  {
+    "id": "cab",
+    "category": "amenities",
+    "keywords": ["cab","taxi","car","transport","pickup","drop","airport","bus","station","travel","reach","get there","how to reach","aut","rickshaw","drive","driver"],
+    "answer": "Absolutely! We can arrange cab services on demand from major nearby points:\n\n\ud83d\ude95 Aut (Jibhi entry point) to FAM\n\ud83d\ude95 Banjar to FAM\n\ud83d\ude95 Bhuntar Airport (Kullu) to FAM (~50 km)\n\ud83d\ude95 Delhi to FAM (overnight bus + cab)\n\nJust share your arrival details and we\u2019ll coordinate everything for you."
+  },
+  {
+    "id": "luggage",
+    "category": "amenities",
+    "keywords": ["luggage","bag","bags","suitcase","baggage","heavy","help","carry","assistance","luggage assistance"],
+    "answer": "Yes, we provide luggage assistance on demand. Our friendly staff will help you with your bags when you arrive and when you leave."
+  },
+  {
+    "id": "trek",
+    "category": "amenities",
+    "keywords": ["trek","treks","trekking","hike","hiking","trail","trails","walk","nature walk","guide","local guide","adventure","outdoor","forest"],
+    "answer": "Yes! We can arrange a local Trek Guide on demand to help you explore the best trails around Jibhi \u2014 from the Serolsar Lake trek to the Jibhi Waterfall walk. Just let us know your preference and we\u2019ll set it up!"
+  },
+  {
+    "id": "cafe",
+    "category": "cafe",
+    "keywords": ["cafe","coffee","food","restaurant","dining","eat","breakfast","lunch","dinner","meal","menu","cuisine","kitchen","cook","snacks","beverage","hungry","dinner","eat out","order"],
+    "answer": "Our boutique caf\u00e9 serves freshly prepared comfort food in a peaceful mountain setting. From morning tea and hearty meals to evening snacks, everything is made with care using local ingredients. Just let us know what you\u2019re craving!"
+  },
+  {
+    "id": "workcation",
+    "category": "workcation",
+    "keywords": ["workcation","work","remote","work from","laptop","meeting","coworking","office","digital","nomad","productivity","wfh","work from home"],
+    "answer": "FAM is a wonderful workcation destination. We offer:\n\n\ud83d\udcf6 Reliable High-Speed Wi-Fi\n\ud83c\udf3f Peaceful environment surrounded by nature\n\ud83c\udfd4\ufe0f Breathtaking mountain views from every corner\n\ud83d\udecb\ufe0f Comfortable stays with all amenities\n\nMany of our guests work remotely from here \u2014 just be warned, the mountain views might distract you!"
+  },
+  {
+    "id": "nearby-waterfall",
+    "category": "nearby",
+    "keywords": ["waterfall","jibhi waterfall","nearby waterfall","walk","short walk","cascade"],
+    "answer": "Jibhi Waterfall is just a short walk from the property \u2014 about 500 metres or a 5-minute stroll through village paths. It\u2019s the closest nature escape from FAM and absolutely beautiful year-round."
+  },
+  {
+    "id": "nearby-jalori",
+    "category": "nearby",
+    "keywords": ["jalori","jalori pass","pass","high altitude","viewpoint","scenic","drive"],
+    "answer": "Jalori Pass is about 15 km from FAM, roughly a 45-minute drive. At 3,120 metres, it offers stunning panoramic views of the Himalayas. Best visited between March and June or September to November."
+  },
+  {
+    "id": "nearby-serolsar",
+    "category": "nearby",
+    "keywords": ["serolsar","serolsar lake","lake","trek","alpine","forest","rhododendron"],
+    "answer": "Serolsar Lake is a beautiful 2 km trek from Jalori Pass through enchanting forests of oak and rhododendron. The crystal-clear alpine lake at the end is absolutely worth the walk. Best from May to October."
+  },
+  {
+    "id": "nearby-chehni",
+    "category": "nearby",
+    "keywords": ["chehni","chehni kothi","kothi","tower","heritage","village","ancient","historic","architecture"],
+    "answer": "Chehni Kothi is an ancient tower with stunning historic architecture, located in a heritage village about 8 km from FAM (25-minute drive). A beautiful step back in time through local village paths."
+  },
+  {
+    "id": "nearby-mini",
+    "category": "nearby",
+    "keywords": ["mini","mini thailand","river","swim","dip","blue water","boulder","paradise","riverside"],
+    "answer": "Mini Thailand is a hidden riverside paradise in Jibhi, about 2 km from FAM \u2014 just a 10-minute drive. Crystal-blue waters surrounded by boulders and pine trees make it perfect for a peaceful afternoon dip."
+  },
+  {
+    "id": "nearby-ghnp",
+    "category": "nearby",
+    "keywords": ["ghnp","great himalayan","national park","unesco","wildlife","alpine","meadow","heritage site"],
+    "answer": "The Great Himalayan National Park is a UNESCO World Heritage Site about 35 km from FAM (~1 hour drive). It\u2019s home to exotic wildlife, alpine meadows, and breathtaking Himalayan vistas. A must-visit for nature lovers."
+  },
+  {
+    "id": "nearby-tirthan",
+    "category": "nearby",
+    "keywords": ["tirthan","tirthan valley","river","fishing","trout","valley","serene","peaceful"],
+    "answer": "Tirthan Valley is about 20 km from FAM, roughly a 30-minute drive. Known for trout fishing, riverside walks, and pristine natural beauty \u2014 it\u2019s a serene escape into one of Himachal\u2019s most picturesque valleys."
+  },
+  {
+    "id": "book",
+    "category": "booking",
+    "keywords": ["book","booking","reserve","reservation","check in","check-in","check out","checkout","cancel","cancellation","pay","payment","advance","deposit","availability"],
+    "answer": "You can book directly through our website or by contacting us directly. For the best rates and personalized service, we recommend booking directly with us.\n\n\ud83d\udcde Call our Property Manager at 98765 75673\n\u2709\ufe0f Email us at flamingoaurmaina@gmail.com\n\nA partial advance is required to confirm your reservation. Check-in is flexible, and our team will coordinate with you."
+  }
+]

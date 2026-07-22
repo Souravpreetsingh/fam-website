@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="background:#f8f4ec">
+<head>
+  <style>#pt-overlay{position:fixed;inset:0;z-index:99999;pointer-events:none;background:#f8f4ec;opacity:0}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Stay - Flamingo aur Maina</title>
+  <meta property="og:title" content="Book Your Stay - Flamingo aur Maina" />
+  <meta property="og:description" content="Select your perfect room at Flamingo aur Maina in Jibhi, Himachal Pradesh." />
+  <meta property="og:url" content="https://flamingoaurmaina.netlify.app/pages/booking" />
+  <meta property="og:image" content="https://flamingoaurmaina.netlify.app/images/hero/luxury-hero.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="/css/style.css?v=10" />
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f8f4ec",
+        "background": "#f8f4ec",
+        "surface-bright": "#f9faf5",
+        "surface-container": "#eeeeea",
+        "surface-container-low": "#f3f4f0",
+        "surface-container-high": "#e8e8e4",
+        "surface-container-highest": "#e2e3df",
+        "surface-dim": "#d9dad6",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#1a1c1a",
+        "on-background": "#1a1c1a",
+        "on-surface-variant": "#414942",
+        "primary": "#0a341d",
+        "on-primary": "#ffffff",
+        "primary-container": "#234b32",
+        "on-primary-container": "#8fba9a",
+        "primary-fixed": "#c0edcb",
+        "primary-fixed-dim": "#a5d1b0",
+        "inverse-primary": "#a5d1b0",
+        "accent-gold": "#C9A86A",
+        "secondary": "#605e58",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#e6e2da",
+        "on-secondary-container": "#66645e",
+        "charcoal": "#1B1B1B",
+        "muted-gray": "#6B7280",
+        "outline": "#727972",
+        "outline-variant": "#c1c8c0",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "tertiary": "#4b1f27",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#65353c",
+        "on-tertiary-container": "#e09fa7"
+      },
+      fontFamily: {
+        'display-hero': ['Playfair Display', 'serif'],
+        'display-hero-mobile': ['Playfair Display', 'serif'],
+        'headline-lg': ['Playfair Display', 'serif'],
+        'headline-md': ['Playfair Display', 'serif'],
+        'body-lg': ['Inter', 'sans-serif'],
+        'body-md': ['Inter', 'sans-serif'],
+        'label-sm': ['Inter', 'sans-serif'],
+        'display': ['Playfair Display', 'serif'],
+        'body': ['Inter', 'sans-serif']
+      },
+      fontSize: {
+        'display-hero': ['80px', { lineHeight: '96px', letterSpacing: '0.04em', fontWeight: '700' }],
+        'display-hero-mobile': ['42px', { lineHeight: '48px', fontWeight: '700' }],
+        'headline-lg': ['48px', { lineHeight: '56px', fontWeight: '600' }],
+        'headline-md': ['32px', { lineHeight: '40px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'label-sm': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '600' }]
+      },
+      borderRadius: {
+        DEFAULT: "1rem",
+        lg: "2rem",
+        xl: "3rem",
+        full: "9999px"
+      },
+      spacing: {
+        'section-gap': '120px',
+        'margin-desktop': '64px',
+        'gutter': '24px',
+        'max-width': '1400px'
+      },
+      boxShadow: {
+        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+      }
+    }
+  }
+}
+</script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f8f4ec; color: #1a1c1a; }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .room-card {
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(0);
+    }
+    .room-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    }
+    .room-card.selected {
+      --tw-ring-offset-shadow: 0 0 0 2.5px #C9A86A;
+      box-shadow: 0 0 0 2.5px #C9A86A, 0 0 48px rgba(201,168,106,0.2);
+      transform: translateY(-4px);
+    }
+    .room-card .check-wrap {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .room-card.selected .check-wrap {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .summary-enter {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: summaryIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes summaryIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-fade-in {
+      animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .perspective-wrap {
+      perspective: 1200px;
+    }
+
+    .counter-btn {
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(65,73,66,0.25);
+      background: transparent;
+      cursor: pointer;
+      color: #414942;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .counter-btn:hover { border-color: #C9A86A; color: #C9A86A; }
+    .counter-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<div id="pt-overlay"></div>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">
+    <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto rounded-full">
+      <div class="flex items-center gap-4">
+        <a href="/" class="font-headline-md text-headline-md text-primary tracking-tight">Flamingo aur Maina</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="/" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Home</a>
+        <a href="/pages/rooms" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Rooms</a>
+        <a href="/pages/life" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Life at FAM</a>
+        <a href="/pages/explore" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Explore</a>
+        <a href="/pages/gallery" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Gallery</a>
+        <a href="/pages/amenities" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="window.location.href='/pages/login'" class="nav-signin-btn" aria-label="Sign in to your account">Sign In</button>
+          <button type="button" onclick="window.location.href='booking.html'" class="nav-book-btn" aria-label="Book your stay at FAM">Book Your Stay</button>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="lg:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-panel" id="mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <span class="font-headline-md text-xl text-primary">Menu</span>
+      <button class="mobile-menu-close" id="mobile-close" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links" aria-label="Mobile navigation">
+      <a href="/" class="mobile-menu-link">Home</a>
+      <a href="/pages/rooms" class="mobile-menu-link">Rooms</a>
+      <a href="/pages/life" class="mobile-menu-link">Life at FAM</a>
+      <a href="/pages/explore" class="mobile-menu-link">Explore</a>
+      <a href="/pages/gallery" class="mobile-menu-link">Gallery</a>
+      <a href="/pages/amenities" class="mobile-menu-link">Amenities</a>
+      <div class="mobile-menu-cta-group">
+        <button type="button" onclick="window.location.href='/pages/login'" class="nav-mobile-signin">Sign In</button>
+        <button type="button" onclick="window.location.href='booking.html'" class="nav-mobile-book">Book Your Stay</button>
+      </div>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="tel:9876575673" class="mobile-menu-phone">
+        <span class="material-symbols-outlined text-lg">phone</span>
+        Property Manager: 98765 75673
+      </a>
+    </div>
+  </div>
+
+  <!-- ====== BREADCRUMB ====== -->
+  <div class="pt-24 md:pt-28 pb-2 px-4 md:px-margin-desktop max-w-max-width mx-auto">
+    <a href="/" class="text-on-surface-variant/50 hover:text-accent-gold transition-colors font-body text-[12px] tracking-[0.05em] uppercase">&larr; Back to Home</a>
+    <div class="flex items-center gap-2 mt-1">
+      <a href="/" class="text-on-surface-variant/40 hover:text-accent-gold transition-colors font-body text-[11px] tracking-[0.1em] uppercase">Home</a>
+      <span class="text-on-surface-variant/20 text-[11px]">&#9657;</span>
+      <span class="text-accent-gold/70 font-body text-[11px] tracking-[0.1em] uppercase">Booking</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero with dynamic step title -->
+    <section class="relative h-[35vh] min-h-[300px] overflow-hidden">
+      <img src="/images/hero/luxury-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-b from-surface/60 via-surface/30 to-surface"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <span class="text-accent-gold font-body text-[11px] tracking-[0.25em] uppercase mb-2">Flamingo Aur Maina</span>
+        <h1 class="font-display text-[clamp(1.8rem,4vw,3.5rem)] text-primary font-bold tracking-[-0.02em] leading-[1.1] mb-2" id="step-title">
+          <span class="bg-gradient-to-r from-[#C9A86A] via-[#B8925A] to-[#A07840] bg-clip-text text-transparent">
+            Book Your Stay
+          </span>
+        </h1>
+        <p class="text-on-surface-variant/60 font-body text-[clamp(0.8rem,1vw,1rem)]" id="step-subtitle">Select your perfect mountain retreat</p>
+      </div>
+    </section>
+
+    <!-- Wizard Section -->
+    <section class="max-w-[1200px] mx-auto px-4 md:px-8 pb-24 -mt-8 relative z-10">
+
+      <!-- Step Indicator -->
+      <div class="flex items-center justify-center gap-1 md:gap-3 mb-8" id="step-indicator"></div>
+
+      <!-- ====== STEP 1: ROOM ====== -->
+      <div id="step-room" class="step-panel">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="h-px flex-1 bg-gradient-to-r from-[#C9A86A]/30 to-transparent"></div>
+          <span class="text-[#C9A86A]/60 font-body text-[11px] tracking-[0.2em] uppercase">Jibhi, Himachal Pradesh</span>
+          <div class="h-px flex-1 bg-gradient-to-l from-[#C9A86A]/30 to-transparent"></div>
+        </div>
+        <p class="text-center text-on-surface-variant/50 font-body text-[13px] mb-8">6 rooms available · All prices include GST</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mb-6" id="room-grid"></div>
+      </div>
+
+      <!-- ====== STEP 2: DATES ====== -->
+      <div id="step-dates" class="step-panel" style="display:none">
+        <div class="max-w-[800px] mx-auto">
+          <div class="relative rounded-[24px] bg-surface-container-low border border-outline-variant/20 p-6 md:p-8">
+            <h3 class="font-display text-lg text-primary font-semibold mb-2">Select Your Dates</h3>
+            <p class="text-on-surface-variant/50 font-body text-sm mb-6">Choose your check-in and check-out dates.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <div class="text-on-surface-variant/50 font-body text-[11px] tracking-[0.15em] uppercase mb-3">Check-In</div>
+                <div id="checkin-cal" class="bg-white rounded-xl p-3 shadow-sm"></div>
+                <div class="mt-2 text-on-surface-variant/60 font-body text-sm" id="checkin-display">Not selected</div>
+              </div>
+              <div>
+                <div class="text-on-surface-variant/50 font-body text-[11px] tracking-[0.15em] uppercase mb-3">Check-Out</div>
+                <div id="checkout-cal" class="bg-white rounded-xl p-3 shadow-sm"></div>
+                <div class="mt-2 text-on-surface-variant/60 font-body text-sm" id="checkout-display">Not selected</div>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-accent-gold font-body text-sm" id="nights-display" style="display:none"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 3: GUESTS ====== -->
+      <div id="step-guests" class="step-panel" style="display:none">
+        <div class="max-w-[500px] mx-auto">
+          <div class="relative rounded-[24px] bg-surface-container-low border border-outline-variant/20 p-6 md:p-8">
+            <h3 class="font-display text-lg text-primary font-semibold mb-2">Number of Guests</h3>
+            <p class="text-on-surface-variant/50 font-body text-sm mb-6" id="max-guests-text">Maximum <span id="max-guests-count">4</span> guests for this room.</p>
+            <div class="space-y-5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-primary font-body text-sm">Adults</div>
+                  <div class="text-on-surface-variant/40 font-body text-[11px]">Age 18+</div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button id="adults-minus" class="counter-btn">−</button>
+                  <span class="w-6 text-center text-primary font-body text-base tabular-nums" id="adults-count">2</span>
+                  <button id="adults-plus" class="counter-btn">+</button>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-primary font-body text-sm">Children</div>
+                  <div class="text-on-surface-variant/40 font-body text-[11px]">Ages 2–12</div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <button id="children-minus" class="counter-btn">−</button>
+                  <span class="w-6 text-center text-primary font-body text-base tabular-nums" id="children-count">0</span>
+                  <button id="children-plus" class="counter-btn">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 text-on-surface-variant/30 font-body text-[12px]" id="total-guests">Total: 2 guests</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 4: GUEST INFO ====== -->
+      <div id="step-info" class="step-panel" style="display:none">
+        <div class="max-w-[500px] mx-auto">
+          <div class="relative rounded-[24px] bg-surface-container-low border border-outline-variant/20 p-6 md:p-8">
+            <h3 class="font-display text-lg text-primary font-semibold mb-6">Your Details</h3>
+            <div class="space-y-4">
+              <input id="input-name" placeholder="Full Name" class="w-full bg-white border border-outline-variant/30 rounded-2xl px-4 py-3.5 text-primary font-body text-sm placeholder:text-on-surface-variant/30 outline-none focus:border-accent-gold/50 transition-all" />
+              <input id="input-email" placeholder="Email" type="email" class="w-full bg-white border border-outline-variant/30 rounded-2xl px-4 py-3.5 text-primary font-body text-sm placeholder:text-on-surface-variant/30 outline-none focus:border-accent-gold/50 transition-all" />
+              <input id="input-phone" placeholder="Phone" type="tel" class="w-full bg-white border border-outline-variant/30 rounded-2xl px-4 py-3.5 text-primary font-body text-sm placeholder:text-on-surface-variant/30 outline-none focus:border-accent-gold/50 transition-all" />
+              <textarea id="input-requests" placeholder="Special Requests (optional)" rows="3" class="w-full bg-white border border-outline-variant/30 rounded-2xl px-4 py-3.5 text-primary font-body text-sm placeholder:text-on-surface-variant/30 outline-none focus:border-accent-gold/50 transition-all resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 5: REVIEW → PAYMENT ====== -->
+      <div id="step-review" class="step-panel" style="display:none">
+        <div class="max-w-[520px] mx-auto">
+          <div class="summary-enter relative rounded-[32px] p-[2px] bg-gradient-to-b from-[#C9A86A]/20 to-transparent">
+            <div class="rounded-[30px] bg-surface-container-low p-6 md:p-8">
+              <h3 class="font-display text-xl text-primary font-semibold mb-6">Review Reservation</h3>
+              <div class="space-y-4" id="review-details"></div>
+              <button id="review-confirm-btn" class="mt-6 w-full py-4 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 bg-primary text-on-primary hover:bg-primary-container shadow-lg">
+                Confirm & Proceed to Payment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 7: PAYMENT ====== -->
+      <div id="step-payment" class="step-panel" style="display:none">
+        <div class="max-w-[520px] mx-auto">
+          <div class="summary-enter relative rounded-[32px] p-[2px] bg-gradient-to-b from-[#C9A86A]/20 to-transparent">
+            <div class="rounded-[30px] bg-surface-container-low p-6 md:p-8">
+              <h3 class="font-display text-xl text-primary font-semibold mb-2">Payment</h3>
+              <p class="text-on-surface-variant/50 font-body text-sm mb-6">Choose your payment method to complete the booking.</p>
+
+              <div class="space-y-3 mb-6" id="payment-options">
+                <label class="payment-option" data-method="upi">
+                  <input type="radio" name="payment" value="upi" class="hidden" />
+                  <div class="flex items-center gap-4 p-4 rounded-2xl border border-outline-variant/20 bg-surface cursor-pointer transition-all">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a341d"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-primary font-body text-sm font-medium">UPI</div>
+                      <div class="text-on-surface-variant/40 font-body text-[11px]">Google Pay, PhonePe, Paytm</div>
+                    </div>
+                    <div class="w-5 h-5 rounded-full border-2 border-outline-variant/30 pay-radio"></div>
+                  </div>
+                </label>
+                <label class="payment-option" data-method="card">
+                  <input type="radio" name="payment" value="card" class="hidden" />
+                  <div class="flex items-center gap-4 p-4 rounded-2xl border border-outline-variant/20 bg-surface cursor-pointer transition-all">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a341d"><rect x="1" y="4" width="22" height="16" rx="2" stroke="none"/><line x1="1" y1="10" x2="23" y2="10" stroke="#f8f4ec" stroke-width="2"/></svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-primary font-body text-sm font-medium">Credit / Debit Card</div>
+                      <div class="text-on-surface-variant/40 font-body text-[11px]">Visa, Mastercard, RuPay</div>
+                    </div>
+                    <div class="w-5 h-5 rounded-full border-2 border-outline-variant/30 pay-radio"></div>
+                  </div>
+                </label>
+                <label class="payment-option" data-method="netbanking">
+                  <input type="radio" name="payment" value="netbanking" class="hidden" />
+                  <div class="flex items-center gap-4 p-4 rounded-2xl border border-outline-variant/20 bg-surface cursor-pointer transition-all">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a341d"><path d="M12 2L2 7v2h20V7L12 2zm-9 9v8h4v-8H3zm6 0v8h4v-8H9zm6 0v8h4v-8h-4z"/></svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-primary font-body text-sm font-medium">Net Banking</div>
+                      <div class="text-on-surface-variant/40 font-body text-[11px]">All major banks supported</div>
+                    </div>
+                    <div class="w-5 h-5 rounded-full border-2 border-outline-variant/30 pay-radio"></div>
+                  </div>
+                </label>
+                <label class="payment-option" data-method="paylater">
+                  <input type="radio" name="payment" value="paylater" class="hidden" />
+                  <div class="flex items-center gap-4 p-4 rounded-2xl border border-outline-variant/20 bg-surface cursor-pointer transition-all">
+                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#0a341d"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <div class="flex-1">
+                      <div class="text-primary font-body text-sm font-medium">Pay Later</div>
+                      <div class="text-on-surface-variant/40 font-body text-[11px]">Reserve now, pay at the property</div>
+                    </div>
+                    <div class="w-5 h-5 rounded-full border-2 border-outline-variant/30 pay-radio"></div>
+                  </div>
+                </label>
+              </div>
+
+              <div class="bg-surface rounded-2xl p-4 border border-outline-variant/10 mb-6">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-on-surface-variant/40 font-body text-[12px] tracking-[0.1em] uppercase">Amount to Pay</span>
+                  <span class="text-accent-gold font-display text-xl font-semibold" id="payment-total">₹0</span>
+                </div>
+                <p class="text-on-surface-variant/30 font-body text-[11px]">Full amount including GST</p>
+              </div>
+
+              <button id="pay-btn" disabled
+                class="w-full py-4 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 bg-primary text-on-primary hover:bg-primary-container shadow-lg disabled:opacity-30 disabled:cursor-not-allowed">
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STEP 8: BOOKING CONFIRMATION ====== -->
+      <div id="step-confirmation" class="step-panel" style="display:none">
+        <div class="max-w-[520px] mx-auto">
+          <div class="summary-enter relative rounded-[32px] p-[2px] bg-gradient-to-b from-[#C9A86A]/20 to-transparent">
+            <div class="rounded-[30px] bg-surface-container-low p-6 md:p-8 text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0a341d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3 class="font-display text-2xl text-primary font-semibold mb-2">Booking Confirmed!</h3>
+              <p class="text-on-surface-variant/50 font-body text-sm mb-6">Thank you, <span id="confirmation-name" class="font-medium text-primary">Guest</span>. Your reservation at Flamingo aur Maina is confirmed.</p>
+
+              <div class="text-left bg-surface rounded-2xl p-4 border border-outline-variant/10 mb-6 space-y-2" id="confirmation-summary"></div>
+
+              <div class="bg-accent-gold/10 rounded-2xl p-4 border border-accent-gold/20 mb-6 text-left">
+                <div class="flex items-center gap-2 mb-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A86A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <span class="text-accent-gold font-body text-[11px] tracking-[0.1em] uppercase font-medium">Confirmation Sent</span>
+                </div>
+                <p class="text-on-surface-variant/60 font-body text-sm">A confirmation email has been sent to <span id="confirmation-email" class="font-medium text-primary">your email</span>. You can also view your booking in your <a href="/dashboard" class="text-accent-gold underline">dashboard</a>.</p>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <a href="/" class="w-full py-3.5 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 text-center bg-primary text-on-primary hover:bg-primary-container shadow-lg">Return Home</a>
+                <a href="/dashboard" class="w-full py-3.5 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 text-center border border-outline-variant/40 text-on-surface-variant hover:text-primary">View My Bookings</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between mt-8 max-w-[520px] mx-auto" id="nav-buttons" style="display:none">
+        <button id="btn-back" class="px-6 py-3.5 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 border border-outline-variant/50 text-on-surface-variant hover:text-primary hover:bg-surface">
+          Back
+        </button>
+        <button id="btn-next" class="px-8 py-3.5 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 bg-primary text-on-primary hover:bg-primary-container shadow-lg disabled:opacity-30 disabled:cursor-not-allowed">
+          Next
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-charcoal text-on-primary">
+    <div class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-16">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 border-b border-on-primary/10 pb-12">
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h3 class="font-headline-md text-2xl text-on-primary tracking-wider">Flamingo aur Maina</h3>
+          <p class="text-on-primary/60 font-body-md max-w-xs text-center md:text-left">A sanctuary of refined luxury and untold stories amidst nature's embrace.</p>
+        </div>
+        <div class="flex gap-16 text-center md:text-left">
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Explore</h4>
+            <a href="/" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Home</a>
+            <a href="/pages/rooms" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Rooms</a>
+            <a href="/pages/life" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Life at FAM</a>
+            <a href="/pages/explore" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Explore</a>
+            <a href="/pages/gallery" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Gallery</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Connect</h4>
+            <a href="/pages/amenities" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Amenities</a>
+            <a href="#contact" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Contact Us</a>
+            <a href="#" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-primary/40 font-body-md">
+        <p>&copy; 2024 Flamingo aur Maina. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-on-primary transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-on-primary transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // ====== ROOM DATA ======
+  var ROOMS = [
+    { id: 'flamingo-1', name: 'Flamingo 1', type: 'Duplex', capacity: 4, price: 6000,
+      desc: 'Spanning two levels with panoramic valley views, this duplex retreat offers ample space for families or small groups seeking mountain serenity.',
+      image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80',
+      amenities: ['Mountain View', 'King Bed', 'Private Balcony', 'Living Room', 'Wi-Fi', 'Heater', 'Hot Water', 'Premium Toiletries'] },
+    { id: 'flamingo-2', name: 'Flamingo 2', type: 'King Attic', capacity: 4, price: 5000,
+      desc: 'A charming attic room with vaulted ceilings and skylights, perfect for a cozy family stay under the stars.',
+      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
+      amenities: ['Skylight', 'King Bed', 'Attic Charm', 'Wi-Fi', 'Heater', 'Hot Water', 'Premium Toiletries', 'Mountain View'] },
+    { id: 'flamingo-3', name: 'Flamingo 3', type: 'Duplex', capacity: 4, price: 6000,
+      desc: 'An elegant duplex featuring Himalayan sunrise views, a private living area, and premium comforts for an unforgettable stay.',
+      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80',
+      amenities: ['Sunrise View', 'Duplex Layout', 'Living Room', 'Wi-Fi', 'Heater', 'Hot Water', 'Premium Toiletries'] },
+    { id: 'maina-1', name: 'Maina 1', type: 'Private Room', capacity: 2, price: 2500,
+      desc: 'A serene private room with forest views, ideal for couples seeking quietude and connection with nature.',
+      image: 'https://images.unsplash.com/photo-1631049307262-da0ec9d70304?w=600&q=80',
+      amenities: ['Forest View', 'Queen Bed', 'Reading Nook', 'Wi-Fi', 'Heater', 'Hot Water'] },
+    { id: 'maina-2', name: 'Maina 2', type: 'Private Room', capacity: 2, price: 2000,
+      desc: 'Minimalist comfort meets mountain charm in this cozy private room — a restful haven for budget-conscious travelers.',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80',
+      amenities: ['Compact Design', 'Queen Bed', 'Mountain View', 'Wi-Fi', 'Heater', 'Hot Water'] },
+    { id: 'maina-3', name: 'Maina 3', type: 'Private Room', capacity: 2, price: 2500,
+      desc: 'A bright and airy private room with garden access, designed for peaceful mornings and tranquil evenings.',
+      image: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80',
+      amenities: ['Garden Access', 'Queen Bed', 'Workspace', 'Wi-Fi', 'Heater', 'Hot Water', 'Natural Light'] }
+  ];
+
+  // ====== STATE ======
+  var STEPS = ['room', 'dates', 'guests', 'info', 'review', 'payment', 'confirmation'];
+  var STEP_LABELS = ['Room', 'Dates', 'Guests', 'Details', 'Review', 'Payment', 'Done'];
+  var STEP_TITLES = {
+    room: 'Choose Your Room',
+    dates: 'Select Dates',
+    guests: 'Guests',
+    info: 'Guest Details',
+    review: 'Review Reservation',
+    payment: 'Payment',
+    confirmation: 'Booking Confirmation'
+  };
+  var STEP_SUBTITLES = {
+    room: 'Select from our collection of six distinctive rooms in Jibhi, Himachal Pradesh.',
+    dates: 'Choose your check-in and check-out dates.',
+    guests: 'Tell us how many guests will be staying.',
+    info: 'Share your contact information so we can confirm your booking.',
+    review: 'Please review your reservation and proceed to payment.',
+    payment: 'Choose your payment method to complete the booking.',
+    confirmation: 'Your reservation is confirmed! Check your email and dashboard for details.'
+  };
+
+  var currentStep = 0;
+  var booking = {
+    room: null,
+    checkIn: null,
+    checkOut: null,
+    adults: 2,
+    children: 0,
+    fullName: '',
+    email: '',
+    phone: '',
+    specialRequests: '',
+    paymentMethod: null
+  };
+
+  // ====== UTILITY ======
+  function today() { var d = new Date(); d.setHours(0,0,0,0); return d; }
+  function sameDay(a, b) { return a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
+  function formatDateShort(d) { return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }); }
+  function formatDateLong(d) { return d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }); }
+  function getDaysInMonth(y, m) { return new Date(y, m + 1, 0).getDate(); }
+  function getFirstDay(y, m) { return new Date(y, m, 1).getDay(); }
+  function getNights() { if (!booking.checkIn || !booking.checkOut) return 0; return Math.max(0, Math.round((booking.checkOut.getTime() - booking.checkIn.getTime()) / 86400000)); }
+
+  // ====== STEP INDICATOR ======
+  function renderIndicator() {
+    var el = document.getElementById('step-indicator');
+    var html = '';
+    STEPS.forEach(function(s, i) {
+      if (i > 0) html += '<div class="w-6 md:w-8 h-px ' + (i <= currentStep ? 'bg-primary/40' : 'bg-outline-variant/20') + '"></div>';
+      html += '<div class="flex items-center gap-1.5 md:gap-2">' +
+        '<div class="w-2 h-2 rounded-full transition-all duration-400 ' + (i === currentStep ? 'bg-accent-gold w-2.5 h-2.5' : i < currentStep ? 'bg-primary' : 'bg-outline-variant/30') + '"></div>' +
+        '<span class="font-body text-[10px] tracking-[0.1em] uppercase hidden md:inline ' + (i === currentStep ? 'text-accent-gold font-medium' : i < currentStep ? 'text-on-surface-variant/60' : 'text-on-surface-variant/30') + '">' + STEP_LABELS[i] + '</span>' +
+      '</div>';
+    });
+    el.innerHTML = html;
+    // Update hero
+    document.getElementById('step-title').innerHTML = '<span class="bg-gradient-to-r from-[#C9A86A] via-[#B8925A] to-[#A07840] bg-clip-text text-transparent">' + STEP_TITLES[STEPS[currentStep]] + '</span>';
+    document.getElementById('step-subtitle').textContent = STEP_SUBTITLES[STEPS[currentStep]];
+  }
+
+  // ====== SHOW/HIDE STEPS ======
+  function goToStep(index) {
+    currentStep = index;
+    document.querySelectorAll('.step-panel').forEach(function(el, i) {
+      el.style.display = i === index ? 'block' : 'none';
+    });
+    var nav = document.getElementById('nav-buttons');
+    nav.style.display = index === STEPS.length - 1 ? 'none' : 'flex';
+    document.getElementById('btn-back').style.display = index === 0 ? 'none' : 'block';
+    document.getElementById('btn-next').textContent = index === 4 ? 'Confirm & Proceed to Payment' : index === 5 ? 'Pay Now' : 'Next';
+    renderIndicator();
+    updateNavState();
+    window.scrollTo({ top: 280, behavior: 'smooth' });
+  }
+
+  function canGoNext() {
+    switch (currentStep) {
+      case 0: return booking.room !== null;
+      case 1: return booking.checkIn !== null && booking.checkOut !== null;
+      case 2: return booking.adults + booking.children > 0;
+      case 3: return booking.fullName.trim().length > 0 && booking.email.trim().length > 0 && booking.phone.trim().length > 0;
+      case 4: return true;
+      case 5: return booking.paymentMethod !== null && booking.paymentMethod !== undefined;
+      case 6: return true;
+      default: return false;
+    }
+  }
+
+  function updateNavState() {
+    var btn = document.getElementById('btn-next');
+    btn.disabled = !canGoNext();
+  }
+
+  // ====== ROOM SELECTION ======
+  function buildRoomCard(room, index) {
+    var delay = index * 80;
+    var amens = room.amenities.slice(0, 5);
+    var more = room.amenities.length - 5;
+    var sel = booking.room && booking.room.id === room.id;
+    return '<div class="room-card page-fade-in bg-surface-container-low rounded-[20px] overflow-hidden border border-outline-variant/20' + (sel ? ' selected' : '') + '" data-id="' + room.id + '" style="animation-delay:' + delay + 'ms">' +
+      '<div class="relative h-56 md:h-64 overflow-hidden">' +
+        '<img src="' + room.image + '" alt="' + room.name + '" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />' +
+        '<div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-surface/20 to-transparent"></div>' +
+        '<div class="absolute top-4 right-4 z-10 check-wrap">' +
+          '<div class="px-3 py-1.5 rounded-full bg-accent-gold text-surface font-body text-[10px] font-bold tracking-[0.15em] uppercase">Selected</div>' +
+        '</div>' +
+        '<div class="absolute bottom-4 left-5 right-5 flex items-center gap-2 text-on-surface-variant/70 font-body text-[12px]">' +
+          '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="5.5" cy="5" r="2.5"/><path d="M1 12.5c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5" stroke-linecap="round"/></svg>' +
+          room.capacity + ' Guests' +
+        '</div>' +
+      '</div>' +
+      '<div class="p-6">' +
+        '<h3 class="font-display text-[22px] text-primary font-semibold leading-tight mb-1">' + room.name + '</h3>' +
+        '<div class="text-accent-gold/80 font-body text-[12px] tracking-[0.15em] uppercase mb-3">' + room.type + '</div>' +
+        '<p class="text-on-surface-variant/60 font-body text-sm leading-relaxed mb-5">' + room.desc + '</p>' +
+        '<div class="flex items-baseline gap-1.5 mb-1">' +
+          '<span class="text-accent-gold font-display text-2xl font-semibold tracking-tight">₹' + room.price.toLocaleString('en-IN') + '</span>' +
+          '<span class="text-on-surface-variant/40 font-body text-[13px]">/ Night</span>' +
+        '</div>' +
+        '<div class="text-on-surface-variant/30 font-body text-[11px] tracking-wide mb-5">Including GST</div>' +
+        '<div class="space-y-2 mb-6">' +
+          amens.map(function(a) {
+            return '<div class="flex items-center gap-2.5"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#C9A86A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0"><path d="M3 7l3 3 5-5"/></svg><span class="text-on-surface-variant/60 font-body text-[13px]">' + a + '</span></div>';
+          }).join('') +
+          (more > 0 ? '<div class="flex items-center gap-2.5"><div class="w-[14px]"></div><span class="text-on-surface-variant/30 font-body text-[12px]">+' + more + ' more</span></div>' : '') +
+        '</div>' +
+        '<button class="select-btn w-full py-3.5 rounded-full font-body text-[12px] font-medium tracking-[0.15em] uppercase transition-all duration-400 bg-surface/60 text-on-surface-variant/70 hover:bg-surface hover:text-primary border border-outline-variant/30">Select Room</button>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderRooms() {
+    var grid = document.getElementById('room-grid');
+    grid.innerHTML = ROOMS.map(function(r, i) { return buildRoomCard(r, i); }).join('');
+    document.querySelectorAll('.room-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.select-btn')) return;
+        selectRoom(card.dataset.id);
+      });
+      card.querySelector('.select-btn').addEventListener('click', function(e) {
+        e.stopPropagation();
+        selectRoom(card.dataset.id);
+      });
+    });
+  }
+
+  function selectRoom(id) {
+    var room = ROOMS.find(function(r) { return r.id === id; });
+    booking.room = room;
+    document.querySelectorAll('.room-card').forEach(function(c) {
+      c.classList.toggle('selected', c.dataset.id === id);
+    });
+    document.getElementById('max-guests-count').textContent = room.capacity;
+    if (booking.adults + booking.children > room.capacity) {
+      booking.adults = Math.min(booking.adults, room.capacity);
+      booking.children = 0;
+      document.getElementById('adults-count').textContent = booking.adults;
+      document.getElementById('children-count').textContent = booking.children;
+    }
+    updateNavState();
+  }
+
+  // ====== CALENDAR ======
+  var calState = { year: today().getFullYear(), month: today().getMonth() };
+
+  function renderCal(prefix) {
+    var el = document.getElementById(prefix + '-cal');
+    if (!el) return;
+    var y = calState.year, m = calState.month;
+    var days = getDaysInMonth(y, m);
+    var first = getFirstDay(y, m);
+    var minDate = prefix === 'checkout' && booking.checkIn ? new Date(booking.checkIn.getTime() + 86400000) : today();
+    var value = prefix === 'checkout' ? booking.checkOut : booking.checkIn;
+    var monthLabel = new Date(y, m).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+
+    var html = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">' +
+      '<button class="cal-nav" data-prefix="' + prefix + '" data-dir="-1" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid #e2e3df;background:transparent;cursor:pointer;color:#414942;font-size:14px">‹</button>' +
+      '<span style="font-size:13px;font-weight:600;color:#1a1c1a;font-family:Playfair Display,serif">' + monthLabel + '</span>' +
+      '<button class="cal-nav" data-prefix="' + prefix + '" data-dir="1" style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid #e2e3df;background:transparent;cursor:pointer;color:#414942;font-size:14px">›</button>' +
+    '</div>' +
+    '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px">' +
+      ['Su','Mo','Tu','We','Th','Fr','Sa'].map(function(d) { return '<div style="text-align:center;font-size:10px;color:#727972;font-weight:500;padding:2px 0">' + d + '</div>'; }).join('') +
+    '</div>' +
+    '<div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px">';
+
+    for (var i = 0; i < first; i++) html += '<div></div>';
+
+    for (var d = 1; d <= days; d++) {
+      var date = new Date(y, m, d); date.setHours(0,0,0,0);
+      var disabled = date < minDate;
+      var selected = sameDay(date, value);
+      html += '<button class="cal-day' + (disabled ? ' disabled' : '') + '" data-prefix="' + prefix + '" data-year="' + y + '" data-month="' + m + '" data-day="' + d + '"' + (disabled ? ' disabled' : '') +
+        ' style="width:100%;aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:12px;border:none;background:' + (selected ? '#C9A86A' : 'transparent') + ';color:' + (selected ? '#fff' : disabled ? '#d9dad6' : '#1a1c1a') + ';font-weight:' + (selected ? '600' : '400') + ';cursor:' + (disabled ? 'not-allowed' : 'pointer') + '">' + d + '</button>';
+    }
+
+    html += '</div>';
+    el.innerHTML = html;
+
+    el.querySelectorAll('.cal-nav').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var dir = parseInt(btn.getAttribute('data-dir'));
+        calState.month += dir;
+        if (calState.month < 0) { calState.month = 11; calState.year--; }
+        if (calState.month > 11) { calState.month = 0; calState.year++; }
+        renderCal('checkin');
+        renderCal('checkout');
+      });
+    });
+
+    el.querySelectorAll('.cal-day:not(.disabled)').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var year = parseInt(btn.getAttribute('data-year'));
+        var month = parseInt(btn.getAttribute('data-month'));
+        var day = parseInt(btn.getAttribute('data-day'));
+        var date = new Date(year, month, day);
+        if (btn.getAttribute('data-prefix') === 'checkout') {
+          booking.checkOut = date;
+        } else {
+          booking.checkIn = date;
+          if (!booking.checkOut || booking.checkOut <= booking.checkIn) { booking.checkOut = null; }
+        }
+        renderCal('checkin');
+        renderCal('checkout');
+        updateDateDisplay();
+        updateNavState();
+      });
+    });
+  }
+
+  function updateDateDisplay() {
+    document.getElementById('checkin-display').textContent = booking.checkIn ? formatDateShort(booking.checkIn) : 'Not selected';
+    document.getElementById('checkout-display').textContent = booking.checkOut ? formatDateShort(booking.checkOut) : 'Not selected';
+    var nights = getNights();
+    var nd = document.getElementById('nights-display');
+    if (nights > 0) {
+      nd.style.display = 'flex';
+      nd.innerHTML = '<span>' + nights + ' night' + (nights !== 1 ? 's' : '') + '</span>';
+    } else {
+      nd.style.display = 'none';
+    }
+  }
+
+  // ====== BUILD REVIEW HTML ======
+  function row(label, value) {
+    return '<div class="flex items-center justify-between py-3 border-b border-outline-variant/10">' +
+      '<span class="text-on-surface-variant/40 font-body text-[12px] tracking-[0.1em] uppercase">' + label + '</span>' +
+      '<span class="text-on-surface/85 font-body text-sm font-medium">' + value + '</span>' +
+    '</div>';
+  }
+
+  function renderReview() {
+    var nights = getNights();
+    var total = booking.room && nights > 0 ? booking.room.price * nights : booking.room ? booking.room.price : 0;
+    var ci = booking.checkIn ? formatDateLong(booking.checkIn) : '—';
+    var co = booking.checkOut ? formatDateLong(booking.checkOut) : '—';
+    var nightsLabel = nights > 0 ? nights + ' night' + (nights !== 1 ? 's' : '') : '—';
+    var guests = booking.adults + booking.children;
+    var guestStr = guests + ' (' + booking.adults + ' Adult' + (booking.adults !== 1 ? 's' : '') + (booking.children > 0 ? ', ' + booking.children + ' Child' + (booking.children !== 1 ? 'ren' : '') : '') + ')';
+
+    var html =
+      row('Property', 'Flamingo aur Maina') +
+      row('Room', booking.room ? booking.room.name : '—') +
+      row('Room Type', booking.room ? booking.room.type : '—') +
+      row('Check-In', ci) +
+      row('Check-Out', co) +
+      row('Nights', nightsLabel) +
+      row('Guests', guestStr) +
+      '<div class="pt-2"><div class="text-on-surface-variant/30 font-body text-[10px] tracking-[0.15em] uppercase mb-2">Guest Details</div>' +
+      '<div class="bg-surface rounded-2xl p-4 space-y-2 border border-outline-variant/10">' +
+        '<p class="text-on-surface-variant/70 font-body text-sm"><span class="text-on-surface-variant/40">Name:</span> ' + (booking.fullName || '—') + '</p>' +
+        '<p class="text-on-surface-variant/70 font-body text-sm"><span class="text-on-surface-variant/40">Email:</span> ' + (booking.email || '—') + '</p>' +
+        '<p class="text-on-surface-variant/70 font-body text-sm"><span class="text-on-surface-variant/40">Phone:</span> ' + (booking.phone || '—') + '</p>' +
+        (booking.specialRequests ? '<p class="text-on-surface-variant/70 font-body text-sm"><span class="text-on-surface-variant/40">Requests:</span> ' + booking.specialRequests + '</p>' : '') +
+      '</div></div>' +
+      row('Price', booking.room ? '₹' + booking.room.price.toLocaleString('en-IN') + ' / night' : '—') +
+      '<div class="flex items-center justify-between py-3 border-b border-outline-variant/10"><span class="text-on-surface-variant/40 font-body text-[12px] tracking-[0.1em] uppercase">Taxes</span><span class="text-on-surface-variant/50 font-body text-sm">Included</span></div>' +
+      '<div class="flex items-center justify-between py-3"><span class="text-primary font-display text-base font-semibold">Grand Total</span><span class="text-accent-gold font-display text-xl font-semibold">₹' + total.toLocaleString('en-IN') + '</span></div>';
+
+    document.getElementById('review-details').innerHTML = html;
+  }
+
+  // ====== FORM VALIDATION ======
+  function syncForm() {
+    booking.fullName = document.getElementById('input-name').value;
+    booking.email = document.getElementById('input-email').value;
+    booking.phone = document.getElementById('input-phone').value;
+    booking.specialRequests = document.getElementById('input-requests').value;
+    updateNavState();
+  }
+
+  function renderPaymentTotal() {
+    var nights = getNights();
+    var total = booking.room && nights > 0 ? booking.room.price * nights : booking.room ? booking.room.price : 0;
+    document.getElementById('payment-total').textContent = '₹' + total.toLocaleString('en-IN');
+  }
+
+  // ====== PAYMENT ======
+  function handlePayment() {
+    document.getElementById('pay-btn').textContent = 'Processing…';
+    document.getElementById('pay-btn').disabled = true;
+    setTimeout(function() {
+      renderConfirmation();
+      goToStep(6);
+    }, 1200);
+  }
+
+  function renderConfirmation() {
+    document.getElementById('confirmation-name').textContent = booking.fullName.split(' ')[0];
+    document.getElementById('confirmation-email').textContent = booking.email;
+    var nights = getNights();
+    var total = booking.room && nights > 0 ? booking.room.price * nights : booking.room ? booking.room.price : 0;
+    var ci = booking.checkIn ? formatDateLong(booking.checkIn) : '—';
+    var co = booking.checkOut ? formatDateLong(booking.checkOut) : '—';
+    var html =
+      '<div class="flex items-center justify-between py-2"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Room</span><span class="text-primary font-body text-sm font-medium">' + booking.room.name + '</span></div>' +
+      '<div class="flex items-center justify-between py-2"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Check-In</span><span class="text-primary font-body text-sm font-medium">' + ci + '</span></div>' +
+      '<div class="flex items-center justify-between py-2"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Check-Out</span><span class="text-primary font-body text-sm font-medium">' + co + '</span></div>' +
+      '<div class="flex items-center justify-between py-2"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Guests</span><span class="text-primary font-body text-sm font-medium">' + (booking.adults + booking.children) + '</span></div>' +
+      '<div class="flex items-center justify-between py-2"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Payment</span><span class="text-primary font-body text-sm font-medium capitalize">' + (booking.paymentMethod || '—') + '</span></div>' +
+      '<div class="flex items-center justify-between py-2 border-t border-outline-variant/10"><span class="text-on-surface-variant/40 font-body text-[11px] tracking-[0.1em] uppercase">Total Paid</span><span class="text-accent-gold font-display text-base font-semibold">₹' + total.toLocaleString('en-IN') + '</span></div>';
+    document.getElementById('confirmation-summary').innerHTML = html;
+  }
+
+  // ====== NAVIGATION ======
+  function nextStep() {
+    if (!canGoNext()) return;
+    if (currentStep === 5) { handlePayment(); return; } // payment → confirmation
+    if (currentStep === STEPS.length - 1) return;
+    // Sync form data before leaving step
+    if (currentStep === 3) syncForm();
+    if (currentStep === 4) renderReview();
+    goToStep(currentStep + 1);
+  }
+
+  function prevStep() {
+    if (currentStep === 0) return;
+    if (currentStep === 4) syncForm();
+    goToStep(currentStep - 1);
+  }
+
+  // ====== INIT ======
+  document.addEventListener('DOMContentLoaded', function() {
+    renderRooms();
+    renderCal('checkin');
+    renderCal('checkout');
+    goToStep(0);
+
+    // Mobile menu (shared implementation from index.html)
+    if (typeof initMobileMenu === 'function') initMobileMenu();
+
+    // Navbar scroll effect
+    var nav = document.getElementById('main-nav');
+    if (nav) {
+      var onScroll = function() {
+        nav.classList.toggle('scrolled', window.scrollY > 100);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // Nav buttons
+    document.getElementById('btn-next').addEventListener('click', nextStep);
+    document.getElementById('btn-back').addEventListener('click', prevStep);
+
+    // Guest counters
+    document.getElementById('adults-minus').addEventListener('click', function() {
+      if (booking.adults > 1) {
+        booking.adults--;
+        document.getElementById('adults-count').textContent = booking.adults;
+        updateGuestTotal();
+        updateNavState();
+      }
+    });
+    document.getElementById('adults-plus').addEventListener('click', function() {
+      var maxGuests = booking.room ? booking.room.capacity : 4;
+      if (booking.adults + booking.children < maxGuests) {
+        booking.adults++;
+        document.getElementById('adults-count').textContent = booking.adults;
+        updateGuestTotal();
+        updateNavState();
+      }
+    });
+    document.getElementById('children-minus').addEventListener('click', function() {
+      if (booking.children > 0) {
+        booking.children--;
+        document.getElementById('children-count').textContent = booking.children;
+        updateGuestTotal();
+        updateNavState();
+      }
+    });
+    document.getElementById('children-plus').addEventListener('click', function() {
+      var maxGuests = booking.room ? booking.room.capacity : 4;
+      if (booking.adults + booking.children < maxGuests) {
+        booking.children++;
+        document.getElementById('children-count').textContent = booking.children;
+        updateGuestTotal();
+        updateNavState();
+      }
+    });
+
+    // Form inputs
+    document.getElementById('input-name').addEventListener('input', syncForm);
+    document.getElementById('input-email').addEventListener('input', syncForm);
+    document.getElementById('input-phone').addEventListener('input', syncForm);
+
+    // Review → Payment button
+    document.getElementById('review-confirm-btn').addEventListener('click', function() {
+      renderPaymentTotal();
+      goToStep(5);
+    });
+
+    // Payment options
+    document.querySelectorAll('.payment-option').forEach(function(label) {
+      label.addEventListener('click', function() {
+        document.querySelectorAll('.payment-option').forEach(function(l) {
+          l.querySelector('.pay-radio').className = 'w-5 h-5 rounded-full border-2 border-outline-variant/30 pay-radio';
+          l.querySelector('input').checked = false;
+        });
+        label.querySelector('.pay-radio').className = 'w-5 h-5 rounded-full border-2 border-accent-gold pay-radio bg-accent-gold/10';
+        label.querySelector('input').checked = true;
+        booking.paymentMethod = label.getAttribute('data-method');
+        updateNavState();
+      });
+    });
+
+    // Pay button
+    document.getElementById('pay-btn').addEventListener('click', handlePayment);
+  });
+
+  function updateGuestTotal() {
+    var total = booking.adults + booking.children;
+    document.getElementById('total-guests').textContent = 'Total: ' + total + ' guest' + (total !== 1 ? 's' : '');
+  }
+  </script>
+
+  <script src="/js/animations.js"></script>
+  <script src="/js/transitions.js"></script>
+  <script>document.querySelectorAll('footer p').forEach(function(p){p.innerHTML=p.innerHTML.replace('2024',new Date().getFullYear());});</script>
+</body>
+</html>

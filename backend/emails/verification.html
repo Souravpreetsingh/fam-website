@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Georgia', serif; margin: 0; padding: 0; background: #f8f4ec; }
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 2px solid #C9A86A; }
+    .logo { font-size: 28px; color: #0a341d; font-weight: bold; letter-spacing: 2px; }
+    .content { padding: 30px 0; color: #333; line-height: 1.8; }
+    .button { display: inline-block; padding: 14px 32px; background: #0a341d; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 16px; margin: 20px 0; }
+    .footer { text-align: center; padding-top: 30px; border-top: 1px solid #ddd; color: #888; font-size: 14px; }
+    h1 { color: #0a341d; font-size: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Flamingo aur Maina</div>
+    </div>
+    <div class="content">
+      <h1>Verify Your Email Address</h1>
+      <p>Dear {{name}},</p>
+      <p>Thank you for creating an account at Flamingo aur Maina. Please verify your email address by clicking the button below:</p>
+      <p style="text-align: center;">
+        <a href="{{verificationUrl}}" class="button">Verify Email</a>
+      </p>
+      <p>This link will expire in 24 hours. If you did not create an account, please ignore this email.</p>
+      <p>Warm regards,<br>The Flamingo aur Maina Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} Flamingo aur Maina. All rights reserved.</p>
+      <p>Flamingo aur Maina, Himalayas, India</p>
+    </div>
+  </div>
+</body>
+</html>

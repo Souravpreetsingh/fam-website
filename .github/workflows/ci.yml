@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Lint & Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (LTS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint --if-present
+        continue-on-error: false
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Verify output
+        run: |
+          if [ -f dist/index.html ] || [ -f index.html ]; then
+            echo "Build artifacts found — project is healthy."
+          else
+            echo "No index.html found — build may have failed."
+            exit 1
+          fi

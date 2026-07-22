@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Georgia', serif; margin: 0; padding: 0; background: #f8f4ec; }
+    .container { max-width: 600px; margin: 0 auto; padding: 40px 20px; }
+    .header { text-align: center; padding: 30px 0; border-bottom: 2px solid #C9A86A; }
+    .logo { font-size: 28px; color: #0a341d; font-weight: bold; letter-spacing: 2px; }
+    .content { padding: 30px 0; color: #333; line-height: 1.8; }
+    .details { background: #fff; border-radius: 8px; padding: 20px; margin: 20px 0; border: 1px solid #e0ddd5; }
+    .details table { width: 100%; }
+    .details td { padding: 8px 0; border-bottom: 1px solid #f0ede5; }
+    .details td:last-child { text-align: right; font-weight: bold; }
+    .button { display: inline-block; padding: 14px 32px; background: #0a341d; color: #ffffff; text-decoration: none; border-radius: 4px; font-size: 16px; margin: 20px 0; }
+    .footer { text-align: center; padding-top: 30px; border-top: 1px solid #ddd; color: #888; font-size: 14px; }
+    h1 { color: #0a341d; font-size: 24px; }
+    .badge { display: inline-block; background: #0a341d; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Flamingo aur Maina</div>
+    </div>
+    <div class="content">
+      <h1>Booking Confirmed!</h1>
+      <p>Dear {{name}},</p>
+      <p>Your booking has been confirmed. We look forward to welcoming you to Flamingo aur Maina.</p>
+      <div class="details">
+        <table>
+          <tr><td>Booking ID</td><td><span class="badge">{{bookingId}}</span></td></tr>
+          <tr><td>Room</td><td>{{roomName}}</td></tr>
+          <tr><td>Check-In</td><td>{{checkIn}}</td></tr>
+          <tr><td>Check-Out</td><td>{{checkOut}}</td></tr>
+          <tr><td>Guests</td><td>{{guests}}</td></tr>
+          <tr><td>Total Amount</td><td>{{totalAmount}}</td></tr>
+        </table>
+      </div>
+      <p style="text-align: center;">
+        <a href="{{frontendUrl}}/bookings" class="button">View My Bookings</a>
+      </p>
+      <p>If you have any questions or need to modify your booking, please contact us.</p>
+      <p>Warm regards,<br>The Flamingo aur Maina Team</p>
+    </div>
+    <div class="footer">
+      <p>&copy; {{year}} Flamingo aur Maina. All rights reserved.</p>
+      <p>Flamingo aur Maina, Himalayas, India</p>
+    </div>
+  </div>
+</body>
+</html>

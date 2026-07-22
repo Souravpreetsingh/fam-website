@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flamingoaurmaina.netlify.app/sitemap.xml
