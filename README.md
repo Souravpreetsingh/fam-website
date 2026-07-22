@@ -6,14 +6,14 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 
 | Layer        | Technology                                          |
 | ------------ | --------------------------------------------------- |
-| Frontend     | React 19, TypeScript 6, Vite 8, Tailwind CSS 4      |
+| Frontend     | HTML, CSS, JavaScript, Tailwind CSS                  |
 | Backend      | Node.js, Express, Mongoose                           |
 | Database     | MongoDB Atlas                                       |
 | Auth         | JWT (access + refresh tokens)                       |
 | Payments     | Razorpay                                            |
 | Media        | Cloudinary                                          |
 | Email        | Nodemailer (SMTP)                                   |
-| Animations   | GSAP, ScrollTrigger, Three.js, Framer Motion        |
+| Animations   | GSAP, ScrollTrigger                                 |
 | AI           | Custom knowledge base chatbot                        |
 | Deployment   | Netlify (frontend), Render (backend)                 |
 
@@ -21,25 +21,14 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 
 ```
 .
-├── public/              # Static assets (hero frames, images)
+├── public/              # Static HTML site (deployed to Netlify)
 │   ├── assets/frames/   # 240 hero frame images
-│   ├── css/             # Static CSS files
-│   ├── js/              # Static JS files
-│   └── pages/           # Static HTML pages
-├── src/                 # React application
-│   ├── admin/           # Admin dashboard
-│   ├── api/             # API client
-│   ├── assets/          # React assets
-│   ├── components/      # Reusable components
-│   ├── context/         # React contexts
-│   ├── dashboard/       # User dashboard
-│   ├── data/            # Static data
-│   ├── hooks/           # Custom hooks
-│   ├── lib/             # Utilities
-│   ├── pages/           # Route pages
-│   └── types/           # TypeScript types
-├── api/                 # Netlify Functions (legacy)
-├── backend/             # Express API server (deployed separately)
+│   ├── css/             # Stylesheets
+│   ├── js/              # JavaScript (transitions, hero, animations)
+│   └── pages/           # HTML pages (booking, rooms, explore, etc.)
+├── src/                 # React app (in development, not deployed)
+├── api/                 # Netlify Functions wrapper
+├── backend/             # Express API server (deployed on Render)
 ├── .github/workflows/   # CI/CD pipelines
 ├── netlify.toml         # Netlify deployment config
 └── render.yaml          # Render deployment config
@@ -78,37 +67,27 @@ npm run build      # Production build
 
 ### GitHub Actions
 
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| `ci.yml` | Pull Request | Lint, type-check, build verification |
-| `deploy.yml` | Push to `main` | Build + deploy to Netlify |
-
-The CI pipeline runs automatically on every Pull Request and must pass before merging.
+| Workflow    | Trigger         | Purpose                                   |
+| ----------- | --------------- | ----------------------------------------- |
+| `ci.yml`    | Pull Request    | Validate required files exist             |
+| `deploy.yml` | Push to `main`  | Deploy `public/` to Netlify               |
 
 ### Required GitHub Secrets
 
-| Secret | Description |
-|--------|-------------|
-| `NETLIFY_AUTH_TOKEN` | Netlify Personal Access Token |
-| `NETLIFY_SITE_ID` | Netlify site ID |
-
-### Branch Protection
-
-Configure the following branch protection rules on `main`:
-
-- Require pull request reviews (1 reviewer)
-- Require status checks: `Lint, TypeCheck & Build`
-- Require branches to be up-to-date
+| Secret                | Description                                  |
+| --------------------- | -------------------------------------------- |
+| `NETLIFY_AUTH_TOKEN`  | Netlify Personal Access Token                |
+| `NETLIFY_SITE_ID`     | Netlify site ID                              |
 
 ## Deployment
 
-### Frontend (Netlify)
+### Frontend (Static Site)
 
 Every push to `main` triggers an automatic deployment via GitHub Actions:
 
-1. Build: `npm run build` (outputs to `dist/`)
-2. Deploy: `netlify deploy --prod --dir=dist`
-3. SPA routing handled by `netlify.toml`
+1. Deploy `public/` to Netlify
+2. Clean URLs: `/pages/room` → `/pages/room.html`
+3. API proxy: `/api/*` → Render backend
 
 Preview deployments are available via Netlify's GitHub integration.
 

@@ -9,37 +9,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  lint-typecheck-build:
-    name: Lint, TypeCheck & Build
+  validate:
+    name: Validate Static Site
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      - name: Check required files exist
+        run: |
+          echo "Checking required files..."
+          test -f public/index.html || { echo "Missing: public/index.html"; exit 1; }
+          for page in rooms booking explore gallery amenities life login signup; do
+            test -f "public/pages/$page.html" || { echo "Missing: public/pages/$page.html"; exit 1; }
+          done
+          echo "All HTML pages present"
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Type check
-        run: npm run type-check
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: build-output
-          path: dist/
-          retention-days: 1
+      - name: Check for empty files
+        run: |
+          find public -type f -size 0 -name "*.html" -o -name "*.css" -o -name "*.js" | while read f; do
+            echo "WARNING: Empty file: $f"
+          done
