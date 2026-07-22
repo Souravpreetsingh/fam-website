@@ -18,15 +18,14 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 
 | Layer | Technology |
 |-------|-----------|
-| Static Frontend | HTML, CSS, JavaScript, Tailwind CSS |
-| React App | React 19, TypeScript, Vite, React Router, TanStack Query |
+| Frontend | HTML, CSS, JavaScript, Tailwind CSS |
 | Backend | Node.js, Express, Mongoose, Socket.io |
 | Database | MongoDB Atlas |
 | Authentication | JWT (access + refresh tokens) |
 | Payments | Razorpay |
 | Media | Cloudinary |
 | Email | Nodemailer (SMTP) |
-| Animations | GSAP, ScrollTrigger, Framer Motion |
+| Animations | GSAP, ScrollTrigger |
 | AI | Custom knowledge base chatbot |
 | Deployment | Netlify (static), Render (backend) |
 
@@ -38,14 +37,6 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 │   ├── css/             # Stylesheets
 │   ├── js/              # JavaScript (transitions, hero, animations)
 │   └── pages/           # HTML pages (booking, rooms, explore, etc.)
-├── src/                 # React SPA
-│   ├── admin/           # Admin dashboard pages & components
-│   ├── api/             # API client layer (Axios)
-│   ├── components/      # Shared React components
-│   ├── context/         # Auth context
-│   ├── dashboard/       # User dashboard pages
-│   ├── hooks/           # Custom React hooks
-│   └── pages/           # SPA pages (Home, Booking, Login, etc.)
 ├── backend/             # Express API server
 │   ├── config/          # DB, Cloudinary, Nodemailer, Razorpay config
 │   ├── controllers/     # Route handlers
@@ -57,7 +48,6 @@ A luxury hospitality website for Flamingo aur Maina, a boutique café and mounta
 │   └── validations/     # Zod schemas
 ├── api/                 # Netlify Functions wrapper
 ├── netlify.toml         # Netlify deployment config
-├── vite.config.ts       # Vite config for React SPA
 └── render.yaml          # Render deployment config
 ```
 
@@ -71,16 +61,7 @@ npx serve public -l 3000
 
 Opens the hero frames + static pages at `http://localhost:3000`.
 
-### 2. React SPA
-
-```bash
-npm install
-npm run dev
-```
-
-Opens the React app at `http://localhost:5173`.
-
-### 3. Backend
+### 2. Backend
 
 ```bash
 cd backend
@@ -94,11 +75,6 @@ Starts the API server at `http://localhost:5000` with Swagger docs at `/api-docs
 ## Environment Variables
 
 Copy `.env.example` to `.env` and configure:
-
-### Frontend (.env)
-```
-VITE_API_URL=/api/v1
-```
 
 ### Backend (backend/.env)
 ```
@@ -117,14 +93,13 @@ SMTP_PORT=587
 SMTP_USER=...
 SMTP_PASS=...
 EMAIL_FROM=Flamingo aur Maina <noreply@flamingoaurmaina.com>
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=http://localhost:3000
 ```
 
 ## Deployment
 
 - **Static Site**: Deploy `public/` to Netlify (auto-configured via `netlify.toml`)
 - **Backend**: Deploy `backend/` to Render (auto-configured via `render.yaml`)
-- **React SPA**: Build with `npm run build` and deploy `dist/` to Netlify/Vercel
 
 ## API Documentation
 
