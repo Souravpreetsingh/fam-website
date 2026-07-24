@@ -4837,3 +4837,111 @@ html.mode-winter .nav-mobile-book {
   60% { transform: translateX(-4px); }
   80% { transform: translateX(4px); }
 }
+
+/* ============================================
+   Mobile Hero — 768px and below only
+   Does NOT affect desktop (769px+)
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-root {
+    height: 100svh;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .hero-text-wrap {
+    padding: 0 24px;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 40px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-greeting {
+    font-size: 11px;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+  }
+
+  .hero-fam {
+    font-size: clamp(36px, 12vw, 42px);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-tagline {
+    font-size: clamp(26px, 8vw, 34px);
+    max-width: 320px;
+    margin-bottom: 8px;
+  }
+
+  .hero-desc {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 4vw, 16px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 24px;
+    max-width: 300px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    height: 56px;
+    padding: 0 24px;
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  .hero-gradient-overlay {
+    display: block;
+    background: linear-gradient(to top, rgba(8,8,12,0.5) 0%, rgba(8,8,12,0.15) 50%, transparent 100%);
+  }
+
+  .scroll-indicator {
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
+  }
+
+  .hero-seq {
+    transform: translateX(0) !important;
+    animation-name: heroFadeInMobile !important;
+  }
+}
+
+@keyframes heroFadeInMobile {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Description hidden on desktop */
+.hero-desc {
+  display: none;
+}
