@@ -1,7 +1,1 @@
-{
-  "total": 240,
-  "padding": 3,
-  "format": "jpg",
-  "prefix": "ezgif-frame-",
-  "path": "/assets/frames/"
-}
+{ "total": 240, "padding": 3, "format": "jpg", "prefix": "ezgif-frame-", "path": "/assets/frames/" }

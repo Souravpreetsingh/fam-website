@@ -18,8 +18,23 @@ export default defineConfig({
   }],
   build: {
     chunkSizeWarningLimit: 2000,
+    cssCodeSplit: false,
     rollupOptions: {
       input: 'index.html',
+        output: {
+          manualChunks(id: string) {
+            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom') || id.includes('node_modules/react-router')) {
+              return 'vendor'
+            }
+            if (id.includes('node_modules/framer-motion')) {
+              return 'motion'
+            }
+            if (id.includes('node_modules/gsap')) {
+              return 'gsap'
+            }
+          },
+        },
     },
+    assetInlineLimit: 4096,
   },
 })

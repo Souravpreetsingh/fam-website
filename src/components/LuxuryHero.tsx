@@ -169,152 +169,180 @@ export default function LuxuryHero() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    let animationCleanup: (() => void) | null = null
+    let cancelled = false
+    let scrollTriggerCleanup: (() => void) | null = null
+    let scrollTriggerPin: (() => void) | null = null
+
+    /* Sliding window frame cache */
+    const FRAME_CACHE_SIZE = 25
+    const PRELOAD_AHEAD = 15
+    const frames: (HTMLImageElement | null)[] = new Array(DEFAULT_CONFIG.total)
+    let totalFrames = DEFAULT_CONFIG.total
+    let currentIndex = -1
+    let rafQueued = false
+    let lastLoadedIdx = -1
+
+    function resizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
+      const w = Math.round(window.innerWidth * dpr)
+      const h = Math.round(window.innerHeight * dpr)
+      if (canvas!.width !== w || canvas!.height !== h) {
+        canvas!.width = w
+        canvas!.height = h
+        canvas!.style.width = window.innerWidth + 'px'
+        canvas!.style.height = window.innerHeight + 'px'
+      }
+    }
+
+    resizeCanvas()
+
+    function frameSrc(idx: number): string {
+      return DEFAULT_CONFIG.path + DEFAULT_CONFIG.prefix + padNum(idx + 1, DEFAULT_CONFIG.padding) + '.' + DEFAULT_CONFIG.format
+    }
+
+    function preloadSingle(idx: number): Promise<boolean> {
+      return new Promise(resolve => {
+        if (cancelled) { resolve(false); return }
+        const img = new Image()
+        const src = frameSrc(idx)
+        let resolved = false
+        function finish(ok: boolean) {
+          if (resolved || cancelled) return
+          resolved = true
+          frames[idx] = ok ? img : null
+          resolve(ok)
+        }
+        img.onload = () => {
+          if (cancelled) { resolve(false); return }
+          if (typeof img.decode === 'function') {
+            img.decode().then(() => finish(true)).catch(() => finish(false))
+          } else {
+            finish(true)
+          }
+        }
+        img.onerror = () => finish(false)
+        img.src = src
+        if (img.complete && img.naturalWidth > 0) {
+          if (typeof img.decode === 'function') {
+            img.decode().then(() => finish(true)).catch(() => finish(false))
+          } else {
+            finish(true)
+          }
+        } else if (img.complete) {
+          finish(false)
+        }
+      })
+    }
+
+    function releaseFrames(keepStart: number, keepEnd: number) {
+      for (let i = 0; i < totalFrames; i++) {
+        if (i < keepStart || i > keepEnd) {
+          if (frames[i]) {
+            delete frames[i]
+          }
+        }
+      }
+    }
+
+    async function preloadRange(start: number, end: number, batchSize = 6) {
+      const indices: number[] = []
+      for (let i = start; i <= end && i < totalFrames; i++) {
+        if (i === 0) continue
+        if (i > lastLoadedIdx && !frames[i]) {
+          indices.push(i)
+        }
+      }
+      if (indices.length === 0) return
+      for (let i = 0; i < indices.length; i += batchSize) {
+        if (cancelled) return
+        const batch = indices.slice(i, i + batchSize)
+        await Promise.allSettled(batch.map(idx => preloadSingle(idx)))
+        if (i + batchSize >= indices.length || cancelled) break
+        await new Promise(r => setTimeout(r, 0))
+      }
+      if (indices.length > 0) {
+        lastLoadedIdx = Math.max(lastLoadedIdx, end)
+      }
+    }
+
+    function renderFrame(index: number) {
+      if (index === currentIndex) return
+      currentIndex = index
+      const img = frames[index]
+      if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return
+      const cw = canvas!.width
+      const ch = canvas!.height
+      if (cw === 0 || ch === 0) return
+      try {
+        ctx!.clearRect(0, 0, cw, ch)
+        ctx!.imageSmoothingEnabled = true
+        ctx!.imageSmoothingQuality = 'high'
+        const iw = img.naturalWidth
+        const ih = img.naturalHeight
+        const scale = Math.max(cw / iw, ch / ih)
+        const sx = (cw - iw * scale) / 2
+        const sy = (ch - ih * scale) / 2
+        ctx!.drawImage(img, sx, sy, iw * scale, ih * scale)
+      } catch (e) {
+      }
+    }
+
+    let pendingPreload: Promise<void> | null = null
+
+    function queueFrame(progress: number) {
+      if (rafQueued) return
+      rafQueued = true
+      requestAnimationFrame(() => {
+        rafQueued = false
+        const idx = Math.round(progress * (totalFrames - 1))
+        const clampedIdx = Math.max(0, Math.min(idx, totalFrames - 1))
+        renderFrame(clampedIdx)
+
+        const nextBatchEnd = Math.min(clampedIdx + PRELOAD_AHEAD, totalFrames - 1)
+        if (nextBatchEnd > lastLoadedIdx && !cancelled) {
+          if (pendingPreload) return
+          pendingPreload = preloadRange(lastLoadedIdx + 1, nextBatchEnd).then(() => {
+            pendingPreload = null
+          })
+        }
+
+        const windowStart = Math.max(0, clampedIdx - 10)
+        const windowEnd = Math.min(clampedIdx + FRAME_CACHE_SIZE, totalFrames - 1)
+        releaseFrames(windowStart, windowEnd)
+      })
+    }
 
     async function initFrames() {
-      /* Load config */
-      let config: FrameConfig = DEFAULT_CONFIG
       try {
         const res = await fetch('/assets/frames/frame-count.json')
-        config = await res.json()
+        const config = await res.json()
+        totalFrames = config.total
       } catch {
-        config = DEFAULT_CONFIG
+        totalFrames = DEFAULT_CONFIG.total
       }
 
-      const totalFrames = config.total
-      const frames: (HTMLImageElement | null)[] = new Array(totalFrames)
+      if (cancelled) return
 
-      /* Resize canvas to fill the sticky container */
-      function resizeCanvas() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2)
-        const w = Math.round(window.innerWidth * dpr)
-        const h = Math.round(window.innerHeight * dpr)
-        if (canvas!.width !== w || canvas!.height !== h) {
-          canvas!.width = w
-          canvas!.height = h
-          canvas!.style.width = window.innerWidth + 'px'
-          canvas!.style.height = window.innerHeight + 'px'
-        }
-      }
-
-      resizeCanvas()
-      window.addEventListener('resize', resizeCanvas)
-
-      /* Preload single frame */
-      function frameSrc(idx: number): string {
-        return config.path + config.prefix + padNum(idx + 1, config.padding) + '.' + config.format
-      }
-
-      function preloadSingle(idx: number): Promise<boolean> {
-        return new Promise(resolve => {
-          const img = new Image()
-          const src = frameSrc(idx)
-          let resolved = false
-          function finish(ok: boolean) {
-            if (resolved) return
-            resolved = true
-            if (ok) frames[idx] = img
-            else frames[idx] = null
-            resolve(ok)
-          }
-          img.onload = () => {
-            if (typeof img.decode === 'function') {
-              img.decode().then(() => finish(true)).catch(() => finish(false))
-            } else {
-              finish(true)
-            }
-          }
-          img.onerror = () => finish(false)
-          img.src = src
-          if (img.complete && img.naturalWidth > 0) {
-            if (typeof img.decode === 'function') {
-              img.decode().then(() => finish(true)).catch(() => finish(false))
-            } else {
-              finish(true)
-            }
-          } else if (img.complete) {
-            finish(false)
-          }
-        })
-      }
-
-      /* Preload all frames in batches */
-      async function preloadAll() {
-        const remaining: number[] = []
-        for (let i = 1; i < totalFrames; i++) remaining.push(i)
-        let failed = 0
-        while (remaining.length > 0) {
-          const batch = remaining.splice(0, 6)
-          await Promise.all(batch.map(idx =>
-            preloadSingle(idx).then(ok => { if (!ok) failed++ })
-          ))
-        }
-      }
-
-      /* Render a specific frame to canvas */
-      let currentIndex = -1
-
-      function renderFrame(index: number) {
-        if (index === currentIndex) return
-        currentIndex = index
-        const img = frames[index]
-        if (!img || !img.complete || !img.naturalWidth || !img.naturalHeight) return
-        const cw = canvas!.width
-        const ch = canvas!.height
-        if (cw === 0 || ch === 0) return
-        try {
-          ctx!.clearRect(0, 0, cw, ch)
-          ctx!.imageSmoothingEnabled = true
-          ctx!.imageSmoothingQuality = 'high'
-          const iw = img.naturalWidth
-          const ih = img.naturalHeight
-          const scale = Math.max(cw / iw, ch / ih)
-          const sx = (cw - iw * scale) / 2
-          const sy = (ch - ih * scale) / 2
-          ctx!.drawImage(img, sx, sy, iw * scale, ih * scale)
-        } catch (e) {
-          console.error('[frame] render error', e)
-        }
-      }
-
-      /* Queue frame during scroll */
-      let rafQueued = false
-      let firstLoaded = false
-
-      function queueFrame(progress: number) {
-        if (rafQueued) return
-        rafQueued = true
-        requestAnimationFrame(() => {
-          rafQueued = false
-          if (!firstLoaded) return
-          const idx = Math.round(progress * (totalFrames - 1))
-          renderFrame(Math.max(0, Math.min(idx, totalFrames - 1)))
-        })
-      }
-
-      /* Preload first frame and show it */
       const frame0Ok = await preloadSingle(0)
-      if (frame0Ok) {
-        firstLoaded = true
+      if (frame0Ok && !cancelled) {
         renderFrame(0)
         canvas!.style.opacity = '1'
         setFramesReady(true)
       }
 
-      /* Timeout fallback */
+      lastLoadedIdx = 0
+      if (!cancelled) {
+        preloadRange(1, 15)
+      }
+
       const timeoutId = setTimeout(() => {
-        if (!firstLoaded) {
-          firstLoaded = true
+        if (!cancelled && !framesReady) {
           canvas!.style.opacity = '1'
           setFramesReady(true)
         }
-      }, 3000)
+      }, 2000)
 
-      /* Preload remaining frames in background */
-      preloadAll()
-
-      /* Set up GSAP ScrollTrigger */
-      ScrollTrigger.create({
+      scrollTriggerPin = ScrollTrigger.create({
         trigger: section,
         start: 'top top',
         end: 'bottom top',
@@ -325,29 +353,25 @@ export default function LuxuryHero() {
         onUpdate: self => { queueFrame(self.progress) },
       })
 
-      gsap.to(canvas, {
-        scale: 1.04,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-        },
-      })
-
-      animationCleanup = () => {
+      scrollTriggerCleanup = () => {
         clearTimeout(timeoutId)
-        window.removeEventListener('resize', resizeCanvas)
-        ScrollTrigger.getAll().forEach(st => st.kill())
+        if (scrollTriggerPin) scrollTriggerPin.kill()
+        frames.length = 0
         ctx?.clearRect(0, 0, canvas!.width, canvas!.height)
       }
     }
 
     initFrames()
 
+    window.addEventListener('resize', resizeCanvas, { passive: true })
+
     return () => {
-      if (animationCleanup) animationCleanup()
+      cancelled = true
+      if (scrollTriggerCleanup) scrollTriggerCleanup()
+      ScrollTrigger.getAll().forEach(st => st.kill())
+      window.removeEventListener('resize', resizeCanvas)
+      ctx?.clearRect(0, 0, canvas!.width, canvas!.height)
+      frames.length = 0
     }
   }, [])
 

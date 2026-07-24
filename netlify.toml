@@ -1,6 +1,6 @@
 [build]
-  command = "echo 'Static site - no build required'"
-  publish = "public"
+  command = "npm run build"
+  publish = "dist"
 
 [[redirects]]
   from = "/api/*"
@@ -8,8 +8,8 @@
   status = 200
 
 [[redirects]]
-  from = "/pages/:page"
-  to = "/pages/:page.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
 
 [[headers]]
@@ -24,6 +24,11 @@
 
 [[headers]]
   for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/frames/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
