@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="background:#f8f4ec">
+<head>
+  <style>#pt-overlay{position:fixed;inset:0;z-index:99999;pointer-events:none;background:#f8f4ec;opacity:1}</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="preload" as="image" href="/images/hero/luxury-hero.jpg" />
+  <title>Flamingo aur Maina | Boutique Stays in Jibhi</title>
+  <meta property="og:title" content="Flamingo aur Maina | Boutique Stays in Jibhi" />
+  <meta property="og:description" content="A sanctuary of refined luxury and untold stories amidst nature's embrace. Boutique stays in Jibhi, Himachal Pradesh." />
+  <meta property="og:url" content="https://flamingoaurmaina.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://flamingoaurmaina.netlify.app/images/hero/luxury-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flamingo aur Maina | Boutique Stays in Jibhi" />
+  <meta name="twitter:description" content="A sanctuary of refined luxury and untold stories amidst nature's embrace." />
+  <meta name="twitter:image" content="https://flamingoaurmaina.netlify.app/images/hero/luxury-hero.jpg" />
+  <link rel="canonical" href="https://flamingoaurmaina.netlify.app/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Flamingo aur Maina",
+    "description": "A sanctuary of refined luxury and untold stories amidst nature's embrace. Boutique stays in Jibhi, Himachal Pradesh.",
+    "url": "https://flamingoaurmaina.netlify.app",
+    "telephone": "+91-9876575673",
+    "email": "flamingoaurmaina@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Opposite Forest Rest House, Rashala",
+      "addressLocality": "Jibhi",
+      "addressRegion": "Himachal Pradesh",
+      "postalCode": "175123",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.5787944,
+      "longitude": 77.3668959
+    },
+    "image": "https://flamingoaurmaina.netlify.app/images/hero/luxury-hero.jpg",
+    "priceRange": "&#8377;2,000 - &#8377;6,000"
+  }
+  </script>
+  <meta name="description" content="A sanctuary of refined luxury and untold stories amidst nature's embrace. Boutique stays in Jibhi, Himachal Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="css/style.css?v=11" />
+  <link rel="stylesheet" href="css/scroll-story.css?v=1" />
+  <link rel="stylesheet" href="css/transitions.css?v=1" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#f8f4ec",
+        "background": "#f8f4ec",
+        "surface-bright": "#f9faf5",
+        "surface-container": "#eeeeea",
+        "surface-container-low": "#f3f4f0",
+        "surface-container-high": "#e8e8e4",
+        "surface-container-highest": "#e2e3df",
+        "surface-dim": "#d9dad6",
+        "surface-container-lowest": "#ffffff",
+        "on-surface": "#1a1c1a",
+        "on-background": "#1a1c1a",
+        "on-surface-variant": "#414942",
+        "primary": "#0a341d",
+        "on-primary": "#ffffff",
+        "primary-container": "#234b32",
+        "on-primary-container": "#8fba9a",
+        "primary-fixed": "#c0edcb",
+        "primary-fixed-dim": "#a5d1b0",
+        "inverse-primary": "#a5d1b0",
+        "accent-gold": "#C9A86A",
+        "secondary": "#605e58",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#e6e2da",
+        "on-secondary-container": "#66645e",
+        "charcoal": "#1B1B1B",
+        "muted-gray": "#6B7280",
+        "outline": "#727972",
+        "outline-variant": "#c1c8c0",
+        "error": "#ba1a1a",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "tertiary": "#4b1f27",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#65353c",
+        "on-tertiary-container": "#e09fa7"
+      },
+      fontFamily: {
+        'display-hero': ['Playfair Display', 'serif'],
+        'display-hero-mobile': ['Playfair Display', 'serif'],
+        'headline-lg': ['Playfair Display', 'serif'],
+        'headline-md': ['Playfair Display', 'serif'],
+        'body-lg': ['Inter', 'sans-serif'],
+        'body-md': ['Inter', 'sans-serif'],
+        'label-sm': ['Inter', 'sans-serif']
+      },
+      fontSize: {
+        'display-hero': ['80px', { lineHeight: '96px', letterSpacing: '0.04em', fontWeight: '700' }],
+        'display-hero-mobile': ['42px', { lineHeight: '48px', fontWeight: '700' }],
+        'headline-lg': ['48px', { lineHeight: '56px', fontWeight: '600' }],
+        'headline-md': ['32px', { lineHeight: '40px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'label-sm': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '600' }]
+      },
+      borderRadius: {
+        DEFAULT: "1rem",
+        lg: "2rem",
+        xl: "3rem",
+        full: "9999px"
+      },
+      spacing: {
+        'section-gap': '120px',
+        'margin-desktop': '64px',
+        'gutter': '24px',
+        'max-width': '1400px'
+      },
+      boxShadow: {
+        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+      }
+    }
+  }
+}
+</script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f8f4ec; color: #1a1c1a; }
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<div id="pt-overlay"></div>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(r) {
+    for (var i = 0; i < r.length; i++) r[i].unregister()
+  })
+  caches.keys().then(function(k) { return Promise.all(k.map(function(n) { return caches.delete(n) })) })
+}
+</script>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">
+    <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto rounded-full">
+      <div class="flex items-center gap-4">
+        <a href="/" class="font-headline-md text-headline-md text-primary tracking-tight">Flamingo aur Maina</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="/" class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b border-primary/30 pb-1">Home</a>
+        <a href="/pages/rooms" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Rooms</a>
+        <a href="/pages/life" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Life at FAM</a>
+        <a href="/pages/explore" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Explore</a>
+        <a href="/pages/gallery" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Gallery</a>
+        <a href="/pages/amenities" class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-accent-gold transition-colors">Amenities</a>
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="window.location.href='/pages/login'" class="nav-signin-btn" aria-label="Sign in to your account">Sign In</button>
+          <a href="/pages/booking.html" class="nav-book-btn" data-direct-nav aria-label="Book your stay at FAM">Book Your Stay</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="lg:hidden text-primary p-2" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <div class="mobile-menu-overlay" id="mobile-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-panel" id="mobile-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <span class="font-headline-md text-xl text-primary">Menu</span>
+      <button class="mobile-menu-close" id="mobile-close" aria-label="Close navigation menu">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="mobile-menu-links" aria-label="Mobile navigation">
+      <a href="/" class="mobile-menu-link">Home</a>
+      <a href="/pages/rooms" class="mobile-menu-link">Rooms</a>
+      <a href="/pages/life" class="mobile-menu-link">Life at FAM</a>
+      <a href="/pages/explore" class="mobile-menu-link">Explore</a>
+      <a href="/pages/gallery" class="mobile-menu-link">Gallery</a>
+      <a href="/pages/amenities" class="mobile-menu-link">Amenities</a>
+      <div class="mobile-menu-cta-group">
+        <button type="button" onclick="window.location.href='/pages/login'" class="nav-mobile-signin">Sign In</button>
+        <a href="/pages/booking.html" class="nav-mobile-book" data-direct-nav>Book Your Stay</a>
+      </div>
+    </nav>
+    <div class="mobile-menu-footer">
+      <a href="tel:9876575673" class="mobile-menu-phone">
+        <span class="material-symbols-outlined text-lg">phone</span>
+        Property Manager: 98765 75673
+      </a>
+    </div>
+  </div>
+
+  <main>
+  <!-- ====== CINEMATIC SCROLL HERO ====== -->
+  <section class="hero-root" id="hero" data-scroll-hero>
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    <div class="hero-gradient-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-text-wrap">
+        <div class="hero-greeting hero-seq">WELCOME HOME</div>
+        <h1 class="hero-fam hero-seq">FAM</h1>
+        <p class="hero-tagline hero-seq">Luxury Boutique Caf&eacute; &amp; Mountain Retreat</p>
+        <div class="hero-btns hero-seq">
+          <a href="/pages/booking.html" class="hero-btn-primary" data-direct-nav>
+            <span>Book Your Stay</span>
+            <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+          </a>
+          <a href="/pages/explore" class="hero-btn-secondary">
+            Explore Jibhi
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ====== MOUNTAIN TIME EXPERIENCE ====== -->
+  <section class="mt-hero" id="mt-hero">
+    <div class="mt-hero-content">
+      <div class="mt-icon-wrap">
+        <span class="mt-icon" id="mt-icon">&#x2600;&#xFE0F;</span>
+      </div>
+      <span class="mt-badge" id="mt-badge">Good Morning</span>
+      <h2 class="mt-headline" id="mt-headline">Wake up with the mountains.</h2>
+    </div>
+  </section>
+
+  <!-- ====== WELCOME HOME ====== -->
+  <section id="welcome" class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
+      <div class="md:col-span-7 img-container rounded-lg shadow-xl h-[400px] md:h-[600px] relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDChD6URBvMdJt1aM-0azn2L2FYPsgSF4Mv9I_R5nQgNWZpvlufxja5A3FxKoK3LTDR1_bj_AXzsqSyx9BIxCTziQMGsW76Niji84tnkxU7bmhWPXNUKDtfiAcmbBxDGpdW1QIEeqRIOL2m9YTvg8YUGqaOfNVLS3mfTdzj2VgoDklFXtFOO4zls3SlmnGy_Ad1l-zIJO1wPIjer8o1nKOYfJxIRrs_YPY5VdocZgThty1P5UoRAz8oS1D_qXM9XQhBhuFjkrDoZeo" alt="Morning sunlight over Himalayan mountains from the property" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="md:col-span-5 md:pl-12 mb-8 md:mb-0">
+        <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-2 block">Welcome Home</span>
+        <span class="font-body-md text-on-surface-variant italic block mb-6">(Flamingo &amp; Maina Birds)</span>
+        <div class="space-y-5 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+          <p>Some places are built to impress.</p>
+          <p>We built FAM to make people feel at home.</p>
+          <p>After spending nearly a decade in India's metro cities, our founders, Karanvir Singh Sapra and Rahul Yadav, returned to the mountains with a simple idea&mdash;to create the kind of place they would always want to come back to. A place where mornings begin with mountain views instead of alarms, where conversations need countless cups of tea, and where every guest is welcomed like an old friend.</p>
+          <p>Flamingo aur Maina (FAM) is nestled in the heart of Jibhi, surrounded by an apple orchard, 1.5 acres of open land, and uninterrupted 360&deg; mountain views. Every corner of the property has been thoughtfully designed to slow you down&mdash;from our cozy wooden cabins and comfortable rooms to our warm common spaces where we serve comforting food made with care.</p>
+          <p>But FAM isn't just about where you sleep.</p>
+          <p>It's about how you feel while you're here.</p>
+          <p>Whether you're escaping the city, working remotely, travelling with friends, celebrating something special, or simply looking for a quiet weekend, we hope you leave with more than just photographs.</p>
+          <p>We hope you leave with stories, friendships, and a reason to come back.</p>
+          <p>Because at FAM, we're not just hosting guests.</p>
+          <p>We're building a place people can belong to.</p>
+          <p><em class="text-accent-gold font-bold">Welcome home.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STORY CHAPTER 2 ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
+      <div class="md:col-span-5 md:pr-12 mb-8 md:mb-0">
+        <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Chapter 01</span>
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary leading-tight mb-6">A Journey Back Home</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Karanvir Singh Sapra and Rahul Yadav returned to the mountains, seeking the quiet strength of nature. What started as a personal retreat evolved into a shared sanctuary&mdash;a space curated with intentionality and profound respect for the landscape.</p>
+      </div>
+      <div class="md:col-span-7 img-container rounded-lg shadow-xl h-[400px] md:h-[600px] relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw6pZio4vFcZux0EkW3GrS3Y2Dupi297NFD-tEtNEAi_eXKU9sUn2kT9qPi-KKcS_17Jtk5_evjurv0knePcQlgVDcISnHF9-G6tAgwvkhKHnHNDR0zMmO59MpGCltkSBJdLvd7GOfIvqyFqTnXt4YAjocGsuyV1kbvqy2tOqZI7Eh2ACHlhL5stIsXSAjG1DdRwSvzpQyQuq-LiH20NKHAbmxTkVzwI-OZXeiwXOP55csVFIp3zYU8de2Pc1X2GIBsYzOI9CPfaI" alt="Founders enjoying tea on a wooden balcony overlooking mountains" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== OUR VISION ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap text-center reveal">
+    <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Our Vision</span>
+    <h2 class="font-headline-lg text-3xl md:text-5xl text-primary mb-8 max-w-3xl mx-auto">Creating a Place Where Every Traveller Feels at Home</h2>
+    <div class="max-w-4xl mx-auto space-y-6 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+      <p>Our vision is to create a place where every traveller feels at home, reconnects with nature, builds meaningful memories, and experiences genuine mountain hospitality.</p>
+      <p>Inspired by our own journey back to the mountains, we believe true luxury is found in peace, warmth, meaningful conversations, and unforgettable moments.</p>
+      <p>At Flamingo aur Maina, we are not simply offering rooms.</p>
+      <p class="text-primary font-headline-md text-xl italic">We are creating a place where people belong and always look forward to returning.</p>
+    </div>
+  </section>
+
+  <!-- ====== PARALLAX DIVIDER ====== -->
+  <section class="w-full py-16 md:py-32 reveal">
+    <div class="max-w-max-width mx-auto px-4 md:px-margin-desktop mb-12 text-center">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Chapter 02</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary leading-tight">Built Around Nature</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-6">1.5 acres of open land, 360-degree mountain views. Architecture that doesn't dominate the landscape, but invites it inside.</p>
+    </div>
+    <div class="w-full h-[50vh] md:h-[70vh] relative parallax-bg rounded-none" data-parallax="true" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH-dj0QtkEbbKw02qnxG1lx4cMdiQ1j9jKPFHU0Uh3YRVLa_VJPtAFitgR1JAiABRzS9zFHBwuGUPaNfjG_1mzfkwDN8ueIf4sRnNsvzlGyUKcKKFPb1b3FQH__BGSF2F0DZe0eAz9NlFx23N70r7bX4MfujZl68sBTpmUCM1y8iHKKNmeDDinMFRWONdtEI-0FLpbD1cvAFLeccN85tPyl9hXcxb6xJicV3gPpgz3Ojj0otK4IVXVn6MibhvHWM0a-M2oOWCAZJk')">
+      <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+  </section>
+
+  <!-- ====== GALLERY PREVIEW ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap text-center reveal">
+    <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Moments at FAM</span>
+    <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">A Glimpse of Paradise</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16">Every corner of FAM tells a story. From the misty mountains to the quiet corners of our cozy retreat.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:100ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Luxurious hotel suite with mountain views" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:200ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Cozy attic bedroom with skylight" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+      <div class="img-container rounded-xl h-[300px] md:h-[500px] relative reveal" style="transition-delay:300ms">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28" alt="Outdoor dining terrace overlooking pool" class="w-full h-full object-cover absolute inset-0" />
+      </div>
+    </div>
+    <a href="/pages/gallery" class="btn-secondary mt-12 inline-flex">View Full Gallery</a>
+  </section>
+
+  <!-- ====== QUOTE DIVIDER ====== -->
+  <section class="py-24 md:py-32 bg-surface-container-low text-center reveal">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="material-symbols-outlined text-5xl text-primary/30 mb-6 block">format_quote</span>
+      <blockquote class="font-headline-lg text-3xl md:text-4xl text-primary italic text-balance leading-snug">
+        &ldquo;Luxury isn't measured by marble floors. It's measured by how at home you feel.&rdquo;
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ====== ROOMS PREVIEW ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="text-center mb-16">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Stay With Us</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Spaces Designed to Feel Like Home</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Every room at Flamingo aur Maina has been thoughtfully designed to combine mountain charm, modern comfort, and peaceful living.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Flamingo 1 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrzL8aFnw29G--xO0xB7cJw5bUF6iErudebJK_udr_C-zjP4VVlPtTWtaytwm4XB9bodkmUPBFKrwg5wyEST0zHHzbh0yonox_YJAvHikynJjdiUhZFewW5B-CsIt8NgwdA3jZp77wdsLitsm4LimVKuNeWhudbzgqJBAT5IPUysrbNaWPH2y-7GiKzxfxaF6_4Lm1WjF9TxgQVW_6qgR5P0LdecGYW9beSuPCGHckRsHLUSsMdykqIEYZNHQqm2lcRClynYC64wM" alt="Flamingo 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 1</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/booking.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Flamingo 2 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:80ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Flamingo 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">King Attic</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 2</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;5,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/booking.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Flamingo 3 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:160ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28" alt="Flamingo 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">4 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Duplex</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Flamingo 3</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;6,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/booking.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 1 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:240ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Maina 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 1</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/booking.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 2 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:320ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI" alt="Maina 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 2</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,000 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/booking.html" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Maina 3 -->
+      <div class="bg-surface-container-low rounded-2xl overflow-hidden reveal border border-outline-variant/20 hover:shadow-xl transition-all duration-500" style="transition-delay:400ms">
+        <div class="h-56 overflow-hidden">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQQONzA8cxam44mhr-1ZivCdFCx8PU3hSQHSau4f24KnX5qrBsnrMNHMX5XmVgUd_uT2Hwy2W2bS4g2FHoPP0dn0-Bbdpcr1AOr0ps0rLKCSUGGfxMaihy-5FpNBv7iivXEdlVstvuVdEKryGYf3MhSDa_YShGMYyKa59nr28zb8EubJ-NsRApoEnq90zhgI48v8mG4Mp87tFyfNCcqFg1ISXOkOJONAPEvrRv-oHWr_qjWmb2k5sDLZNbXuAubSNWKPYgjfn7eQ" alt="Maina 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">2 Guests</span>
+            <span class="font-label-sm text-xs bg-surface py-1 px-3 rounded-full text-on-surface-variant">Private Room</span>
+          </div>
+          <h3 class="font-headline-md text-xl text-primary mb-1">Maina 3</h3>
+          <p class="font-headline-md text-base text-accent-gold mb-4">&#8377;2,500 <span class="text-sm text-on-surface-variant">/ night (incl. GST)</span></p>
+          <a href="/pages/rooms" class="btn-primary text-sm py-2 px-5">Book Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="/pages/rooms" class="btn-primary">View All Rooms</a>
+    </div>
+  </section>
+
+  <!-- ====== AI TRIP PLANNER ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap" id="ai-trip-planner">
+    <div class="text-center mb-10 reveal">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">AI Trip Planner</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Plan Your Perfect Mountain Escape</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Answer a few simple questions and let FAM create your personalized Jibhi itinerary.</p>
+    </div>
+
+    <div class="trip-planner-wrap reveal">
+      <!-- LEFT: Illustration -->
+      <div class="tp-illustration">
+        <svg viewBox="0 0 500 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tpSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8dcc8"/>
+              <stop offset="100%" stop-color="#f8f4ec"/>
+            </linearGradient>
+            <linearGradient id="tpSunG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C9A86A"/>
+              <stop offset="100%" stop-color="#b8925a"/>
+            </linearGradient>
+            <filter id="tpGlowF">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="tpShadow"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.08"/></filter>
+          </defs>
+          <rect width="500" height="550" fill="url(#tpSky)" rx="24"/>
+          <!-- Sun -->
+          <circle cx="380" cy="130" r="32" fill="#C9A86A" opacity="0.12" filter="url(#tpGlowF)"/>
+          <circle class="tp-float" cx="380" cy="130" r="18" fill="url(#tpSunG)" style="animation-delay:0s"/>
+          <!-- Clouds -->
+          <g class="tp-cloud" opacity="0.4" style="animation-delay:0s">
+            <ellipse cx="100" cy="95" rx="38" ry="12" fill="#fff"/>
+            <ellipse cx="125" cy="89" rx="26" ry="10" fill="#fff" opacity="0.7"/>
+          </g>
+          <g class="tp-cloud" opacity="0.3" style="animation-delay:2s">
+            <ellipse cx="320" cy="75" rx="30" ry="9" fill="#fff"/>
+            <ellipse cx="340" cy="70" rx="20" ry="7" fill="#fff" opacity="0.6"/>
+          </g>
+          <!-- Birds -->
+          <g opacity="0.25" class="tp-float" style="animation-delay:0.6s">
+            <path d="M220,110 Q228,104 236,110 Q244,104 252,110" stroke="#0a341d" fill="none" stroke-width="1.5"/>
+          </g>
+          <g opacity="0.2" class="tp-float" style="animation-delay:1.2s">
+            <path d="M265,95 Q272,90 279,95 Q286,90 293,95" stroke="#0a341d" fill="none" stroke-width="1.2"/>
+          </g>
+          <!-- Mountain layer 1 (back) -->
+          <path d="M0,340 L50,270 L90,300 L130,240 L180,280 L230,220 L280,270 L330,230 L370,260 L420,200 L460,240 L500,210 L500,400 L0,400 Z" fill="#234b32" opacity="0.35" class="tp-mtn" style="animation-delay:0s"/>
+          <!-- Mountain layer 2 (mid) -->
+          <path d="M0,380 L40,320 L80,350 L140,290 L190,330 L250,270 L310,320 L360,280 L410,310 L450,260 L500,300 L500,450 L0,450 Z" fill="#1a3d28" opacity="0.5" class="tp-mtn" style="animation-delay:0.3s"/>
+          <!-- Mountain layer 3 (front) -->
+          <path d="M0,420 L60,370 L120,400 L180,350 L230,380 L300,330 L360,370 L420,340 L470,370 L500,350 L500,500 L0,500 Z" fill="#0a341d" opacity="0.7" class="tp-mtn" style="animation-delay:0.6s"/>
+          <!-- Snow caps -->
+          <polygon points="230,220 222,240 238,240" fill="#f8f4ec" opacity="0.8"/>
+          <polygon points="420,200 412,220 428,220" fill="#f8f4ec" opacity="0.8"/>
+          <polygon points="300,330 293,348 307,348" fill="#f8f4ec" opacity="0.6"/>
+          <!-- Pine trees -->
+          <g opacity="0.3">
+            <polygon points="70,420 78,370 86,420" fill="#0a341d"/>
+            <polygon points="160,410 168,365 176,410" fill="#0a341d"/>
+            <polygon points="340,400 348,350 356,400" fill="#0a341d"/>
+            <polygon points="420,410 427,365 434,410" fill="#0a341d"/>
+          </g>
+          <!-- River -->
+          <path d="M400,320 Q410,350 395,380 Q380,410 390,440 Q400,470 395,500" stroke="#C9A86A" stroke-width="2.5" fill="none" opacity="0.2"/>
+          <path d="M402,320 Q412,350 397,380 Q382,410 392,440 Q402,470 397,500" stroke="#C9A86A" stroke-width="1" fill="none" opacity="0.1"/>
+          <!-- Trail -->
+          <path d="M180,480 Q220,450 280,430 Q340,410 380,380 Q420,350 440,300" stroke="#0a341d" stroke-width="1.5" fill="none" opacity="0.08" stroke-dasharray="4 4"/>
+          <!-- Floating travel icons -->
+          <text x="70" y="175" font-size="22" class="tp-float" style="animation-delay:0.2s">&#9992;</text>
+          <text x="410" y="290" font-size="20" class="tp-float" style="animation-delay:1s">&#128247;</text>
+          <text x="140" y="240" font-size="18" class="tp-float" style="animation-delay:0.7s">&#9749;</text>
+          <text x="340" y="420" font-size="20" class="tp-float" style="animation-delay:1.5s">&#129496;</text>
+          <text x="220" y="390" font-size="16" class="tp-float" style="animation-delay:0.4s">&#127826;</text>
+          <text x="60" y="320" font-size="18" class="tp-float" style="animation-delay:1.8s">&#127797;</text>
+          <!-- Bottom whisper -->
+          <text x="250" y="535" text-anchor="middle" font-family="'Playfair Display',serif" font-size="10" fill="#0a341d" opacity="0.12" font-style="italic">Begin your story in the mountains</text>
+        </svg>
+      </div>
+
+      <!-- RIGHT: Planner Card -->
+      <div class="tp-card" id="planner-card">
+        <div class="tp-badge"><span>&#10024;</span> AI Trip Planner</div>
+        <h3>Plan Your Perfect Mountain Escape</h3>
+        <p class="tp-desc">Answer a few simple questions and let FAM create your personalized Jibhi itinerary.</p>
+
+        <!-- Progress -->
+        <div class="tp-progress">
+          <div class="tp-progress-bar"><div class="tp-progress-fill" id="tp-fill"></div></div>
+          <div class="tp-step-dots" id="tp-dots">
+            <span class="tp-step-dot active" data-s="1">1</span>
+            <span class="tp-step-dot" data-s="2">2</span>
+            <span class="tp-step-dot" data-s="3">3</span>
+            <span class="tp-step-dot" data-s="4">4</span>
+            <span class="tp-step-dot" data-s="5">5</span>
+          </div>
+        </div>
+
+        <!-- Step content -->
+        <div id="tp-content"></div>
+
+        <!-- Navigation -->
+        <div class="tp-nav" id="tp-nav">
+          <button class="tp-btn tp-btn-back hidden" id="tp-back">&#8592; Back</button>
+          <div></div>
+          <button class="tp-btn tp-btn-next" id="tp-next">Next </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var state = { step: 1, traveler: null, days: null, budget: null, interests: [] };
+    var content = document.getElementById('tp-content');
+    var fill = document.getElementById('tp-fill');
+    var dots = document.getElementById('tp-dots');
+    var backBtn = document.getElementById('tp-back');
+    var nextBtn = document.getElementById('tp-next');
+
+    var steps = {
+      1: { label: 'Step 1', question: 'Who are you travelling with?', type: 'traveler' },
+      2: { label: 'Step 2', question: 'How many days?', type: 'days' },
+      3: { label: 'Step 3', question: 'What\'s your budget?', type: 'budget' },
+      4: { label: 'Step 4', question: 'What interests you? (select all that apply)', type: 'interests' },
+      5: { label: 'Step 5', question: 'Ready to plan your escape?', type: 'generate' }
+    };
+
+    var travelers = [
+      { id:'couple', icon:'&#10084;&#65039;', label:'Couple' },
+      { id:'family', icon:'&#128104;&#8205;&#128105;&#8205;&#128103;&#8205;&#128102;', label:'Family' },
+      { id:'friends', icon:'&#128101;', label:'Friends' },
+      { id:'solo', icon:'&#127934;', label:'Solo' }
+    ];
+
+    var dayOpts = [
+      { id:1, label:'1 Day' }, { id:2, label:'2 Days' }, { id:3, label:'3 Days' },
+      { id:4, label:'4 Days' }, { id:5, label:'5+ Days' }
+    ];
+
+    var budgetOpts = [
+      { id:'budget', label:'&#8377;5,000', sub:'Budget Friendly' },
+      { id:'moderate', label:'&#8377;10,000', sub:'Comfortable' },
+      { id:'premium', label:'&#8377;20,000', sub:'Premium' },
+      { id:'luxury', label:'Luxury', sub:'Experience' }
+    ];
+
+    var interestOpts = [
+      { id:'cafe', icon:'&#9749;', label:'Coffee &amp; Snacks' },
+      { id:'trekking', icon:'&#129496;', label:'Trekking' },
+      { id:'photography', icon:'&#128247;', label:'Photography' },
+      { id:'bonfire', icon:'&#128293;', label:'Bonfire' },
+      { id:'nature', icon:'&#127796;', label:'Nature' },
+      { id:'workcation', icon:'&#128187;', label:'Workcation' },
+      { id:'orchard', icon:'&#127822;', label:'Apple Orchard' },
+      { id:'stargazing', icon:'&#127776;', label:'Stargazing' },
+      { id:'relaxation', icon:'&#129720;', label:'Relaxation' }
+    ];
+
+    var roomData = {
+      couple: { name:'Flamingo 2', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI', guests:'2 Guests', price:'&#8377;5,000 / night (incl. GST)', desc:'A cozy attic retreat with a skylight, heater, and bonfire — perfect for a romantic mountain escape.' },
+      solo: { name:'Maina 2', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuA4nlrjlGhGlQ1VJgZIpTbY7YapqlA_1BMfRG6-4JTpuKR5FIr-kCoGL2oLmf0vKEa4o4eCj4Cax_Lhik-W4Ye44HUpjMiiaBTCiS4heB0TPb8hgsU22edlGNxbK_RfEKDi2WEB3RurNCgyGvmQBNRG_vhq3OHgc8qMsHP7unAqt2hCjeV_YhoLtev37NNelTZhQ53GsVmZZ6GcvkW7TCoFrfGKEjGOS9l8v2N3WY6nXIvyOgDh09t3w0iWhvsIqOAURwZoWjIGhDI', guests:'1 Guest', price:'&#8377;2,000 / night (incl. GST)', desc:'A compact, cosy private room with valley views and a peaceful nook for quiet reflection.' },
+      friends: { name:'Flamingo 1', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBrzL8aFnw29G--xO0xB7cJw5bUF6iErudebJK_udr_C-zjP4VVlPtTWtaytwm4XB9bodkmUPBFKrwg5wyEST0zHHzbh0yonox_YJAvHikynJjdiUhZFewW5B-CsIt8NgwdA3jZp77wdsLitsm4LimVKuNeWhudbzgqJBAT5IPUysrbNaWPH2y-7GiKzxfxaF6_4Lm1WjF9TxgQVW_6qgR5P0LdecGYW9beSuPCGHckRsHLUSsMdykqIEYZNHQqm2lcRClynYC64wM', guests:'4 Guests', price:'&#8377;6,000 / night (incl. GST)', desc:'A spacious duplex with mountain views, Wi-Fi, heater, bonfire, and a private sit-out — ideal for groups.' },
+      family: { name:'Flamingo 3', img:'https://lh3.googleusercontent.com/aida-public/AB6AXuBCI3D7XP8c2d9NoG6DCIaUFiJyZlKrabk2SD7ICCgHWNCu1PIHQ01YENmMI9CIfj1BNXL1d1F-k5cyS3XktNDhDdgsUGREW3RwIN3ejOroEEohHh1n01W2yxlmNIlR4zd_GsAoZ9mt9eQwcVAKctuAikc_KpHc0hV0sSIbLtOs3Gu44ScfhirNpqTGya3Tw7klCmACZaVm60KtTAhqi_mzWYZBoTUjvvQsUsOWO71h3e8WqVaQpot4tDSeDxURzBy6v_H0A9G-l28', guests:'4 Guests', price:'&#8377;6,000 / night (incl. GST)', desc:'A generous duplex with garden access, heater, bonfire, and tea/coffee — built for family comfort.' }
+    };
+
+    var interestAddons = {
+      cafe: 'Relax in the garden with hot coffee &amp; snacks',
+      trekking: 'Guided nature trek through pine forests',
+      photography: 'Photography walk at golden hour',
+      bonfire: 'Bonfire under the stars',
+      nature: 'Nature walk through the apple orchard',
+      workcation: 'Work from the garden with mountain views',
+      orchard: 'Apple orchard tour &amp; fresh apple tasting',
+      stargazing: 'Stargazing session under clear mountain skies',
+      relaxation: 'Yoga &amp; meditation by the riverside'
+    };
+
+    var dayPlans = {
+      1: [ { d:1, acts:['Check in at FAM','Settle into your room','Relax in Apple Orchard','Bonfire Evening'] } ],
+      2: [ { d:1, acts:['Check in at FAM','Explore Jibhi Village','Photography walk','Bonfire Evening'] }, { d:2, acts:['Visit Jibhi Waterfall','Morning tea in the garden','Nature walk','Departure'] } ],
+      3: [ { d:1, acts:['Check in at FAM','Relax in Apple Orchard','Explore the property','Bonfire Evening'] }, { d:2, acts:['Jalori Pass Excursion','Serolsar Lake Trek','Photography Stop','Evening relax at FAM'] }, { d:3, acts:['Jibhi Waterfall','Morning tea in garden','Checkout'] } ],
+      4: [ { d:1, acts:['Check in at FAM','Explore the property','Bonfire Evening'] }, { d:2, acts:['Jalori Pass','Serolsar Lake Trek','Photography walk','Evening relax'] }, { d:3, acts:['Chehni Kothi Visit','Mini Thailand','Evening river walk','Bonfire Night'] }, { d:4, acts:['Jibhi Waterfall','Morning tea','Checkout'] } ],
+      5: [ { d:1, acts:['Check in at FAM','Relax &amp; settle in','Bonfire welcome'] }, { d:2, acts:['Jalori Pass Excursion','Serolsar Lake Trek','Photography stop','Evening relax at FAM'] }, { d:3, acts:['Great Himalayan NP Trek','Picnic lunch','Wildlife spotting','Return to FAM'] }, { d:4, acts:['Chehni Kothi Visit','Mini Thailand','River walk','Farewell bonfire'] }, { d:5, acts:['Jibhi Waterfall','Morning tea','Checkout'] } ]
+    };
+
+    function insertAddons(acts, interests) {
+      var result = acts.slice();
+      interests.forEach(function(id){
+        if (interestAddons[id]) {
+          var insertAt = Math.min(result.length - 1, Math.floor(result.length / 2));
+          result.splice(insertAt, 0, interestAddons[id]);
+        }
+      });
+      return result;
+    }
+
+    function generate() {
+      var plan = dayPlans[state.days] || dayPlans[3];
+      var traveler = state.traveler || 'couple';
+      var itinerary = plan.map(function(day){
+        var acts = day.acts.slice();
+        acts = insertAddons(acts, state.interests);
+        // Traveler-specific modifier
+        if (traveler === 'couple') {
+          acts.splice(1,0,'Romantic candlelight dinner setup');
+        } else if (traveler === 'family') {
+          acts.splice(2,0,'Family game night');
+        } else if (traveler === 'friends') {
+          acts.splice(2,0,'Group music night');
+        } else if (traveler === 'solo') {
+          acts.splice(1,0,'Solo journaling time at Caf&eacute;');
+        }
+        return { day: day.d, acts: acts };
+      });
+      return itinerary;
+    }
+
+    function getBudgetLabel(b) {
+      var map = { budget:'&#8377;5,000 - &#8377;8,000', moderate:'&#8377;10,000 - &#8377;15,000', premium:'&#8377;20,000 - &#8377;25,000', luxury:'&#8377;30,000+' };
+      return map[b] || 'Custom';
+    }
+
+    function getPacking(traveler, days) {
+      var base = ['Warm jacket','Comfortable shoes','Power bank','Water bottle','Toiletries'];
+      if (state.interests.indexOf('trekking') !== -1) base.push('Trekking poles','Snacks');
+      if (days > 3) base.push('Laundry bag','Extra socks');
+      if (state.interests.indexOf('photography') !== -1) base.push('Camera');
+      return base.slice(0,5+Math.min(days,2));
+    }
+
+    function getBestTime(traveler) {
+      if (traveler === 'family') return 'March-June, Sept-Oct';
+      if (traveler === 'solo') return 'Year-round';
+      return 'March-June, Sept-November';
+    }
+
+    function getAttractions() {
+      if (state.interests.length === 0) return 'Jibhi Waterfall, Jalori Pass, Serolsar Lake';
+      var map = { cafe:'Garden Cafe', trekking:'Forest Trails', photography:'Jalori Pass', bonfire:'FAM Bonfire Pit', nature:'Apple Orchard', workcation:'Garden Workspace', orchard:'Apple Orchard', stargazing:'Open Terrace', relaxation:'River Bank' };
+      var names = state.interests.map(function(i){ return map[i]; }).filter(Boolean);
+      return names.slice(0,4).join(', ');
+    }
+
+    function updateUI() {
+      // Progress
+      var pct = ((state.step - 1) / 4) * 100;
+      fill.style.width = pct + '%';
+      dots.querySelectorAll('.tp-step-dot').forEach(function(d){
+        var s = parseInt(d.getAttribute('data-s'));
+        d.classList.toggle('active', s === state.step);
+        d.classList.toggle('done', s < state.step);
+      });
+
+      // Back button
+      backBtn.classList.toggle('hidden', state.step === 1);
+
+      // Render step
+      renderStep();
+
+      // Next button
+      if (state.step === 5) {
+        nextBtn.textContent = 'Generate My Trip ';
+        nextBtn.disabled = false;
+      } else if (state.step === 4) {
+        nextBtn.textContent = 'Next ';
+        nextBtn.disabled = state.interests.length === 0;
+      } else if (state.step === 3) {
+        nextBtn.textContent = 'Next ';
+        nextBtn.disabled = !state.budget;
+      } else if (state.step === 2) {
+        nextBtn.textContent = 'Next ';
+        nextBtn.disabled = !state.days;
+      } else if (state.step === 1) {
+        nextBtn.textContent = 'Next ';
+        nextBtn.disabled = !state.traveler;
+      }
+    }
+
+    function renderStep() {
+      var info = steps[state.step];
+      var html = '<div class="tp-step"><div class="tp-step-label">' + info.label + '</div>';
+      html += '<div class="tp-step-question">' + info.question + '</div>';
+
+      if (state.step === 1) {
+        html += '<div class="tp-options col2">';
+        travelers.forEach(function(t){
+          var sel = state.traveler === t.id ? ' selected' : '';
+          html += '<div class="tp-option' + sel + '" data-val="' + t.id + '"><span class="tp-option-icon">' + t.icon + '</span><span class="tp-option-label">' + t.label + '</span></div>';
+        });
+        html += '</div>';
+      } else if (state.step === 2) {
+        html += '<div class="tp-pills">';
+        dayOpts.forEach(function(o){
+          var sel = state.days === o.id ? ' selected' : '';
+          html += '<span class="tp-pill' + sel + '" data-val="' + o.id + '">' + o.label + '</span>';
+        });
+        html += '</div>';
+      } else if (state.step === 3) {
+        html += '<div class="tp-options col4">';
+        budgetOpts.forEach(function(o){
+          var sel = state.budget === o.id ? ' selected' : '';
+          html += '<div class="tp-option budget-card' + sel + '" data-val="' + o.id + '"><span class="tp-price">' + o.label + '</span><span class="tp-option-sub">' + o.sub + '</span></div>';
+        });
+        html += '</div>';
+      } else if (state.step === 4) {
+        html += '<div class="tp-chips">';
+        interestOpts.forEach(function(o){
+          var sel = state.interests.indexOf(o.id) !== -1 ? ' selected' : '';
+          html += '<span class="tp-chip' + sel + '" data-val="' + o.id + '">' + o.icon + ' ' + o.label + '</span>';
+        });
+        html += '</div>';
+      } else if (state.step === 5) {
+        html += '<p style="font-size:14px;color:#414942;line-height:1.7;margin-bottom:12px;">We\'ll create a personalized itinerary based on your preferences. Click the button below to generate your perfect Jibhi escape.</p>';
+        var summary = '';
+        summary += '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;">';
+        if (state.traveler) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + (state.traveler.charAt(0).toUpperCase() + state.traveler.slice(1)) + '</span>';
+        if (state.days) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + state.days + ' Day' + (state.days > 1 ? 's' : '') + '</span>';
+        if (state.budget) summary += '<span style="padding:4px 12px;background:rgba(10,52,29,0.06);border-radius:9999px;font-size:12px;color:#414942;">' + getBudgetLabel(state.budget) + '</span>';
+        summary += '</div>';
+        html += summary;
+        html += '<button class="tp-generate" id="tp-gen-btn"><span>Generate My Trip</span> <span style="font-size:18px;"></span></button>';
+      }
+
+      html += '</div>';
+      content.innerHTML = html;
+
+      // Bind events
+      content.querySelectorAll('.tp-option').forEach(function(el){
+        el.addEventListener('click', function(){
+          var val = el.getAttribute('data-val');
+          if (state.step === 1) {
+            state.traveler = val;
+            el.parentElement.querySelectorAll('.tp-option').forEach(function(e){ e.classList.remove('selected'); });
+          } else if (state.step === 3) {
+            state.budget = val;
+            el.parentElement.querySelectorAll('.tp-option').forEach(function(e){ e.classList.remove('selected'); });
+          }
+          el.classList.add('selected');
+          updateUI();
+        });
+      });
+
+      content.querySelectorAll('.tp-pill').forEach(function(el){
+        el.addEventListener('click', function(){
+          state.days = parseInt(el.getAttribute('data-val'));
+          el.parentElement.querySelectorAll('.tp-pill').forEach(function(e){ e.classList.remove('selected'); });
+          el.classList.add('selected');
+          updateUI();
+        });
+      });
+
+      content.querySelectorAll('.tp-chip').forEach(function(el){
+        el.addEventListener('click', function(){
+          var val = el.getAttribute('data-val');
+          var idx = state.interests.indexOf(val);
+          if (idx !== -1) { state.interests.splice(idx, 1); el.classList.remove('selected'); }
+          else { state.interests.push(val); el.classList.add('selected'); }
+          updateUI();
+        });
+      });
+
+      var genBtn = document.getElementById('tp-gen-btn');
+      if (genBtn) {
+        genBtn.addEventListener('click', function(e){
+          e.preventDefault();
+          genBtn.classList.add('loading');
+          genBtn.innerHTML = '<span class="tp-spinner"></span><span>Generating your perfect trip...</span>';
+          genBtn.disabled = true;
+          setTimeout(function(){ showResult(); }, 1800);
+        });
+      }
+    }
+
+    function showResult() {
+      var itinerary = generate();
+      var room = roomData[state.traveler] || roomData.couple;
+      var days = state.days || 3;
+      var traveler = state.traveler || 'couple';
+
+      var html = '<div class="tp-result">';
+      html += '<div class="tp-result-badge"><span>&#10004;&#65039;</span> Your Personalized Itinerary is Ready</div>';
+      html += '<h4>Your Jibhi Escape</h4>';
+
+      // Days
+      itinerary.forEach(function(day){
+        html += '<div class="tp-day"><div class="tp-day-title">DAY ' + day.day + '</div><ul class="tp-day-list">';
+        day.acts.forEach(function(a){
+          html += '<li>' + a + '</li>';
+        });
+        html += '</ul></div>';
+      });
+
+      // Recommended room
+      html += '<div class="tp-room-card">';
+      html += '<img src="' + room.img + '" alt="' + room.name + '" loading="lazy">';
+      html += '<div class="tp-room-info"><h5>' + room.name + '</h5>';
+      html += '<div class="tp-room-tags"><span>' + room.guests + '</span><span>' + room.price + '</span></div>';
+      html += '<p>' + room.desc + '</p>';
+      html += '<a href="/pages/rooms" class="tp-room-book">Book Now </a>';
+      html += '</div></div>';
+
+      // Summary
+      html += '<div class="tp-summary-card"><h5>Trip Summary</h5><div class="tp-summary-grid">';
+      html += '<div class="tp-summary-item"><strong>Budget</strong>' + getBudgetLabel(state.budget || 'moderate') + '</div>';
+      html += '<div class="tp-summary-item"><strong>Duration</strong>' + days + ' Day' + (days > 1 ? 's' : '') + '</div>';
+      html += '<div class="tp-summary-item"><strong>Attractions</strong>' + getAttractions() + '</div>';
+      html += '<div class="tp-summary-item"><strong>Packing</strong>' + getPacking(traveler, days).join(', ') + '</div>';
+      html += '<div class="tp-summary-item" style="grid-column:1/-1;"><strong>Best Time</strong>' + getBestTime(traveler) + '</div>';
+      html += '</div></div>';
+
+      // Export buttons
+      html += '<div class="tp-export">';
+      html += '<button class="tp-export-btn" onclick="alert(\'PDF download coming soon. Your itinerary will be available as a beautifully formatted PDF.\')"><span>&#128196;</span> Download Itinerary</button>';
+      html += '<button class="tp-export-btn" onclick="if(navigator.share){navigator.share({title:\'My Jibhi Trip at Flamingo aur Maina\',text:\'Check out my personalized itinerary from FAM!\',url:window.location.href})}else{prompt(\'Copy this link to share:\',window.location.href)}"><span>&#128228;</span> Share Trip</button>';
+      html += '<a href="/pages/rooms" class="tp-export-btn solid"><span>&#128205;</span> Book Recommended Room</a>';
+      html += '</div>';
+
+      html += '</div>';
+      content.innerHTML = html;
+      content.querySelector('.tp-result').style.animation = 'none';
+      void content.querySelector('.tp-result').offsetHeight;
+      content.querySelector('.tp-result').style.animation = '';
+
+      // Hide nav, show restart
+      document.getElementById('tp-nav').innerHTML = '<div></div><button class="tp-btn tp-btn-next" onclick="location.reload()">Plan Another Trip </button>';
+    }
+
+    function goTo(n) {
+      state.step = Math.max(1, Math.min(5, n));
+      updateUI();
+    }
+
+    backBtn.addEventListener('click', function(){ goTo(state.step - 1); });
+    nextBtn.addEventListener('click', function(){
+      if (state.step === 5) {
+        var genBtn = document.getElementById('tp-gen-btn');
+        if (genBtn) { genBtn.click(); }
+        return;
+      }
+      if (state.step === 4 && state.interests.length === 0) return;
+      if (state.step === 3 && !state.budget) return;
+      if (state.step === 2 && !state.days) return;
+      if (state.step === 1 && !state.traveler) return;
+      goTo(state.step + 1);
+    });
+
+    updateUI();
+  })();
+  </script>
+
+  <!-- ====== CTA SECTION ====== -->
+  <section class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="relative w-full h-[500px] rounded-[3rem] overflow-hidden flex flex-col justify-center items-center text-center px-8">
+      <div class="absolute inset-0 z-0 parallax-bg" data-parallax="true" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDadx8bWjHH5cRqMoFbR_LdcYa4CxHl3FFV9NsqEp9XtvIQh_uqQa45hQ2Cod6q38T6ya0IMd0KBa91W2Hwen3fFK3tUV3-OdkAmlBw1eQCE84R43TaCIjwe6gyYNOyIjbDrySAhi8GMO8zPNh4YMELlQ7MqEQGS5c8l8DSVDbyYEFV4iA2k3EkiX6S_OvkZvSob2MEOEEgoGHkZ1kfs6VzIWXsHw1O0uRbQ1bdTYGBXZAtS3a3Po4KFyKlHsb0rnAJaX2wXzNnL7o')"></div>
+      <div class="absolute inset-0 bg-surface/80 z-10"></div>
+      <div class="relative z-20 max-w-2xl">
+        <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-6">Find Your Perfect Stay.</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Every room has its own story. Choose the one that feels like yours.</p>
+        <a href="/pages/rooms" class="btn-primary inline-flex items-center gap-2 text-base py-4 px-10">
+          <span>View All Availability</span>
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact" class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-section-gap reveal">
+    <div class="text-center mb-12">
+      <span class="font-label-sm text-accent-gold uppercase tracking-widest mb-4 block">Get in Touch</span>
+      <h2 class="font-headline-lg text-4xl md:text-5xl text-primary mb-4">Visit Us</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto">We'd love to welcome you to FAM.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div class="space-y-8">
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Address</h3>
+          <p class="text-on-surface-variant font-body-md leading-relaxed">
+            Opposite Forest Rest House,<br/>
+            Rashala,<br/>
+            Jibhi,<br/>
+            Himachal Pradesh 175123
+          </p>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Coordinates</h3>
+          <p class="text-on-surface-variant font-body-md">
+            31&deg; 34' 43.6598" N<br/>
+            77&deg; 22' 0.8252" E
+          </p>
+          <a href="https://www.google.com/maps?q=31.5787944,77.3668959" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-primary text-on-primary rounded-full font-label-sm text-sm uppercase tracking-widest hover:bg-primary-container transition-all duration-300">
+            <span class="material-symbols-outlined text-sm">map</span>
+            Get Directions
+          </a>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Property Manager</h3>
+          <a href="tel:9876575673" class="text-2xl md:text-3xl font-headline-md text-accent-gold hover:text-primary transition-colors block mb-2">98765 75673</a>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Founder</h3>
+          <a href="tel:9877381864" class="text-2xl md:text-3xl font-headline-md text-accent-gold hover:text-primary transition-colors block mb-2">98773 81864</a>
+        </div>
+        <div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/20">
+          <h3 class="font-headline-md text-xl text-primary mb-4">Email</h3>
+          <a href="mailto:flamingoaurmaina@gmail.com" class="text-lg font-body-md text-accent-gold hover:text-primary transition-colors break-all">flamingoaurmaina@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FINAL QUOTE ====== -->
+  <section class="max-w-3xl mx-auto px-4 text-center py-24 md:py-32 reveal">
+    <h2 class="font-headline-lg text-5xl md:text-7xl text-primary italic text-primary/90 leading-tight">
+      &ldquo;Welcome Home.&rdquo;
+    </h2>
+  </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="bg-charcoal text-on-primary">
+    <div class="max-w-max-width mx-auto px-4 md:px-margin-desktop py-16">
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 border-b border-on-primary/10 pb-12">
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h3 class="font-headline-md text-2xl text-on-primary tracking-wider">Flamingo aur Maina</h3>
+          <p class="text-on-primary/60 font-body-md max-w-xs text-center md:text-left">A sanctuary of refined luxury and untold stories amidst nature's embrace.</p>
+        </div>
+        <div class="flex gap-16 text-center md:text-left">
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Explore</h4>
+            <a href="/" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Home</a>
+            <a href="/pages/rooms" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Rooms</a>
+            <a href="/pages/life" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Life at FAM</a>
+            <a href="/pages/explore" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Explore</a>
+            <a href="/pages/gallery" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Gallery</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <h4 class="font-label-sm uppercase tracking-widest text-on-primary/40 text-xs mb-2">Connect</h4>
+            <a href="/pages/amenities" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Amenities</a>
+            <a href="#contact" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Contact Us</a>
+            <a href="#" class="text-on-primary/80 hover:text-accent-gold transition-colors text-sm">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-primary/40 font-body-md">
+        <p>&copy; 2024 Flamingo aur Maina. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-on-primary transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-on-primary transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/shader.js"></script>
+  <script src="js/animations.js"></script>
+  <!-- hero-effects.js removed - replaced by hero-frame-animation.js -->
+  <script src="js/seasonal.js"></script>
+  <script src="js/mountain-time.js"></script>
+  <script src="js/concierge.js"></script>
+
+  <script src="js/hero-frame-animation.js"></script>
+  <script src="js/scroll-story.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof initFogShaders === 'function' && window.innerWidth >= 1024) {
+        initFogShaders();
+      }
+      if (typeof FAM !== 'undefined' && FAM.Animations) {
+        FAM.Animations.init({ gsap: false, lenis: false });
+      }
+      initMobileMenu();
+
+      var nav = document.getElementById('main-nav');
+      if (nav) {
+        var onScroll = function() {
+          nav.classList.toggle('scrolled', window.scrollY > 100);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+
+      setTimeout(function() {
+        var overlay = document.getElementById('pt-overlay');
+        if (overlay) {
+          var cur = window.getComputedStyle(overlay).opacity;
+          if (parseFloat(cur) > 0.01) {
+            overlay.style.transition = 'opacity 0.4s ease';
+            overlay.style.opacity = '0';
+          } else {
+            overlay.style.display = 'none';
+          }
+          setTimeout(function() { overlay.style.display = 'none'; }, 500);
+        }
+      }, 400);
+    });
+  </script>
+
+  <script>
+  function initMobileMenu() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var panel = document.getElementById('mobile-panel');
+    var overlay = document.getElementById('mobile-overlay');
+    var closeBtn = document.getElementById('mobile-close');
+    if (!btn || !panel || !overlay) return;
+
+    function open() {
+      panel.classList.add('open');
+      overlay.classList.add('open');
+      document.body.classList.add('mobile-menu-open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+      panel.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.classList.remove('mobile-menu-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (panel.classList.contains('open')) close(); else open();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (overlay) overlay.addEventListener('click', close);
+    if (panel) {
+      panel.querySelectorAll('.mobile-menu-link').forEach(function(link) {
+        link.addEventListener('click', close);
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && panel && panel.classList.contains('open')) close();
+    });
+  }
+  </script>
+
+
+  <script src="js/transitions.js"></script>
+  <script>document.querySelectorAll('footer p').forEach(function(p){p.innerHTML=p.innerHTML.replace('2024',new Date().getFullYear());});</script>
+</body>
+</html>
