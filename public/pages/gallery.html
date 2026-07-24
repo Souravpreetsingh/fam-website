@@ -35,8 +35,10 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="../css/style.css?v=10" />
 <script id="tailwind-config">
 tailwind.config = {
@@ -59,7 +61,7 @@ tailwind.config = {
   .snap-x-mandatory::-webkit-scrollbar-track { background: transparent; }
   .snap-x-mandatory::-webkit-scrollbar-thumb { background-color: rgba(10, 52, 29, 0.2); border-radius: 10px; }
 </style>
-  <link rel="stylesheet" href="../css/transitions.css?v=1" />`n</head>
+  <link rel="stylesheet" href="../css/transitions.css?v=1" /></head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container" style="background:#f8f4ec"><div id="pt-overlay"></div>
   <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">
     <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto rounded-full">
@@ -255,5 +257,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   </script>
   <script>document.querySelectorAll('footer p').forEach(function(p){p.innerHTML=p.innerHTML.replace('2024',new Date().getFullYear());});</script>
-  <script src="../js/transitions.js"></script>`n</body>
+  <script src="../js/transitions.js"></script></body>
 </html>
