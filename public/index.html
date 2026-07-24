@@ -153,12 +153,14 @@ tailwind.config = {
 <div id="pt-overlay"></div>
 <script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(function(r) {
-    for (var i = 0; i < r.length; i++) r[i].unregister()
-  })
-  caches.keys().then(function(k) { return Promise.all(k.map(function(n) { return caches.delete(n) })) })
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').catch(function(e) {
+      console.warn('[SW] Registration failed:', e);
+    });
+  });
 }
 </script>
+<script type="module" src="//instant.page/5.2.0"></script>
 
   <!-- ====== NAVBAR ====== -->
   <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border border-outline-variant/20 shadow-sm transition-all duration-300" id="main-nav">

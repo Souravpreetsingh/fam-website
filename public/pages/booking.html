@@ -987,5 +987,15 @@ tailwind.config = {
   <script src="/js/animations.js"></script>
   <script src="/js/transitions.js"></script>
   <script>document.querySelectorAll('footer p').forEach(function(p){p.innerHTML=p.innerHTML.replace('2024',new Date().getFullYear());});</script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').catch(function(e) {
+        console.warn('[SW] Registration failed:', e);
+      });
+    });
+  }
+  </script>
+  <script type="module" src="//instant.page/5.2.0"></script>
 </body>
 </html>
